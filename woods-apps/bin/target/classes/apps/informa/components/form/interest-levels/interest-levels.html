@@ -1,0 +1,44 @@
+
+<div data-sly-test="${wcmmode.edit}" data-emptytext="Interest Levels Component" class="cq-placeholder"></div>
+<div data-sly-test="${properties.required}">      
+	<input type="hidden" value="${properties.required}" id="interestLevelreq">
+	<input type="hidden" value="${properties.requiredMessage}" id="interestLevelreqMesg">
+</div>
+<div class="form-group interestLevel" data-sly-use.interestLevels="com.informa.components.commons.Multifield">
+	<fieldset class="custom-checkbox-fieldset custom-business-fieldset" data-sly-test="${properties.interestLevelTitle}">
+		<label for="InterestLevel" class="col-md-3 col-sm-3 form-one-control-label forms-title-color-fo">
+			${properties.interestLevelTitle}  
+			<span data-sly-test="${properties.required}">
+				<span class="asterisk-sign-clr">*</span>  
+			</span> 
+		</label>
+		<div class="col-md-9 col-lg-7 col-sm-9 col-xs-11 input-div  interest-levle-checkBox-component forms-custom-radio-btn" >
+            <div data-sly-list.interest="${interestLevels.childList}">
+			<div class="checkbox interest-level-checkBox">
+				<input type="checkbox" name="InterestLevel[]" class="checkbox-input interestLevelValues" id="${interest.text}" value="${interest.interestCode}|${interest.interestType}" />
+				<label for=${interest.text}> 
+				<span> ${interest.text}</span>
+				</label>
+            </div>
+			</div>
+			<div data-sly-test="${properties.tooltip}" data-sly-unwrap> 
+
+				<span class="custom-tool-tip ">
+                 <div data-sly-test.dataplacement="right">
+                <a  href="javascript:void(0)" class="tooltip-mobile hidden-xs" data-toggle="tooltip" data-placement="${dataplacement}" title="${properties.tooltip}">
+						<img class="tool-tip-img" src="/etc/designs/informa/globalstyle/clientlibs/images/Question-mark.png" alt="tooltip_image" />
+					</a>
+					</div>
+
+               <div data-sly-test.dataplacement="bottom">
+					<a  href="javascript:void(0)" class="tooltip-mobile visible-xs " data-toggle="tooltip" data-placement="${dataplacement}" title="${properties.tooltip}">
+						<img class="tool-tip-img" src="/etc/designs/informa/globalstyle/clientlibs/images/Question-mark.png" alt="tooltip_image" />
+					</a>
+					</div>
+					
+				</span>
+			
+		</div>
+            </div>
+	</fieldset>
+</div>

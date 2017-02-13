@@ -1,0 +1,25 @@
+.input-container button {
+	position: absolute;
+	display: block;
+	width: 24px;
+	height: 22px;
+	right: 9px;
+	top: 50%;
+	margin-top: -11px;
+	padding: 0;
+	border: none;
+	background: url(/etc/designs/geometrixx-media/clientlibs/img/mag-glass.png) no-repeat 0 0;
+}
+
+.input-container .text {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: auto;
+	height: auto;
+	padding: 4px 35px 4px 5px;
+	border: none;
+	resize: none;
+}

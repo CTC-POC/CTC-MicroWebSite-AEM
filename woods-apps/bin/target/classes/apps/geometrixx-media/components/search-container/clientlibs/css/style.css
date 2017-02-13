@@ -1,0 +1,21 @@
+
+.diagonal-line-outer {
+	padding: 9px;
+	margin-bottom: 25px;
+	background: url(/etc/designs/geometrixx-media/clientlibs/img/diagonal-lines.png) repeat 0 0;
+}
+.diagonal-line-inner {
+	padding: 15px;
+	background: #e7e7e0;
+}
+
+.input-container {
+	position: relative;
+	height: 25px;
+	border-top: 2px solid #cdcdcd;
+}
+
+.input-container.tall {
+	height: 60px;
+	margin-top: 10px;
+}

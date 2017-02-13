@@ -1,0 +1,66 @@
+<div data-sly-test="${wcmmode.edit}" data-emptytext="Language & Country"
+	class="cq-placeholder"></div>
+<div class="row">
+<div class="col-lg-12 col-sm-12 col-sm-12 col-xs-12 eventRightSection ${properties.spacingstylestop} ${properties.spacingstylesbottom}"
+	data-sly-use.languageList="com.informa.components.commons.LanguageList"
+	data-sly-use.countryLinks="com.informa.components.commons.Multifield">
+    <div class="row">
+	<ul class="nav navbar-nav ${properties.dir || inheritedPageProperties.dir == 'rtl'?'navbar-left':'navbar-right'}" style="padding-right:0;">
+		<li id="userLoggedout" class="active dropdown informaNavSignIn"
+			data-sly-test="${properties.linkTitle}"><a
+			href="${properties.linkPath}.html"
+			target="${properties.openUrlInNewWindow=='yes' && '_blank'}">${properties.linkTitle}
+				
+		</a></li>
+        <li id="userLoggedin" class="dropdown" data-sly-test="${properties.listTitle}">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#"
+            data-sly-test="${properties.listTitle}"> 
+            <span name='headerfirstName'></span> 
+            <span name = 'headerlastName'></span> 
+            <b class="${countryLinks.hasContent?'caret dropdown-caret':' '}"></b>
+            </a>
+			<ul id="sigin"  class="dropdown-menu navbar-right">
+				<li><a href="${properties.signOutPath}.html" id='signOutLink'>${properties.signOutLabel ||'Sign-Out'}</a></li>
+                    <li><a href="${properties.myProfilePath}.html" id='signOutLink'>${properties.myProfileLabel || 'My Profile'}</a></li>
+			</ul>
+		</li>
+
+		<li class="dropdown"  role="combo box" data-sly-test="${properties.currentLanguage && languageList.isLanguageExist==true}">
+			<ul data-sly-list.language="${languageList.languages}"
+				data-sly-unwrap>
+				<li data-sly-test="${languageList.index == 0}" data-sly-unwrap>
+					<a class="dropdown-toggle" data-toggle="dropdown" href="${language.path}.html"
+					target="${properties.openLanguageUrlInNewWindow=='yes' && '_blank'}">${language.language}
+						<b class="caret dropdown-caret"></b>
+				</a>
+				</li>
+			</ul>
+			<ul class="dropdown-menu pull-right" id="language"
+				data-sly-test="${languageList.hasContent}"
+				data-sly-list.language="${languageList.languages}">
+				<li data-sly-test="${languageList.index > 0}"><a
+					href="${language.path}.html"
+					target="${properties.openLanguageUrlInNewWindow=='yes' && '_blank'}">${language.language}</a></li>
+			</ul>
+		</li>
+		<li class="dropdown"  role="combo box"
+			data-sly-test="${properties.listTitle}">
+			<a class="dropdown-toggle" data-toggle="dropdown" href="#"
+			data-sly-test="${properties.listTitle}"> ${properties.listTitle}
+				<b class="${countryLinks.hasContent?'caret dropdown-caret':' '}"></b>
+			</a>
+			<ul id="countries" 
+				data-sly-test="${countryLinks.hasContent}"
+            	data-sly-list.country="${countryLinks.childList}"
+				class="dropdown-menu navbar-right">
+				<li data-sly-test="${country.text}"><a
+					href="${country.linkPath}"
+					target="${country.openInNewWindow==true && '_blank'}">${country.text}</a>
+				</li>
+			</ul>
+		</li>
+	</ul>
+</div>
+</div>
+</div>
+

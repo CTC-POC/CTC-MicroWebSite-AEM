@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="Leading text"
+    xtype="dialog">
+    <items jcr:primaryType="cq:TabPanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <text
+                jcr:primaryType="cq:Widget"
+                jcr:title="Text"
+                xtype="panel">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <title
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Title"
+                        name="./title"
+                        xtype="textfield"/>
+                    <description
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="true"
+                        fieldLabel="Description"
+                        isRichTextFlag="{Boolean}false"
+                        name="./description"
+                        xtype="richtext">
+                        <rtePlugins jcr:primaryType="nt:unstructured">
+                            <format
+                                jcr:primaryType="nt:unstructured"
+                                features="*"/>
+                            <paraformat
+                                jcr:primaryType="nt:unstructured"
+                                features="*">
+                                <formats jcr:primaryType="cq:WidgetCollection">
+                                    <Paragraph
+                                        jcr:primaryType="nt:unstructured"
+                                        description="Paragraph"
+                                        tag="p"/>
+                                    <heading2
+                                        jcr:primaryType="nt:unstructured"
+                                        description="Heading 2"
+                                        tag="h2"/>
+                                    <heading3
+                                        jcr:primaryType="nt:unstructured"
+                                        description="Heading 3"
+                                        tag="h3"/>
+                                    <heading4
+                                        jcr:primaryType="nt:unstructured"
+                                        description="Heading 4"
+                                        tag="h4"/>
+                                    <heading5
+                                        jcr:primaryType="nt:unstructured"
+                                        description="Heading 5"
+                                        tag="h5"/>
+                                    <heading6
+                                        jcr:primaryType="nt:unstructured"
+                                        description="Heading 6"
+                                        tag="h6"/>
+                                </formats>
+                            </paraformat>
+                            <edit
+                                jcr:primaryType="nt:unstructured"
+                                defaultPasteMode="plaintext"
+                                features="[cut,copy,paste-plaintext]"
+                                stripHtmlTags="{Boolean}true"/>
+                        </rtePlugins>
+                    </description>
+                </items>
+            </text>
+            <image
+                jcr:primaryType="cq:Widget"
+                jcr:title="Image"
+                xtype="panel">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <image
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}true"
+                        allowUpload="{Boolean}false"
+                        border="{Boolean}true"
+                        ddGroups="[media]"
+                        fieldLabel="Image"
+                        fileNameParameter="./image"
+                        fileReferenceParameter="./imageRef"
+                        height="200"
+                        name="./imageName"
+                        xtype="smartimage"/>
+                    <imageAltText
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Alt Text"
+                        name="./imageAltText"
+                        xtype="textfield"/>
+                    <quote
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Quote"
+                        name="./quote"
+                        xtype="richtext">
+                        <rtePlugins jcr:primaryType="nt:unstructured">
+                            <format
+                                jcr:primaryType="nt:unstructured"
+                                features="*"/>
+                            <paraformat
+                                jcr:primaryType="nt:unstructured"
+                                features="*">
+                                <formats jcr:primaryType="cq:WidgetCollection">
+                                    <Paragraph
+                                        jcr:primaryType="nt:unstructured"
+                                        description="Paragraph"
+                                        tag="p"/>
+                                    <heading2
+                                        jcr:primaryType="nt:unstructured"
+                                        description="Heading 2"
+                                        tag="h2"/>
+                                    <heading3
+                                        jcr:primaryType="nt:unstructured"
+                                        description="Heading 3"
+                                        tag="h3"/>
+                                    <heading4
+                                        jcr:primaryType="nt:unstructured"
+                                        description="Heading 4"
+                                        tag="h4"/>
+                                    <heading5
+                                        jcr:primaryType="nt:unstructured"
+                                        description="Heading 5"
+                                        tag="h5"/>
+                                    <heading6
+                                        jcr:primaryType="nt:unstructured"
+                                        description="Heading 6"
+                                        tag="h6"/>
+                                </formats>
+                            </paraformat>
+                            <edit
+                                jcr:primaryType="nt:unstructured"
+                                defaultPasteMode="plaintext"
+                                features="[cut,copy,paste-plaintext]"
+                                stripHtmlTags="{Boolean}true"/>
+                        </rtePlugins>
+                    </quote>
+                    <testimonialtitle
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Testimonial Title"
+                        name="./testimonialtitle"
+                        xtype="textfield"/>
+                    <footer
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Author"
+                        name="./author"
+                        xtype="textfield"/>
+                </items>
+            </image>
+            <stylesTab
+                jcr:primaryType="cq:Widget"
+                xtype="componentstyles"/>
+        </items>
+    </items>
+</jcr:root>

@@ -1,0 +1,127 @@
+<div data-sly-test="${wcmmode.edit}" data-emptytext="Account Information"
+	class="cq-placeholder"></div>
+    <!DOCTYPE html>
+
+
+<div data-sly-use.dropDownsData="com.informa.components.commons.PersonalInformation">
+			<div class="personalization">
+								<div class="signup-personalization">
+										<form id="signup-form-Account-Information" role="form" method="post" class="form-horizontal" action="#">
+											<div class="form-group margin-top-zero">
+												<label  class="col-sm-12  col-md-4 col-lg-4 control-label signupsub-title">${properties.secretQuestion || 'Secret Questions' }</label>
+											</div>
+											<div class="form-group">
+												<label for="securityQuestion" class="col-sm-12 col-md-2 col-lg-2 control-label">${properties.question || 'Question' }</label>
+												<div class="col-sm-12  col-md-4 col-lg-4 calendar-icon">
+                                                <select name="securityQuestion" id="securityQuestion" class="form-control">
+                                                    <div data-sly-list.securityQuestions="${dropDownsData.securityQuestions}" >
+                                                        <option value=${securityQuestions.securityQuestion}>${securityQuestions.securityQuestion}</option>
+                                                    </div>
+                                                </select>
+
+												</div>
+											</div>
+											<div class="form-group">
+												<label for="signupAnswer" class="col-sm-12 col-md-2 col-lg-2 control-label">${properties.answer || 'Answer' } <span class="asterisk-sign-clr">*</span></label>
+												<div class="col-sm-12  col-md-10 col-lg-10">
+													<input type="text" name="securityAnswer" class="form-control col-md-4 col-lg-4 signup-validate" id="signupAnswer" aria-required="true"  >
+                                                    <input type="hidden" id="answerRequiredMsg" value="${properties.reqAnswer || 'Please Provide Answer'}"/> 
+												</div>
+											</div>
+											<div id="socialLogin">
+											<div class="form-group ">
+												<label  class="col-sm-12  col-md-4 col-lg-4 control-label signupsub-title">${properties.setPassword || 'Set Password' }</label>
+											</div>
+											<div class="form-group">
+												<label for="signupPassword"  class="col-sm-12 col-md-2 col-lg-2 control-label">${properties.password || 'Password' } <span class="asterisk-sign-clr">*</span></label>
+												<div class="col-sm-12  col-md-10 col-lg-10">
+													<input type="password" name="password" class="form-control col-md-4 col-lg-4 signup-validate"  id="signupPassword" aria-required="true" >
+													<span class="glyphicon glyphicon-eye-open eyespan"></span>
+                                                     <input type="hidden" id="passwordRequiredMessage" value="${properties.reqPassword || 'Password can not be blank'}"/>  
+                                                     <div class="custom-tool-tip personalization-tool-tip" data-sly-test="${properties.passwordRule}">
+														<a  href="javascript:void(0)" class="tooltip-mobile hidden-xs" data-toggle="tooltip" data-placement="right" title="${properties.passwordRule}">
+														<img class="tool-tip-img" src="/etc/designs/informa/globalstyle/clientlibs/images/Question-mark.png" alt="tooltip_image" />
+														</a>
+														<a  href="javascript:void(0)" class="tooltip-mobile visible-xs " data-toggle="tooltip" data-placement="bottom" title="${properties.passwordRule}">
+														<img class="tool-tip-img" src="/etc/designs/informa/globalstyle/clientlibs/images/Question-mark.png" alt="tooltip_image" />
+														</a>
+													</div>  
+												</div>
+											</div>
+											<div class="form-group">
+												<label for="signupConfirmPassword" class="col-sm-12 col-md-2 col-lg-2 control-label">${properties.confirmPassword || 'Confirm Password' } <span class="asterisk-sign-clr">*</span></label>
+												<div class="col-sm-12  col-md-10 col-lg-10">
+													<input type="password" name="signupConfirmPassword" class="form-control col-md-4 col-lg-4 signup-validate"  id="signupConfirmPassword" aria-required="true">
+													<span class="glyphicon glyphicon-eye-open eyespan"></span>
+                                                    <input type="hidden" id="passwordStrength" value="${properties.passwordStrength || 'Allows alphanumeric, special & capital letter with 8 letters.'}"/>
+                                                    <input type="hidden" id="confirmPasswordRequiredMessage" value="${properties.reqConfirmPassword || 'Confirm Password can not be blank'}"/>
+                                                    <input type="hidden" id="matchPasswords" value="${properties.identicalPassword || 'The password and its confirm are not the same'}"/>
+                                                    <input type="hidden" id="emailloginPath" name="emailloginPath" value="${inheritedPageProperties.signUpActivationPath}.html"/>
+												</div>
+											</div> 
+										</div>	
+<div class="form-group">
+<label for="formCaptcha" class="col-sm-12 col-md-2 col-lg-2 control-label"></label>
+<div class="col-sm-12  col-md-4 col-lg-4">
+
+<div class="g-recaptcha" data-sitekey="6LfX2SYTAAAAAMA85A4osYC4DD2QHTmg1YcAQYya"></div>
+<input type="hidden" class="hiddenRecaptcha required" name="hiddenRecaptcha" id="hiddenRecaptcha">
+</div>
+</div>
+									<div class="form-group">
+										<label for="termsandconditions" class="col-sm-12 col-md-2 col-lg-2 control-label"></label>
+										<div class="col-sm-12  col-md-4 col-lg-4">
+											<div class="checkbox col-sm-12  col-md-12 col-lg-12 termsandcondtionsaccount">
+												<input  type="checkbox"  name="termsandconditions"  id="termsandconditions" value=" ">
+												<label for="termsandconditions"><span><span></span></span>${properties.text||'By Signing up you will agree to'} <a href="#" data-toggle="modal" data-target="#termsandconditions-modal">${properties.label || 'Terms and Conditions.'}</a></label>
+											</div>
+										</div>
+									</div>
+
+											<div class="form-group">
+												<div class="col-xs-4 col-sm-8  col-md-offset-2 col-md-2 col-lg-offset-2 col-lg-2 sm-float-left">
+													<button type="button"  name="back" id="btnBackAccountInformation" class="btn-u btn-u-brown">${properties.back || 'Back' }</button></div>
+												<div class="col-xs-4 col-sm-4  col-lg-2   col-md-2 sm-float-right">
+													<button type="button" class="btn-u btn-u-brown disabled signup-not-allowed"  id="signUp" > ${properties.signUp || 'SignUp' }</button>
+
+    												<a href="${properties.signupLink}.html"><input type="hidden" id="signupLink" value="${properties.signupLink }.html"/></a>
+    											</div>
+    											 <div class="col-xs-12 col-lg-2 col-md-2 col-sm-4 loader-pic hide" id="loader-pic">
+                                                	<span class="row"><p class="fa fa-cog fa-spin fa-1x"></p>&nbsp;Loading ...</span>
+                                                </div>
+											</div>
+                                            </form>
+                                      				</div>
+                                            	</div>
+    </div>
+     <!-- modal -->                           
+	<div id="signup-modal" class="modal fade modalCustomCss" role="dialog"> 
+        <div class="modal-dialog">
+            <div class="modal-content panel-body">
+                <div class="modal-header">
+                    <button aria-hidden="true" data-dismiss="modal" class="close" type="button"><i class="fa fa-times fa-1x"></i></button>
+                    <h2 id="myLargeModalLabel2" class="modal-title"></h2>
+                </div>
+                <div class="modal-body">
+                    <p></p>
+
+                    <button class="btn buttomCommonCss" aria-hidden="true" data-dismiss="modal">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+	<!-- end modal -->  
+	<div id="termsandconditions-modal" class="modal fade modalCustomCss" role="dialog"> 
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content panel-body">
+                <div class="modal-header">
+                    <button aria-hidden="true" data-dismiss="modal" class="close" type="button"><i class="fa fa-times fa-1x"></i></button>
+                    <h2 id="myLargeModalLabel2" class="modal-title">${properties.title || 'Terms and Conditions'}</h2>
+                </div>
+                <div class="modal-body">
+                   <div data-sly-resource="${properties.linkPath}.html"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+	<!-- end modal -->

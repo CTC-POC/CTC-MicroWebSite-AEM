@@ -1,0 +1,36 @@
+<!--/*
+
+	Informa
+	_______________________
+	
+	Breadcrumb component.
+
+*/-->
+<div data-sly-test="${wcmmode.edit}" data-emptytext="Bread Crumbs" class="cq-placeholder"></div>
+<div class="container"> 
+<nav role="navigation">
+     <div class="informaRegBreadCrumb ${properties.spacingstylestop} ${properties.spacingstylesbottom}" data-sly-test="${inheritedPageProperties.absoluteParent || inheritedPageProperties.relativeDepth || inheritedPageProperties.parentLabel}" data-sly-use.breadcrumb="com.informa.components.commons.Breadcrumb">
+
+             
+              <ul class="paddingZero" id="breadcrumb1" aria-labelledby="breadcrumblabel">
+<li data-sly-test="${inheritedPageProperties .parentLabel}"><a href="${inheritedPageProperties .parentPath}.html">${inheritedPageProperties .parentLabel}</a>
+                <span class="${inheritedPageProperties .delimiter?'breadCrumbCustomSpace':'breadCrumbArrow'}">${inheritedPageProperties .delimiter}</span>
+                </li>
+                   
+                 <div data-sly-list.trailPage="${breadcrumb.trailPages}" data-sly-unwrap>
+                <li data-sly-test="${inheritedPageProperties .absoluteParent || inheritedPageProperties .relativeDepth }"> 
+				<a data-sly-test="${trailPage.path != currentPage.path}" href="${trailPage.path}.html">${ trailPage.navigationTitle || trailPage.title || trailPage.name }</a>
+                <span data-sly-test="${!trailPageList.last}"class="${inheritedPageProperties .delimiter?'breadCrumbCustomSpace':'breadCrumbArrow'}">${inheritedPageProperties .delimiter}</span>
+		        <!--/* Trail page text (non-link) e.g. when trail page is the current page */-->
+                <span data-sly-test="${trailPage.path == currentPage.path }" class="travel-breadcrumb">${trailPage.navigationTitle || trailPage.title || trailPage.name }</span>
+
+                </li>
+                </div>
+                </ul>
+
+            </div>
+            </nav>
+             <div class="travel-divider"></div>
+ </div>
+
+

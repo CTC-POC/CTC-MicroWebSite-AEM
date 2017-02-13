@@ -1,0 +1,61 @@
+
+<head
+	data-sly-use.clientLib="${'/libs/granite/sightly/templates/clientlib.html'}">
+<!-- clientlibrarymanager -->
+<clientlib data-sly-call="${clientLib.all @ categories=['cq.clientlibrarymanager']}" data-sly-unwrap />
+<div data-sly-include="/libs/cq/cloudserviceconfigs/components/servicelibs/servicelibs.jsp" data-sly-unwrap></div>	
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<meta data-sly-test="${properties.defaulttags}" property="title" content="${inheritedPageProperties.seoTitle @ context ='html'}"/>
+<link rel="shortcut icon" href="${inheritedPageProperties.favicon}" type="image/x-icon"/>
+<div data-sly-use.metaTag="com.informa.components.commons.MetaTag" data-sly-unwrap>
+	<!-- Default tags are loaded -->
+    <meta data-sly-test="${properties.defaulttags}" name="creation_date" content="${metaTag.created @ context='attribute'}"/>
+    <meta data-sly-test="${properties.defaulttags}" name="modified_date" content="${metaTag.lastModified @ context='attribute'}"/>
+<div data-sly-test="${metaTag.hasContent}" data-sly-list.TagList="${metaTag.metaTagsList}" data-sly-unwrap>
+    <meta name="${TagList.metaName}" content="${TagList.metaContent}"/>
+</div>
+<meta name="interest_tag" content="${properties.cq:tags}"/>
+</div>
+    <title>${inheritedPageProperties.seoTitle || currentPage.Title}</title>
+
+<clientlib
+	data-sly-call="${clientLib.all @ categories=['apps.informa.global' ,'apps.informa.globalstyle']}"
+	data-sly-unwrap />
+<includeSidekick
+	data-sly-include="/libs/wcm/core/components/init/init.jsp"
+	data-sly-unwrap />
+<div data-sly-use.clientlibType="${'com.informa.components.commons.model.ClientlibModel' @ designpath=currentDesign}" data-sly-unwrap> 
+<clientlib
+	data-sly-call="${clientLib.all @ categories=clientlibType.type}"
+	data-sly-unwrap />
+</div>
+<!-- target -->
+<script type="text/javascript">
+        if ( !window.CQ_Analytics ) {
+            window.CQ_Analytics = {};
+        }
+        if ( !CQ_Analytics.TestTarget ) {
+            CQ_Analytics.TestTarget = {};
+        }
+        CQ_Analytics.TestTarget.clientCode = 'iirexhibitionslimite';
+</script>
+<script type="text/javascript">
+        CQClientLibraryManager.write([{"p":"/etc/cloudservices/testandtarget/TargetEngine/jcr:content/public/mbox.js","c":[]}],false);
+</script>
+<script type="text/javascript" src="/etc/clientlibs/foundation/testandtarget/util.js"></script>
+<script type="text/javascript" src="/etc/clientlibs/foundation/testandtarget/init.js"></script>
+
+<script src='https://www.google.com/recaptcha/api.js'></script>
+<script
+	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA3LTSOKMBdBU7cM91cxuO3OUccJQOBv4E"
+	type="text/javascript"></script>
+<input type="hidden" value = "Informa-Platform-${inheritedPageProperties.eventEditionCode}" id = "cookiePolicyName"/>
+	<div data-sly-test="${!inheritedPageProperties.hideCookiePolicy}" data-sly-unwrap>
+		<script type="text/javascript" id="cookiebanner"
+		      src="/etc/designs/informa/global/clientlibs/js/eucookiebanner.js"     
+		      data-message="${inheritedPageProperties.cookiePolicy}" data-close-text="${inheritedPageProperties.buttonText}">
+		  </script>
+	<div>
+</head>

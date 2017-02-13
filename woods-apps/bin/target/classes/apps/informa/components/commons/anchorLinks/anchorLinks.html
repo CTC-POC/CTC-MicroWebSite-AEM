@@ -1,0 +1,38 @@
+<!--/*
+
+     Informa
+	_______________________
+
+	Anchor links  component.
+
+*/-->
+<div data-sly-test="${wcmmode.edit}" data-emptytext="Anchor links" class="cq-placeholder"></div>
+<div id="AnchorTop_${currentNode.name}"></div>
+<div class=" tab-collapse-nav-container-anchor ${properties.spacingstylestop} ${properties.spacingstylesbottom}" id="AnchorLink" data-sly-use.tabPanel="com.informa.components.commons.Multifield">
+            <ul id="myTabAnchorLink1_${currentNode.name}" class="nav nav-tabs tab-collapse-nav-tabs-anchor" data-sly-list.tabs="${tabPanel.childList}">
+			  <li class="anchorActive ${tabsList.first?'active':''}"><a href="#anchor${tabsList.count}_${currentNode.name}" data-toggle="tab1"><span class="tab-collapse-tab-title-anchor">${tabs.title}</span></a>
+                </li>
+			</ul>
+			<div data-sly-list.tabs="${tabPanel.childList}">
+               <div class="anchor-section-wrapper">
+                	<div class="row custom-row-anchor" id="anchor${tabsList.count}_${currentNode.name}">
+
+                    	<div id="readMore${tabsList.count}" class="read-more-data">
+                    		<div class="col-md-12 col-sm-12 col-xs-12 ${properties.spacingstylestop} ${properties.spacingstylesbottom}">
+                                <div data-sly-test.tabParsys="${'par-tab-{0}' @ format=[tabsList.index]}" data-sly-resource="${tabParsys @resourceType='foundation/components/parsys'}"></div>
+                                </div>
+                  			</div>
+               			</div>
+			  		 </div> 
+
+
+               <div class="row row-divider-anchor">
+				<div class="col-md-12">
+					 <div class="back-to-top pull-right news-back-top">
+                    	<a href="#AnchorTop_${currentNode.name}"> Top <img src="/etc/designs/informa/globalstyle/clientlibs/images/Top_arrow.png" alt= "Back-to-Top" title="Back to Top">
+                        </a>
+               		 </div>
+            	</div>
+               </div>
+ </div>
+			</div>

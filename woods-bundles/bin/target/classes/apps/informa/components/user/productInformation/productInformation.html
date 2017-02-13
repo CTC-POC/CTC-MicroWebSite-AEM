@@ -1,0 +1,74 @@
+<div data-sly-test="${wcmmode.edit}" data-emptytext="Registration Page"
+	class="cq-placeholder"></div>
+    <!DOCTYPE html>
+
+
+<!---Account Information--------------->
+    <div class="container-fluid">
+	<div class="container personalization ">
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12  signup-personalization paddingzeropx">
+				<div class="panel panel-brown margin-bottom-40">
+					<div class="panel-body">
+    					<div id="horizontalTab" class="sign-up-tab">
+
+
+									<div>
+										<form id="signup-form-Account-Information" method="post" role="form" class="form-horizontal" action="#">
+											<div class="form-group margin-top-zero">
+												<label  class="col-sm-12  col-md-4 col-lg-4 control-label signupsub-title">${properties.secretQuestion || 'Secret Questions' }</label>
+											</div>
+											<div class="form-group margin-top-zero">
+												<label  for="signupquestion" class="col-sm-12 col-md-2 col-lg-2 control-label">${properties.question || 'Question' }</label>
+												<div class="col-sm-12  col-md-4 col-lg-4 calendar-icon">
+													<select name="signupquestion" id="signupquestion" class="form-control">
+														<option value="">Select the question</option>
+														<option value="question01">question01</option>
+														<option value="question02">question02</option>
+													</select>
+												</div>
+											</div>
+											<div class="form-group">
+												<label for="signupAnswer"  class="col-sm-12 col-md-2 col-lg-2 control-label">${properties.answer || 'Answer' } <span class="asterisk-sign-clr">*</span></label>
+												<div class="col-sm-12  col-md-4 col-lg-4">
+													<input type="text" name="signupAnswer" class="form-control" id="signupAnswer"  aria-required="true" >
+												</div>
+											</div>
+											<div class="form-group ">
+												<label  class="col-sm-12  col-md-4 col-lg-4 control-label signupsub-title">${properties.setPassword || 'Set Password' }</label>
+											</div>
+											<div class="form-group">
+												<label for="signupPassword" class="col-sm-12 col-md-2 col-lg-2 control-label">${properties.password || 'Password' } <span class="asterisk-sign-clr">*</span></label>
+												<div class="col-sm-12  col-md-4 col-lg-4">
+													<input type="password" name="password" class="form-control"  id="signupPassword" aria-required="true" >
+													<span class="glyphicon glyphicon-eye-open eyespan"></span>
+												</div>
+											</div>
+											<div class="form-group">
+												<label for="signupConfirmPassword" class="col-sm-12 col-md-2 col-lg-2 control-label">${properties.confirmPassword || 'Confirm Password' } <span class="asterisk-sign-clr">*</span></label>
+												<div class="col-sm-12  col-md-4 col-lg-4">
+													<input type="password" name="signupConfirmPassword" class="form-control"  id="signupConfirmPassword"  aria-required="true">
+													<span class="glyphicon glyphicon-eye-open eyespan"></span>
+												</div>
+											</div>
+											<div class="form-group">
+													<div data-sly-resource="${'captcha' @ resourceType='/apps/informa/components/form/formCaptcha'}" data-sly-unwrap></div>
+											</div>
+											<div class="form-group">
+												<div class="col-xs-4 col-sm-8 col-md-2 col-lg-offset-2 col-lg-2">
+													<button type="button" name="back" id="btnBack-3" class="btn-u btn-u-brown col-xs-12">${properties.back || 'Back' }</button></div>
+												<div class="col-xs-4 col-lg-2 col-md-2 col-sm-4">
+													<button type="button"  name="signUp" id="signUp" >${properties.signUp || 'SignUp' }</button>
+												</div>
+											</div>
+                                            </form>
+                                      				</div>
+                                            	</div>
+                                            </div>
+                                            </div>
+                                            </div>
+                                            </div>
+                                            </div>
+                                            </div>
+
+

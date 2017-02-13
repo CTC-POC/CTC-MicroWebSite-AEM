@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Dialog"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <tab
+                jcr:primaryType="cq:Widget"
+                title="Sponsor Container"
+                xtype="panel">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <imagePanel
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Image Panel"
+                        name="./multi"
+                        xtype="mtmulticompositefield">
+                        <fieldConfigs jcr:primaryType="cq:WidgetCollection">
+                            <imagepath
+                                jcr:primaryType="cq:Widget"
+                                fieldDescription="Select Image from DAM"
+                                fieldLabel="Image Path"
+                                name="./imagePath"
+                                rootPath="{Path}/content/dam"
+                                xtype="pathfield"/>
+                            <imagelink
+                                jcr:primaryType="cq:Widget"
+                                fieldDescription="Give link to Image"
+                                fieldLabel="Image Link"
+                                name="./linkPath"
+                                xtype="pathfield"/>
+                            <alttext
+                                jcr:primaryType="cq:Widget"
+                                fieldDescription="Provide a textual alternative of the content and function of the image"
+                                fieldLabel="Image Alt Text"
+                                name="./altText"
+                                xtype="textfield"/>
+                        </fieldConfigs>
+                    </imagePanel>
+                </items>
+            </tab>
+            <stylesTab
+                jcr:primaryType="cq:Widget"
+                xtype="componentstyles"/>
+        </items>
+    </items>
+</jcr:root>

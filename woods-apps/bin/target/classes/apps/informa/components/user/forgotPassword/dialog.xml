@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="Sign In"
+    xtype="panel">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <emailID
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Email ID Label"
+            name="./emailID"
+            xtype="textfield"/>
+        <buttonLabel
+            jcr:primaryType="cq:Widget"
+            sling:resourceType="granite/ui/components/foundation/form/textarea"
+            fieldLabel="ButtonLabel"
+            name="./buttonLabel"/>
+    </items>
+</jcr:root>

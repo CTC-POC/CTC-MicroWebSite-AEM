@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="Top navigation"
+    width="600"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <generalTab
+                jcr:primaryType="cq:Panel"
+                title="General"
+                xtype="panel">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <absParent
+                        jcr:primaryType="cq:Widget"
+                        allowDecimals="false"
+                        fieldDescription="(eg: 1 for /content/site)"
+                        fieldLabel="Parent Level (absolute)"
+                        minValue="1"
+                        name="./absParent"
+                        xtype="numberfield"/>
+                    <pageLevelsToDisplay
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Page Levels To Display"
+                        name="./pageLevelsToDisplay"
+                        type="select"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <one
+                                jcr:primaryType="nt:unstructured"
+                                text="1"
+                                value="1"/>
+                            <two
+                                jcr:primaryType="nt:unstructured"
+                                text="2"
+                                value="2"/>
+                            <three
+                                jcr:primaryType="nt:unstructured"
+                                text="3"
+                                value="3"/>
+                        </options>
+                    </pageLevelsToDisplay>
+                    <lablename
+                        jcr:primaryType="nt:unstructured"
+                        allowBlank="true"
+                        fieldLabel="Lable Name"
+                        name="./lablename"
+                        xtype="pathfield"/>
+                    <registerPageLink
+                        jcr:primaryType="nt:unstructured"
+                        allowBlank="true"
+                        fieldLabel="Register page link"
+                        name="./registerPageLink"
+                        suffix=".html"
+                        xtype="pathfield"/>
+                </items>
+            </generalTab>
+            <stylesTab
+                jcr:primaryType="cq:Widget"
+                xtype="componentstyles"/>
+        </items>
+    </items>
+</jcr:root>

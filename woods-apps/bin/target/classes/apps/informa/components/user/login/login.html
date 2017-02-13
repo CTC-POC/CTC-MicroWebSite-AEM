@@ -1,0 +1,112 @@
+	<div class="container-fluid">
+		<!-- form breadcrumb start here -->
+		
+		<!-- form Start -->
+		<div class="container personalization ">
+			<div class="row">
+			 <label for="message" style="color:#FF0000;padding:0px; margin:0px; padding-left:2px;"></label>
+				<div class="col-md-6 sigin">
+					<div class="panel panel-brown margin-bottom-40">
+						<div class="panel-heading">
+							<h3 class="panel-title">${properties.title || 'One Sign In for all Informa events' }</h3>
+						</div>
+						<div class="panel-body">
+							<form id="signin-form" method="post" role="form" class="form-horizontal" action="#">
+								<div class="form-group">
+									<label for="email" class="col-lg-3 control-label">${properties.email || 'Email' }<span class="asterisk-sign-clr">*</span></label>
+									<div class="col-lg-9">
+										<input type="email" name="email" class="form-control" aria-required="true" id="email" >
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="sign-password" class="col-lg-3 control-label">${properties.password || 'Password' }<span class="asterisk-sign-clr">*</span></label>
+									<div class="col-lg-9">
+										<input type="password" name="password" class="form-control" aria-required="true"  id="sign-password">
+										<span class="glyphicon glyphicon-eye-open eyespan"></span>
+										
+									</div>
+
+								</div>
+							<div class="form-group">
+									<div class="col-lg-offset-3 col-lg-9">
+										<div class="checkbox">
+
+											<input id="option" type="checkbox" name="field" value=" ">
+											<label for="option"><span><span></span></span>${properties.rememberMeLabel || 'Remember Me' }</label>
+
+										</div>
+									</div>
+								</div>
+						<div class="form-group">
+									<div class="col-lg-offset-3 col-lg-4 sign-button">
+                   					 <button class="btn-u btn-u-brown pull-left signup-not-allowed" type="submit"  id="submitsigIn">${properties.buttonLabel || 'Sign In' }</button>
+
+									</div>
+                                    <div class="col-lg-2 col-md-2 col-sm-4 loader-pic hide" id="loader-pic">
+										<span class="row"><p class="fa fa-cog fa-spin fa-1x"></p>&nbsp;Loading ...</span>
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="col-lg-offset-3 col-lg-9 forgotpswddiv ">
+                					 <a href="${properties.forgotpasswordUrl}.html" class="forgotpswd">${properties.forgotPasswordLabel || 'Forgot Password?'}</a>
+									</div>
+								</div>
+							</form>
+
+						</div>
+					</div>
+				<div class="sigin-with">
+					<h4> ${properties.socialTitle || 'Sign In with'}</h4>
+						<div data-sly-include="sociallogin.jsp">
+
+				</div>
+				</div>
+			</div>
+			<div class="col-md-6 sigin-inform signupForm">
+				<div class="panel panel-brown margin-bottom-40">
+					<div class="panel-heading">
+						<h3 class="panel-title">${properties.shortTitle || 'Are you new to Informa?'}</h3>
+						<i class="fa fa-angle-right fa-2x fa-arrow-first" aria-hidden="true"></i>
+						<i class="fa fa-angle-right fa-2x fa-arrow-second" aria-hidden="true"></i>
+					</div>
+					<div class="panel-body">
+						<div class="inner-content">
+							<p>${properties.longTitle || 'You are missing out a lot of exciting events.By signing up, you can follow our events and get notified about them.'}</p>
+						</div>	
+						<div class="col-lg-12 form-group siginup-btn">
+                                <button type="submit" id="signupButton" name="submit" class="btn-u btn-u-brown ">${properties.signupLabel || 'Sign Up'}</button>
+                            <input type="hidden" id="unverifiedStatusTitle" value="${properties.unverifiedStatusTitle || 'Account not activated,Please activate the Email'}"/>
+                 			<input type="hidden" id="emailActiveMain" value="${properties.emailActiveMain || 'Activation email has been sent to '}"/>
+                 			<input type="hidden" id="emailActiveSub" value="${properties.emailActiveSub || ' Please click on the link to activate your account.'}"/>
+                            <input type="hidden" id="invalidCredentialsTitle" value="${properties.invalidCredentialsTitle || 'Please enter valid Credentials'}"/>
+                 			<input type="hidden" id="invalidCredentialsMsg" value="${properties.invalidCredentialsMsg || 'EmailId or Password is incorrect'}"/>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+         <div id="signinButtonDialog"
+                data-redirectpage=" ${properties.landingPage}"></div>
+          <div id="signupButtonDialog"
+                data-signupredirectpage="${properties.signupUrl}"></div>
+		   <!-- Form End -->
+	</div>
+     <!-- modal -->                           
+	<div id="signinPageModal" class="modal fade modalCustomCss" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content panel-body">
+                <div class="modal-header">
+                    <button aria-hidden="true" data-dismiss="modal" class="close" type="button"><i class="fa fa-times fa-1x"></i></button>
+                    <h2 id="myLargeModalLabel2" class="modal-title"></h2>
+                </div>
+                <div class="modal-body">
+                    <p></p>
+
+                    <button class="btn buttomCommonCss" id="okbtn" aria-hidden="true" data-dismiss="modal">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+	<!-- end modal -->
+</div>

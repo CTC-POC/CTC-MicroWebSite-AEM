@@ -1,0 +1,36 @@
+<!--/*
+
+     Informa
+	_______________________
+
+     List View Variant-1 Component.
+
+*/-->
+<div data-sly-test="${wcmmode.edit}" data-emptytext="List - Title Only"	class="cq-placeholder"></div>
+   <div class="row" data-sly-use.listView="com.informa.components.commons.Multifield"
+        		data-sly-test="${listView.hasContent}">
+		<div class="firstrow ${properties.spacingstylestop} ${properties.spacingstylesbottom}">
+			<div class="col-md-12 col-sm-12 ">
+				<div class="tab-containertwo">
+					<div class="heading">
+                        <h2 class="heading" data-sly-test="${properties.listTitle}">${properties.listTitle}</h2>
+					</div>
+					<div class="tab-content ${properties.listTitle?'':'listViewTopSpace'}">
+						<div id="TabOne" class="tab-pane fade in active">
+							<ul class="tabList" data-sly-list.lviews="${listView.childList}">
+								<li class="Lorem"><span
+									class="${properties.column1width ? properties.column1width : 'col-md-3 col-sm-12 col-xs-12'} item"  data-sly-test="${lviews.title}">
+									<a class="${lviews.linkPath?'listViewAnchor':'hyperLinkListView'}" href="${lviews.linkPath}" target="${lviews.openInNewWindow==true && '_blank'}"> ${lviews.title @ context='html'} </a></span> <span
+									class="${properties.columnsplitwidth ? properties.columnsplitwidth : 'col-md-1 col-sm-1 col-xs-6 hidden-xs'} image"><img
+										src="/etc/designs/informa/globalstyle/clientlibs/images/faq1.png" alt="" /></span><span
+									class="${properties.column2width ? properties.column2width : 'col-md-8 col-sm-8 col-xs-12'}" data-sly-test="${lviews.text}"> ${ lviews.text @ context='html'} </span></li>
+							</ul>
+						</div>
+						<div id="TabTwo" class="tab-pane fade">
+							<p>tab 2</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>

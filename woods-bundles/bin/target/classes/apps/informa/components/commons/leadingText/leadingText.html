@@ -1,0 +1,97 @@
+<!--/*
+
+     Informa
+	_______________________
+	
+     Leading text component.
+
+*/-->
+<div data-sly-test="${wcmmode.edit}" data-emptytext="Text Highlight - Image, Title, Desc, Quote"
+	class="cq-placeholder"></div>
+
+<div class="informa-leading-text col-md-12 leading-panel ${properties.spacingstylestop} ${properties.spacingstylesbottom}"
+	data-sly-test="${properties.variation=='LT2'}">
+	<div class="Consecteturtitle">
+		<div class="informa-leading-text-variation-one-header"
+			data-sly-test="${properties.title}">${properties.title}</div>
+	</div>
+	<p class="informa-leading-text-variation-one-content text">
+	<div data-sly-test="${properties.description}">${properties.description
+		@ context='html'}</div>
+	</p>
+	<div
+		class="informa-leading-text-variation-one-content-highlight-section col-md-12 testimonialContainer"
+		data-sly-test="${properties.flag =='true'}">
+		<div class="row">
+			<div
+				class="informa-leading-text-variation-one-content-image col-md-12">
+				<div class="img-responsive"
+					data-sly-resource="${'image' @ resourceType='wcm/foundation/components/image', wcmmode='disabled'}"></div>
+			</div>
+			<div class="col-md-12">
+				<div
+					class="informa-leading-text-variation-one-content-title Testimonialhead"
+					data-sly-test="${properties.testimonialtitle}">${properties.testimonialtitle}</div>
+				<p
+					class="informa-leading-text-variation-one-content-highlight  testimonialp testimonialTextSpacing">
+					<em data-sly-test="${properties.quote}">${properties.quote @
+						context='html'} </em>
+				</p>
+				<p class="informa-leading-text-variation-one-footer quote"
+					data-sly-test="${properties.author}">${properties.author}</p>
+			</div>
+		</div>
+	</div>
+	<div data-sly-test="${properties.flag !='true'}">
+		<div class="row">
+			<div
+				class="informa-leading-text-variation-one-alternate-content-image col-md-6">
+				<div class="img-responsive"
+					data-sly-resource="${'image' @ resourceType='wcm/foundation/components/image', wcmmode='disabled'}"></div>
+			</div>
+			<div class="col-md-6 setting">
+				<div
+					class="informa-leading-text-variation-one-alternate-content-title Testimonialhead"
+					data-sly-test="${properties.testimonialtitle}">${properties.testimonialtitle}</div>
+				<p
+					class="informa-leading-text-variation-one-alternate-content-highlight testimonialp">
+					<em data-sly-test="${properties.quote}">${properties.quote @
+						context='html'} </em>
+				</p>
+				<p class="informa-leading-text-variation-one-alternate-footer quote"
+					data-sly-test="${properties.author}">${properties.author}</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="informa-leading-text-variation-two row leading-paneltext ${properties.spacingstylestop} ${properties.spacingstylesbottom}"
+	data-sly-test="${properties.variation=='LT1'}">
+	<div class="col-md-12">
+		<div class="panel2  ">
+			<div
+				class="informa-leading-text-variation-two-text-content col-md-12 text2">
+				<div class="textCenter" data-sly-test="${properties.description}">${properties.description
+					@ context='html'}</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div
+	class="informa-leading-text-variation-three col-md-12 leading-testimonial ${properties.spacingstylestop} ${properties.spacingstylesbottom}"
+	data-sly-test="${properties.variation=='LT3'}">
+	<div
+		class="informa-leading-text-variation-three-title leadrightpanelhead"
+		data-sly-test="${properties.testimonialtitle}">${properties.testimonialtitle}</div>
+	<div class="wrapper">
+		<p
+			class="informa-leading-text-variation-three-content-highlight leadrightpaneltxt">
+			<em data-sly-test="${properties.quote}"> ${properties.quote @
+				context='html'} </em>
+		</p>
+		<p
+			class="informa-leading-text-variation-three-footer leadrightpanelquote"
+			data-sly-test="${properties.author}">${properties.author}</p>
+	</div>
+</div>

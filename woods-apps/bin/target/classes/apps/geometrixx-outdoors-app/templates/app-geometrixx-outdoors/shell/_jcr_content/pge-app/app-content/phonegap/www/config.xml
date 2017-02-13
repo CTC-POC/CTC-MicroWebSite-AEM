@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.adobe.cq.mobile.geometrixx.outdoorsapp" version="1.0.0" xmlns="http://www.w3.org/ns/widgets"
+		xmlns:gap="http://phonegap.com/ns/1.0">
+
+	<name>Geometrixx</name>
+
+	<author href="http://adobe.com">
+		AEM Mobile
+	</author>
+
+	<content src="content/phonegap/geometrixx-outdoors/en.html"/>
+
+	<preference name="phonegap-version" value="cli-5.2.0" />
+
+	<!-- Force the Android build to use Gradle -->
+	<preference name="android-build-tool" value="gradle" />
+	<preference name="UIWebViewBounce" value="false"/>
+	<preference name="DisallowOverscroll" value="true"/>
+	<preference name="orientation" value="default"/>
+	<preference name="target-device" value="universal"/>
+	<preference name="fullscreen" value="false"/>
+	<preference name="webviewbounce" value="false"/>
+	<preference name="prerendered-icon" value="true"/>
+	<preference name="stay-in-webview" value="false"/>
+	<preference name="ios-statusbarstyle" value="black-opaque"/>
+	<preference name="detect-data-types" value="true"/>
+	<preference name="exit-on-suspend" value="false"/>
+	<preference name="show-splash-screen-spinner" value="true"/>
+	<preference name="auto-hide-splash-screen" value="false"/>
+	<preference name="disable-cursor" value="false"/>
+	<preference name="android-installLocation" value="auto"/>
+	<preference name="SplashScreen" value="screen"/>
+	<preference name="AutoHideSplashScreen" value="false"/>
+
+	<!-- Status bar -->
+	<preference name="StatusBarOverlaysWebView" value="false"/>
+	<preference name="StatusBarStyle" value="default"/>
+
+	<!-- File preferences -->
+	<preference name="iosPersistentFileLocation" value="Library"/>
+	<preference name="AndroidPersistentFileLocation" value="Internal"/>
+
+	<icon fileReference="/content/dam/geometrixx-outdoors/app/icons/icon.png" src="icon.png"/>
+	<access origin="*"/>
+
+	<!-- Plugins -->
+	<plugin name="cordova-plugin-whitelist" spec="1.2.0" />
+	<plugin name="cordova-plugin-file" spec="3.0.0" />
+	<plugin name="cordova-plugin-file-transfer" spec="1.3.0" />
+	<plugin name="cordova-plugin-device" spec="1.1.0" />
+	<plugin name="cordova-plugin-geolocation" spec="1.0.1" />
+	<plugin name="cordova-plugin-network-information" spec="1.1.0" />
+	<plugin name="cordova-plugin-console" spec="1.0.2" />
+	<plugin name="cordova-plugin-dialogs" spec="1.2.0" />
+	<plugin name="cordova-plugin-inappbrowser" spec="1.1.1" />
+	<plugin name="phonegap-plugin-contentsync" spec="1.2.2" />
+	<plugin name="cordova-plugin-splashscreen" spec="3.0.0" />
+	<plugin name="cordova-plugin-statusbar" spec="2.0.0" />
+	<plugin name="adobe-mobile-services" spec="4.7.0" />
+	<plugin name="com.telerik.plugins.nativepagetransitions" spec="0.5.7" />
+
+	<!-- Platforms -->
+	<gap:platform name="ios"/>
+	<gap:platform name="android"/>
+</widget>

@@ -1,0 +1,28 @@
+<div class="top-margin"></div>
+<div class="container" >
+   <div class="registration">
+		<div class="InformaBookAStandForm InformaBookAStandForm-form-main-fo1">
+            <div class="BookAStandFormOne BookAStandFormOneform-alignments-fo1">
+                <div class=" row form-horizontal registration-form" >
+                    <div class="col-sm-12">								
+                        <h1>${properties.title}</h1>
+
+<!-- no payment URN value at thank you page-->
+                        <p id="uRNValue"></p>
+
+<!-- After payment values coming in thank you page-->
+                        <p id="uRNPayment"></p>
+ 						<p id="emailID"></p>
+                        <p id="transactionID"></p>
+
+
+<p class="" data-sly-test="${properties.description1}">${properties.description1 @ context='html'}<a href="javascript:void(0)" id="successEmail"></a></p>
+<p class="" data-sly-test="${properties.description2}">${properties.description2 @ context='html'}</p>
+<p id="quickSignUpMessage" ></p>
+					</div>
+				</div>
+              </div>
+          </div>
+
+         </div>
+   </div>

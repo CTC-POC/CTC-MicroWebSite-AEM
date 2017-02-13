@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:TabPanel">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <basic
+            jcr:primaryType="nt:unstructured"
+            title="Badge Mapping"
+            xtype="panel">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <moderatorGroup
+                    jcr:primaryType="cq:Widget"
+                    fieldDescription="Path to moderator group to use moderator badge on"
+                    fieldLabel="Moderator Group"
+                    name="./moderatorGroup"
+                    rootPath="/home/groups"
+                    xtype="pathfield"/>
+                <targets
+                    jcr:primaryType="cq:Widget"
+                    fieldDescription="Map scoring segment pages to badges"
+                    fieldLabel="Segment - Badge"
+                    name="./mappings"
+                    xtype="multifield">
+                    <fieldConfig
+                        jcr:primaryType="nt:unstructured"
+                        xtype="badgemapping"/>
+                </targets>
+            </items>
+        </basic>
+    </items>
+</jcr:root>

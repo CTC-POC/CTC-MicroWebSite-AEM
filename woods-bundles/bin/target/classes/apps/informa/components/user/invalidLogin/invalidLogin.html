@@ -1,0 +1,67 @@
+<html>
+
+    <head data-sly-use.clientLib="${'/libs/granite/sightly/templates/clientlib.html'}">
+			<clientlib data-sly-call="${clientLib.all @ categories=['signuplib']}" data-sly-unwrap/>
+		</head>
+		<body>
+	<div class="overlay hidden-xs"></div>      
+	<div class="container-fluid">
+		<div class="container" style="margin-bottom:25px;">
+			<div class="registrationTabs" style="width: 821px;">
+		  <!-- Form FO2 Starts Here -->
+           <form method="post" action="/content/data/informa/servlet/informaVisitor">
+           <input type="hidden" name="action" value="login"/>
+              <h4 style="color:red;"> Invalid Email Id or Password</h4>
+
+				<div class="form-main-fo2">
+					<div class="form-alignments-fo2">
+						<h3 class="form-fo2-title">Login</h3>
+						<div class="row form-fo2-contents">
+							<div class="row">
+								<div class="col-xs-12 col-sm-6 form-group">
+									<div class="row fo2-alg">
+										<div class="col-xs-12 col-sm-4 form-group">
+										   <label class="control-label forms-title-color-fo form-filedfirst-fo2-label col-md-offset-1 fo2PwdMargn">${properties.email}<span class="asterisk-sign-clr">*</span></label>
+										</div>
+										<div class="col-xs-12 col-sm-8 paddingZero">
+
+                                            <input required id="email" name="email" type="text" value="" style="text-align:left;" class="form-control fo1imputsright" /><br/>
+										</div>
+									</div>
+									<div class="row fo2-alg">
+										<div class="col-xs-12 col-sm-4 form-group">
+										   <label class="control-label forms-title-color-fo form-filedfirst-fo2-label col-md-offset-1 fo2PwdMargn">${properties.password}<span class="asterisk-sign-clr">*</span></label>
+										</div>
+										<div class="col-xs-12 col-sm-8 paddingZero">
+                                            <input required id="password" name="password" type="password" style="text-align:left;" value="" class="form-control fo1imputsright" />
+										</div>
+									</div>
+								</div>		
+	<div class="row fo2-buttons">
+    <div class="col-xs-12 col-sm-8 col-xs-8 form-group col-md-offset-1 col-sm-offset-1 paddingZero" style="margin-left:93px;">
+        <div class="col-md-4 col-sm-5 col-xs-10 paddingZero">
+            <div class="form-group form-fo2-next">
+			<input type="submit" style="margin-left:30px; paddind-right:26px;" class="btnnew" value="${properties.buttonLabel || 'Submit' }" name="submit" id="submit">
+            </div>
+        </div>
+       <div data-sly-include="sociallogin.jsp"></div> 
+    </div> 
+	<br/><br/>
+	</div>
+</div>	
+</div>
+</div>
+
+    <div class="col-xs-12 col-sm-8 col-xs-8 form-group col-md-offset-1 col-sm-offset-1 paddingZero">
+        <div class="col-md-3 col-sm-5 col-xs-10 paddingZero">
+            <div class="form-group form-fo2-next" style="margin-left:33px; width:500px;">
+    	 <a style="text-decoration:underline; color:#337ab7 !important;" href="${properties.forgotpasswordUrl}.html">${properties.forgotPasswordLabel}</a> <span>|</span>
+        <a style="text-decoration:underline; color:#337ab7 !important;" href="${properties.signupUrl}.html">${properties.signupLabel}</a>
+         <div id="loginDialog" data-redirectpage="${properties.landingPage}"></div>
+          <!-- Form FO2 ends Here -->
+          </div></div></div>
+        </form></div>
+		</div>       
+	</div>
+	</body>
+</html>

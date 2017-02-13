@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    jcr:title="Social Links"
+    width="800"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <sociallinks
+                jcr:primaryType="cq:Widget"
+                title="Social  Links"
+                xtype="panel">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <links
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Social Share Links"
+                        name="./links"
+                        xtype="mtmulticompositefield">
+                        <fieldConfigs jcr:primaryType="cq:WidgetCollection">
+                            <type
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="Type"
+                                name="./type"
+                                type="select"
+                                xtype="selection">
+                                <options jcr:primaryType="cq:WidgetCollection">
+                                    <facebook
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Facebook"
+                                        value="facebookIcon"/>
+                                    <twitter
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Twitter"
+                                        value="twitterIcon"/>
+                                    <linkedin
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Linkedin"
+                                        value="linkedinIcon"/>
+                                    <instagram
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Instagram"
+                                        value="instagramIcon"/>
+                                    <pinterest
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Pinterest"
+                                        value="pinterestIcon"/>
+                                    <youtube
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Youtube"
+                                        value="youtubeIcon"/>
+                                </options>
+                            </type>
+                            <url
+                                jcr:primaryType="cq:Widget"
+                                allowBlank="true"
+                                fieldLabel=" URL"
+                                name="./url"
+                                width="300"
+                                xtype="textfield"/>
+                            <openInNewWindow
+                                jcr:primaryType="cq:Widget"
+                                boxLabel="Open In New Window"
+                                name="./openInNewWindow"
+                                type="checkbox"
+                                xtype="selection"/>
+                        </fieldConfigs>
+                    </links>
+                </items>
+            </sociallinks>
+        </items>
+    </items>
+</jcr:root>

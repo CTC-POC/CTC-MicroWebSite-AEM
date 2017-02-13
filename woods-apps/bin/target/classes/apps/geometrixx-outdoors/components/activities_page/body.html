@@ -1,0 +1,47 @@
+<!--/*
+
+  ADOBE CONFIDENTIAL
+  __________________
+
+   Copyright 2014 Adobe Systems Incorporated
+   All Rights Reserved.
+
+  NOTICE:  All information contained herein is, and remains
+  the property of Adobe Systems Incorporated and its suppliers,
+  if any.  The intellectual and technical concepts contained
+  herein are proprietary to Adobe Systems Incorporated and its
+  suppliers and are protected by trade secret or copyright law.
+  Dissemination of this information or reproduction of this material
+  is strictly forbidden unless prior written permission is obtained
+  from Adobe Systems Incorporated.
+
+*/-->
+    <div data-sly-resource="${'clientcontext' @ resourceType='cq/personalization/components/clientcontext_optimized'}"></div>
+    <div class="page-header-content">
+        <header>
+            <div class="page-systemnav">
+                <div class="sys-nav-wrapper">
+                    <div data-sly-resource="${'search' @ resourceType='geometrixx-outdoors/components/activities_page/search'}" class="search"></div>
+                    <div data-sly-resource="${'userinfo' @ resourceType='geometrixx-outdoors/components/activities_page/userinfo'}" class="userinfo"></div>
+                </div>
+            </div>
+            <div data-sly-resource="${'topnav' @ resourceType='geometrixx-outdoors/components/activities_page/topnav'}" class="topnav"></div>
+        </header>
+    </div>
+    <div id="main" class="page-main">
+        <div class="page-content">
+            <div data-sly-resource="${'breadcrumb' @ resourceType='geometrixx-outdoors/components/activities_page/breadcrumb'}" class="breadcrumb"></div>
+            <div data-sly-resource="${'par' @ resourceType='wcm/foundation/components/parsys'}"></div>
+        </div>
+        <div class="page-footer" sly-use.footer="footer.js">
+            <footer>
+                <nav>
+                    <div data-sly-resource="${'toolbar' @ resourceType='foundation/components/toolbar'}" class="toolbar"></div>
+                </nav>
+                <p class="copyright">&copy; ${"{0} Geometrixx Outdoors. All rights reserved." @ i18n, format=[footer.currentYear]}</p>
+            </footer>
+        </div>
+    </div>
+    <div data-sly-resource="${'timing' @ resourceType='foundation/components/timing'}" data-sly-unwrap></div>
+    <div data-sly-resource="${'cloudservices' @ resourceType='cq/cloudserviceconfigs/components/servicecomponents'}" data-sly-unwrap></div>
+    <div data-sly-include="customfooterlibs.html" data-sly-unwrap/>

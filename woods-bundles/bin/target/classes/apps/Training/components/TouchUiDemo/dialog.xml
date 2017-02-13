@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="Training"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <generalTab
+                jcr:primaryType="cq:Widget"
+                jcr:title="General"
+                xtype="panel">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <pathfield
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Path Field"
+                        name="./pathfield"
+                        xtype="pathfield"/>
+                    <textfield
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Text Field"
+                        name="./textfieldVal"
+                        xtype="textfield"/>
+                    <richtext
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Description"
+                        isRichTextFlag="{Boolean}false"
+                        name="./description"
+                        xtype="richtext">
+                        <rtePlugins jcr:primaryType="nt:unstructured">
+                            <format
+                                jcr:primaryType="nt:unstructured"
+                                features="*"/>
+                            <paraformat
+                                jcr:primaryType="nt:unstructured"
+                                features="*">
+                                <formats jcr:primaryType="cq:WidgetCollection">
+                                    <Paragraph
+                                        jcr:primaryType="nt:unstructured"
+                                        description="Paragraph"
+                                        tag="p"/>
+                                    <heading2
+                                        jcr:primaryType="nt:unstructured"
+                                        description="Heading 2"
+                                        tag="h2"/>
+                                    <heading3
+                                        jcr:primaryType="nt:unstructured"
+                                        description="Heading 3"
+                                        tag="h3"/>
+                                    <heading4
+                                        jcr:primaryType="nt:unstructured"
+                                        description="Heading 4"
+                                        tag="h4"/>
+                                    <heading5
+                                        jcr:primaryType="nt:unstructured"
+                                        description="Heading 5"
+                                        tag="h5"/>
+                                    <heading6
+                                        jcr:primaryType="nt:unstructured"
+                                        description="Heading 6"
+                                        tag="h6"/>
+                                </formats>
+                            </paraformat>
+                            <edit
+                                jcr:primaryType="nt:unstructured"
+                                defaultPasteMode="plaintext"
+                                features="[cut,copy,paste-plaintext]"
+                                stripHtmlTags="{Boolean}true"/>
+                        </rtePlugins>
+                    </richtext>
+                </items>
+            </generalTab>
+        </items>
+    </items>
+</jcr:root>

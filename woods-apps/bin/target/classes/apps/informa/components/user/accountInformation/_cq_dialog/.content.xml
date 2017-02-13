@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Account Information"
+    sling:resourceType="cq/gui/components/authoring/dialog"
+    helpPath="en/cq/current/wcm/default_components.html#Text">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/foundation/container">
+        <layout
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/foundation/layouts/tabs"
+            type="nav"/>
+        <items jcr:primaryType="nt:unstructured">
+            <tab1
+                jcr:primaryType="nt:unstructured"
+                jcr:title="General"
+                sling:resourceType="granite/ui/components/foundation/container">
+                <layout
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"/>
+                <items jcr:primaryType="nt:unstructured">
+                    <columns
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <questionmap
+                                cq:showOnCreate="{Boolean}false"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Secret Question"
+                                sling:resourceType="granite/ui/components/foundation/form/fieldset"/>
+                            <secretQuestion
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldDescription="Label for Secret Question"
+                                fieldLabel="Secret Question Label"
+                                name="./secretQuestion"/>
+                            <question
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldDescription="Label for Question"
+                                fieldLabel="Question Label"
+                                name="./question"/>
+                            <answer
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldDescription="Label for Answer"
+                                fieldLabel="Answer Label"
+                                name="./answer"/>
+                            <reqAnswer
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldDescription="Provide Error message to be displayed if Answer not entered"
+                                fieldLabel="Required Error Message"
+                                name="./reqAnswer"/>
+                            <passwordmap
+                                cq:showOnCreate="{Boolean}false"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Password"
+                                sling:resourceType="granite/ui/components/foundation/form/fieldset"/>
+                            <setPassword
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldDescription="Label for Set Password"
+                                fieldLabel="Set Password Label"
+                                name="./setPassword"/>
+                            <password
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldDescription="Label for Password"
+                                fieldLabel="Password Label"
+                                name="./password"/>
+                            <reqPassword
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldDescription="Provide Error message to be displayed if Password not entered"
+                                fieldLabel="Required Error Message"
+                                name="./reqPassword"/>
+                            <passwordStrength
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldDescription="Provide Error message to be displayed if Password Strength is weak"
+                                fieldLabel="Password Strength Error Message"
+                                name="./passwordStrength"/>
+                            <passwordRule
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textarea"
+                                fieldDescription="Label for Password Rules"
+                                fieldLabel="Password Rules"
+                                name="./passwordRule"/>
+                            <conirmpasswordmap
+                                cq:showOnCreate="{Boolean}false"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Confirm Password"
+                                sling:resourceType="granite/ui/components/foundation/form/fieldset"/>
+                            <confirmPassword
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldDescription="Label for Confirm Password"
+                                fieldLabel="Confirm Password Label"
+                                name="./confirmPassword"/>
+                            <reqConfirmPassword
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldDescription="Provide Error message to be displayed if Confirm Password not entered"
+                                fieldLabel="Required Error Message for Confirm Password"
+                                name="./reqConfirmPassword"/>
+                            <identicalPassword
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldDescription="Provide Error message to be displayed if mismatch in Passwords"
+                                fieldLabel="Required Error Message for Identical Password"
+                                name="./identicalPassword"/>
+                            <linksmap
+                                cq:showOnCreate="{Boolean}false"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Links"
+                                sling:resourceType="granite/ui/components/foundation/form/fieldset"/>
+                            <back
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldDescription="Label for Back Button"
+                                fieldLabel="Back Button Label"
+                                name="./back"/>
+                            <signUp
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldDescription="Label for Signup Button"
+                                fieldLabel="SignUp Button Label"
+                                name="./signUp"/>
+                            <signupLink
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
+                                fieldDescription="Provide the path for the Confirmation page"
+                                fieldLabel="Confirmation Page Path"
+                                name="./signupLink"
+                                required="true"/>
+                        </items>
+                    </columns>
+                </items>
+            </tab1>
+            <tab2
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Secret Questions"
+                sling:resourceType="granite/ui/components/foundation/container">
+                <layout
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"/>
+                <items jcr:primaryType="nt:unstructured">
+                    <columns
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <securityQuestions
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="/libs/granite/ui/components/foundation/form/multifield"
+                                aem-composit-multifield=""
+                                class="full-width"
+                                eaem-nested=""
+                                fieldDescription="Click 'Add Field' to add secret question"
+                                fieldLabel="Secret Question List"
+                                name="./securityQuestions">
+                                <field
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/foundation/form/fieldset"
+                                    eaem-nested=""
+                                    name="./securityQuestions">
+                                    <layout
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resouceType="granite/ui/components/foundation/layouts/fixedcolumns"
+                                        method="absolute"/>
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <column
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/foundation/container">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <securityQuestion
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                                    fieldLabel="Secret Question"
+                                                    name="./securityQuestion"/>
+                                            </items>
+                                        </column>
+                                    </items>
+                                </field>
+                            </securityQuestions>
+                        </items>
+                    </columns>
+                </items>
+            </tab2>
+            <tab3
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Terms&amp;Conditions"
+                sling:resourceType="granite/ui/components/foundation/container">
+                <layout
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"/>
+                <items jcr:primaryType="nt:unstructured">
+                    <columns
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <text
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldDescription="Enter Text here"
+                                fieldLabel="Terms And Condition Text"
+                                name="./text"/>
+                            <label
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldDescription="Select page that should be displayed in the alert/modal window, using the browse button.Note: Do not enter external url"
+                                fieldLabel="Terms And Condition Label"
+                                name="./label"/>
+                            <title
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldDescription="Enter title here"
+                                fieldLabel="Terms And Condition Title"
+                                name="./title"/>
+                            <contentlink
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
+                                fieldDescription="Select page that should be displayed in the alert/modal window, using the browse button.Note: Do not enter external url"
+                                fieldLabel="Link"
+                                name="./linkPath"
+                                required="true"/>
+                        </items>
+                    </columns>
+                </items>
+            </tab3>
+        </items>
+    </content>
+</jcr:root>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    passportExpiration="true"
+    passportIssuedDate="true"
+    passportNumber="true"
+    passportPlaceOfIssue="true">
+    <passportexpiration
+        jcr:created="{Date}2016-08-09T11:06:41.818+05:30"
+        jcr:createdBy="admin"
+        jcr:lastModified="{Date}2016-08-09T11:06:41.818+05:30"
+        jcr:lastModifiedBy="admin"
+        jcr:primaryType="nt:unstructured"
+        sling:resourceSuperType="foundation/components/form/defaults/field"
+        sling:resourceType="informa/components/form/passportExpiration"/>
+    <passportIssueddate
+        jcr:created="{Date}2016-08-09T11:06:41.818+05:30"
+        jcr:createdBy="admin"
+        jcr:lastModified="{Date}2016-08-09T11:06:41.818+05:30"
+        jcr:lastModifiedBy="admin"
+        jcr:primaryType="nt:unstructured"
+        sling:resourceSuperType="foundation/components/form/defaults/field"
+        sling:resourceType="informa/components/form/passportIssuedDate"/>
+    <passportnumber
+        jcr:created="{Date}2016-08-09T11:06:41.818+05:30"
+        jcr:createdBy="admin"
+        jcr:lastModified="{Date}2016-08-09T11:06:41.818+05:30"
+        jcr:lastModifiedBy="admin"
+        jcr:primaryType="nt:unstructured"
+        sling:resourceSuperType="foundation/components/form/defaults/field"
+        sling:resourceType="informa/components/form/passportNumber"/>
+    <passportplaceOfIssue
+        jcr:created="{Date}2016-08-09T11:06:41.818+05:30"
+        jcr:createdBy="admin"
+        jcr:lastModified="{Date}2016-08-09T11:06:41.818+05:30"
+        jcr:lastModifiedBy="admin"
+        jcr:primaryType="nt:unstructured"
+        sling:resourceSuperType="foundation/components/form/defaults/field"
+        sling:resourceType="informa/components/form/passportPlaceOfIssue"/>
+</jcr:root>

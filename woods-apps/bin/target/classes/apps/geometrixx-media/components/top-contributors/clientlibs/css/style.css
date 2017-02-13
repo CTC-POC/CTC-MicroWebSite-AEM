@@ -1,0 +1,78 @@
+
+.diagonal-line-outer {
+	padding: 9px;
+	margin-bottom: 25px;
+	background: url(/etc/designs/geometrixx-media/clientlibs/img/diagonal-lines.png) repeat 0 0;
+}
+.diagonal-line-inner {
+	padding: 15px;
+	background: #e7e7e0;
+}
+
+.contributor-detail .badge {
+	display: inline-block;
+	width: 81px;
+	font-size: 10px;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-align: center;
+	color: #fff;
+}
+
+.top-contributors ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+.top-contributors li {
+	margin-top: 9px;
+	padding-top: 9px;
+	border-top: 1px solid #bfbfbf;
+}
+.top-contributors li:first-child {
+	padding: 0;
+	margin: 0;
+	border: none;
+}
+
+.top-contributors .replies-count {
+	margin: 25px 0 0 0;
+}
+
+.replies-count {
+	text-align: right;
+	margin-right: 2px;
+}
+
+.contributor-detail .bronze {
+	background: #d96f4e;
+}
+.contributor-detail .silver {
+	background: #a8a8a8;
+}
+
+.contributor-detail .gold {
+	background: #ebb607;
+}
+.contributor-detail .moderator {
+	background: #80ae3e;
+}
+
+.contributor-avatar {
+	float: left;
+	width: 75px;
+}
+.contributor-detail {
+	float: left;
+	margin: 5px 0 0 16px;
+}
+.contributor-detail a {
+	font-size: 16px;
+	color: #009cbd;
+}
+.contributor-detail p {
+	font-size: 13px;
+	text-transform: uppercase;
+	color: #999;
+	margin: 0;
+}

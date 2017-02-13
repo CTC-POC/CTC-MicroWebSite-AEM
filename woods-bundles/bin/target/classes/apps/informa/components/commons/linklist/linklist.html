@@ -1,0 +1,19 @@
+<!--/*
+
+     Informa
+	_______________________
+	
+     Link list component.
+
+*/-->
+<div data-sly-use.linkList="com.informa.components.commons.Multifield" data-sly-unwrap>
+<ul class="informa-link-list-items nav navbar-nav ${properties.spacingstylestop} ${properties.spacingstylesbottom}" data-sly-list.link="${linkList.childList}">
+      <li class="informa-link-list-item active" data-sly-test="${link.title && link.linkPath}">
+         <a class="informa-link-list-link" href="${link.linkPath}" target="${link.openInNewWindow==true && '_blank'}">${link.title}
+            <span class="separator" data-sly-test="${!linkList.last}">|</span>
+		 </a>
+	  </li>
+   </ul>
+</div>
+
+<div data-sly-test="${wcmmode.edit}" data-emptytext="Link List"	class="cq-placeholder"></div>

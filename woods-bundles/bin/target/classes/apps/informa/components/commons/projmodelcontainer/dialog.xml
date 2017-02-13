@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="Program Search"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <generalTab
+                jcr:primaryType="cq:Widget"
+                jcr:title="General"
+                xtype="panel">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <projectTitleLabel
+                        jcr:primaryType="nt:unstructured"
+                        fieldDescription="Project Title Label"
+                        fieldLabel="Project Title Label"
+                        name="./projectTitleLabel"
+                        xtype="textfield"/>
+                    <completionDateLabel
+                        jcr:primaryType="nt:unstructured"
+                        fieldDescription="Completion Date Label"
+                        fieldLabel="Completion Date Label"
+                        name="./completionDateLabel"
+                        xtype="textfield"/>
+                    <completionDate
+                        jcr:primaryType="nt:unstructured"
+                        fieldDescription="Completion Date"
+                        fieldLabel="Completion Date"
+                        name="./completionDate"
+                        xtype="textfield"/>
+                </items>
+            </generalTab>
+            <stylesTab
+                jcr:primaryType="cq:Widget"
+                xtype="componentstyles"/>
+        </items>
+    </items>
+</jcr:root>

@@ -1,0 +1,53 @@
+<!--/*
+
+     Informa
+	_______________________
+	
+	Content tile component.
+
+*/-->
+<!--event overview starts-->
+<div data-sly-test="${wcmmode.edit}" data-emptytext="Content Tile"
+	class="cq-placeholder"></div>
+<div
+	data-sly-use.contentTile="com.informa.components.commons.Multifield">
+	<!-- Event Overview Section Starts -->
+	<div class="section clearfix" data-sly-test="${properties.title}">
+		<div class="col-md-12 ">
+			<div class="row event-overview ">
+				<div class="col-md-4 col-sm-12 event-overview-col-img-custom">
+					<div class="img-responsive"
+						data-sly-resource="${'image' @ resourceType='wcm/foundation/components/image', wcmmode='disabled'}"></div>
+
+				</div>
+				<div class="col-md-8 col-xs-12 event-overview-col-desc-custom ${properties.spacingstylestop} ${properties.spacingstylesbottom} ">
+					<div class="row event-overview-description-row ">
+						<h1 class="event-overview-title">${properties.title}</h1>
+
+						<p class="event-overview-paragraph"
+							data-sly-test="${properties.text}">${properties.text @
+							context='html'}</p>
+					</div>
+					<div class="row event-overview-btn"
+						data-sly-list.link="${contentTile.childList}">
+						<div class="col-md-6 col-xs-12 event-overview-btn-col">
+							<a href="${link.linkPath}"
+								target="${link.openInNewWindow==true && '_blank'}"
+								class="btn btn-primary btn-lg btn-custom" role="button">
+								<div class=" event-overview-btn-text-padding">
+									<h4 class="event-overview-btn-title text-left">${link.title}</h4>
+								</div>
+								<div class="event-overview-btn-icon-padding">
+									<img class="img-responsive"
+										src="${currentDesign.path}/clientlibs/images/arrow1.png"
+										alt="event-overview">
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+				<!-- Event Overview Section end -->
+			</div>
+		</div>
+	</div>
+</div>

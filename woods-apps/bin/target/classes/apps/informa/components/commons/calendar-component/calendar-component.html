@@ -1,0 +1,45 @@
+<!--/*
+                Informa
+                _______________________
+
+                Calendar component.
+*/--> 
+<div id="properties" class="eventDateContainer ${properties.spacingstylestop} ${properties.spacingstylesbottom}"
+	data-sly-use.calendar="com.informa.components.commons.CalendarComponent"
+    data-sly-test="${calendar.hasContent}"
+    data-sly-attribute.start="${inheritedPageProperties.startTime}"
+    data-sly-attribute.end="${inheritedPageProperties.endTime}"
+    data-sly-attribute.subject="${ properties.fileName ? properties.fileName : calendar.pageTitle}"
+	data-sly-attribute.startTime="${calendar.startTime }"
+	data-sly-attribute.endTime="${calendar.endTime }"
+	data-sly-attribute.startDate="${calendar.startDate}"
+	data-sly-attribute.endDate="${calendar.endDate}"
+	data-sly-attribute.title="${calendar.pageTitle}"
+	data-sly-attribute.venue="${properties.venue}"
+	data-sly-attribute.fileName="${properties.fileName}"
+	data-sly-attribute.venueAddress="${properties.venueAddress ? properties.venueAddress : properties.venue}">
+        <p class="col-sm-12 col-xs-12 paddingZero calendarDetails">
+		<i title="${properties.calendarTooltip}" data-sly-test="${calendar.startDate || calendar.endDate}" class="calenderIcon col-md-1 col-sm-1 col-xs-1 paddingZero" id="calendarDownload"></i>
+          <span class="topNavAddress col-md-11  col-sm-11  col-xs-11 paddingZero">
+        	<span data-sly-test="${calendar.startDate && calendar.endDate}" data-sly-unwrap>${properties.dateAndTime||calendar.dateTime}</span>
+        	<span data-sly-test="${calendar.startTime || calendar.endTime}"	data-sly-unwrap>|</span> 
+            <span data-sly-test.startTime="${calendar.startTime}" data-sly-unwrap>${startTime}
+			</span>
+            <span data-sly-test.startTime="${calendar.startTime && calendar.endTime}" data-sly-unwrap>-
+			</span>
+			<span data-sly-test.endTime="${calendar.endTime}" data-sly-unwrap>${endTime}
+			</span>
+          </span>      
+	</p>
+	<p class="mapIconHeader">
+		<a title="${properties.mapTooltip}" href="${properties.map}" target="_new"><i data-sly-test="${properties.venueAddress || properties.venue}"
+			class="mapIcon col-md-1 col-sm-1  col-xs-1  paddingZero"></i></a> 
+			<span class="topNavAddress col-md-11  col-sm-11  col-xs-11 paddingZero">
+			<span data-sly-test="${properties.venue}"
+			data-sly-unwrap>${properties.venue}</span> <span
+			data-sly-test="${properties.venueAddress}" data-sly-unwrap>${properties.venueAddress}</span>
+			</span>
+	</p>
+</div>
+<div data-sly-test="${wcmmode.edit}" data-emptytext="Calendar Component"
+	class="cq-placeholder"></div>

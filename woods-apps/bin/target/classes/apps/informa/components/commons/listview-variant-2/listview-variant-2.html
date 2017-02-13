@@ -1,0 +1,108 @@
+<!--/* 
+
+     Informa
+	_______________________
+
+     List View Variant-2 component.
+
+*/-->
+<div data-sly-test="${wcmmode.edit}" data-emptytext="List - Tabular View"
+	class="cq-placeholder"></div>
+<div class="listheading row ${properties.spacingstylestop} ${properties.spacingstylesbottom}"
+	data-sly-use.listHeader="com.informa.components.commons.Multifield"
+	data-sly-use.listContent="com.informa.components.commons.ListView"
+	data-sly-test="${listHeader.hasContent || listContent.hasContent}">
+	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
+		<div class="listpage">
+			<div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12"
+				data-sly-test="${listHeader.hasContent}">
+				<div class="list heading nav">
+					<div>
+						<ul class="list" data-sly-list.header="${listHeader.childList}">
+							<li class="hotel ${properties.column1width ? properties.column1width :'col-lg-6 col-md-6 col-sm-6 col-xs-6'}"
+								data-sly-test="${headerList.index == 0 }"><a
+								href="${header.linkPath}"
+								target="${header.openInNewWindow==true && '_blank'}">${header.title}
+							</a></li>
+							<li class="category1 ${properties.column2width ? properties.column2width :'col-lg-2 col-md-2 col-sm-2 col-xs-6'}"
+								data-sly-test="${headerList.index == 1 }"><a
+								href="${header.linkPath}"
+								target="${header.openInNewWindow==true && '_blank'}">${header.title}</a>
+							</li>
+							<li class="category3 ${headerList.index ==2 ? properties.column3width : properties.column4width}"
+								data-sly-test="${headerList.index > 1 }"><a
+								href="${header.linkPath}"
+								target="${header.openInNewWindow==true && '_blank'}">${header.title}</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"
+				data-sly-test="${listContent.hasContent}">
+				<div class="list item nav">
+					<div class="row">
+						<ul class="divtable accordion-xs list list-items-mobile"
+							data-sly-list.content="${listContent.childList}">
+							<li class="tr list-item-rows">
+								<div class="accordion-xs-toggle search-toggle-mobile toggle-hotels">
+									<div class="td  hotel ${properties.column1width ? properties.column1width :'col-lg-6 col-md-6 col-sm-6 col-xs-6'} Sort-categoryOne categoryfirst-mobile">
+										<a	class="${content.linkPath?'hotelAnchor':'hyperLinkDynamic'}"
+											href="${content.linkPath}"
+											target="${content.openInNewWindow==true && '_blank'}"
+											data-sly-test="${content.listName}">${content.listName}</a> <span
+											class="soldOutHotels" data-sly-test="${content.altText}">${content.altText
+											@ context='html'}</span>
+									</div>
+									<div class="td category1 ${properties.column2width ? properties.column2width :'col-lg-2 col-md-2 col-sm-2 col-xs-12'} Sort-categorytwo categorysecond-mobile"
+										 data-sly-test="${content.listTypeOne}">${content.listTypeOne}</div>
+								</div>
+								<div class="accordion-xs-collapse">
+									<div class="inner"
+										data-sly-list.header1="${listHeader.childList}">
+										<div class="td Sort-categoryThree hotels-mobile category2 ${properties.column3width ? properties.column3width :'col-lg-2 col-md-2 col-sm-2 col-xs-12'}"
+											 data-sly-test="${content.listTypeTwo && header1List.index == 2}">
+											<span class="mobile-categories visible-xs">${header1.title}
+												:</span>${content.listTypeTwo}
+										</div>
+										<div class="td Sort-categoryThree hotels-mobile category3 ${properties.column4width ? properties.column4width :'col-lg-2 col-md-2 col-sm-2 col-xs-12'}"
+											data-sly-test="${content.text && header1List.index == 3}">
+											<span class="mobile-categories visible-xs">${header1.title}
+												:</span>${content.text}
+										</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div
+				data-sly-use.otherLinks="com.informa.components.commons.ListViewTwo"
+				data-sly-test="${otherLinks.hasContent}" data-sly-unwrap>
+				<div data-sly-list.links="${otherLinks.childList}" data-sly-unwrap>
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+						<div class="list heading1 nav">
+							<div class="row">
+								<div class="heading111">
+									<h2>${links.title}</h2>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12">
+						<div class="list heading2 nav headin">
+							<div class="row">
+								<div class="heading111">
+									<h2>${links.text @ context='html'}</h2>
+								</div>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+

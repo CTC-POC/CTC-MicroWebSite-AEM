@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    activeTab="{Long}0"
+    height="{Long}400"
+    helpPath="en/cq/current/wcm/default_components.html#Forms Dropdown List"
+    width="{Long}650"
+    xtype="tabpanel">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <first
+            jcr:primaryType="nt:unstructured"
+            title="Title and Text"
+            xtype="panel">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <passportExpiration
+                    jcr:primaryType="cq:Widget"
+                    defaultValue="{Boolean}true"
+                    fieldLabel="Passport Expiration"
+                    inputValue="false"
+                    name="./passportExpiration"
+                    type="checkbox"
+                    xtype="selection"/>
+                <passportIssuedDate
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Passport Issued Date"
+                    inputValue="true"
+                    name="./passportIssuedDate"
+                    type="checkbox"
+                    xtype="selection"/>
+                <passportNumber
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Passport Number"
+                    inputValue="true"
+                    name="./passportNumber"
+                    type="checkbox"
+                    xtype="selection"/>
+                <passportPlaceOfIssue
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Passport Place Of Issue"
+                    inputValue="true"
+                    name="./passportPlaceOfIssue"
+                    type="checkbox"
+                    xtype="selection"/>
+            </items>
+        </first>
+    </items>
+</jcr:root>

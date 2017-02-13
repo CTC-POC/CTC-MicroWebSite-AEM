@@ -1,0 +1,24 @@
+{
+	"root": [{
+		"text": "Select Degree",
+		"value": ""
+	}, {
+		"text": "Masters",
+		"value": "D_MSTRS"
+	}, {
+		"text": "Bachelors",
+		"value": "D_BACHL"
+	}, {
+		"text": "PHD",
+		"value": "D_PHD"
+	}, {
+		"text": "High School",
+		"value": "D_HSCHL"
+	}, {
+		"text": "Associates",
+		"value": "D_ASSOC"
+	}, {
+		"text": "Others",
+		"value": "D_OTHER"
+	}]
+}

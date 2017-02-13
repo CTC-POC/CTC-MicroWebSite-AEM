@@ -1,0 +1,14 @@
+
+<head
+	data-sly-use.clientLib="${'/libs/granite/sightly/templates/clientlib.html'}">
+<!-- clientlibrarymanager -->
+	<clientlib data-sly-call="${clientLib.all @ categories=['cq.clientlibrarymanager']}" data-sly-unwrap />
+	<div data-sly-include="/libs/cq/cloudserviceconfigs/components/servicelibs/servicelibs.jsp" data-sly-unwrap></div>	
+	<title>${currentPage.Title}</title>
+    <clientlib
+        data-sly-call="${clientLib.all @ categories=['apps.woods' ,'apps.woods.footer']}"
+        data-sly-unwrap />
+    <includeSidekick
+        data-sly-include="/libs/wcm/core/components/init/init.jsp"
+        data-sly-unwrap />
+</head>

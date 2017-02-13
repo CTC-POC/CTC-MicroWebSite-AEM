@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:description="Informa Landing Page template"
+    jcr:primaryType="cq:Template"
+    jcr:title="Informa Global Landing Page Variant 1"
+    ranking="{Long}6"
+    shortTitle="Landing Page">
+    <jcr:content
+        jcr:primaryType="cq:PageContent"
+        sling:resourceType="/apps/informa/components/page/landingPage">
+        <par_page
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="foundation/components/parsys">
+            <column_control
+                jcr:created="{Date}2016-07-04T10:43:34.553-04:00"
+                jcr:createdBy="bharan"
+                jcr:lastModified="{Date}2016-07-04T10:43:34.553-04:00"
+                jcr:lastModifiedBy="bharan"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="informa/components/commons/column-control"
+                columns="1-col">
+                <par-col-1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="foundation/components/parsys">
+                    <bannerimage
+                        jcr:created="{Date}2016-07-04T10:47:14.486-04:00"
+                        jcr:createdBy="bharan"
+                        jcr:lastModified="{Date}2016-07-04T10:47:14.486-04:00"
+                        jcr:lastModifiedBy="bharan"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="informa/components/commons/bannerImage"/>
+                    <informabreadcrumb
+                        jcr:created="{Date}2016-07-04T11:06:19.659-04:00"
+                        jcr:createdBy="bharan"
+                        jcr:lastModified="{Date}2016-07-04T11:06:19.659-04:00"
+                        jcr:lastModifiedBy="bharan"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="informa/components/commons/informaBreadcrumb"/>
+                </par-col-1>
+            </column_control>
+            <column_control_7652206601
+                jcr:created="{Date}2016-07-04T11:10:23.651-04:00"
+                jcr:createdBy="bharan"
+                jcr:lastModified="{Date}2016-07-04T11:10:23.651-04:00"
+                jcr:lastModifiedBy="bharan"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="informa/components/commons/column-control"
+                columns="1-col">
+                <par-col-1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="foundation/components/parsys">
+                    <anchorlinks
+                        jcr:created="{Date}2016-07-04T11:10:42.706-04:00"
+                        jcr:createdBy="bharan"
+                        jcr:lastModified="{Date}2016-07-05T04:08:08.764-04:00"
+                        jcr:lastModifiedBy="tanuj"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="informa/components/commons/anchorLinks">
+                        <par-tab-0
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="foundation/components/parsys">
+                            <titlebar
+                                jcr:created="{Date}2016-07-05T03:51:34.912-04:00"
+                                jcr:createdBy="bharan"
+                                jcr:lastModified="{Date}2016-07-05T03:51:53.587-04:00"
+                                jcr:lastModifiedBy="bharan"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="informa/components/commons/titleBar"
+                                title="Anchor 1 Title"/>
+                        </par-tab-0>
+                        <par-tab-1
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="foundation/components/parsys">
+                            <titlebar
+                                jcr:created="{Date}2016-07-05T03:51:40.658-04:00"
+                                jcr:createdBy="bharan"
+                                jcr:lastModified="{Date}2016-07-05T03:52:01.744-04:00"
+                                jcr:lastModifiedBy="bharan"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="informa/components/commons/titleBar"
+                                title="Anchor 2 Title"/>
+                        </par-tab-1>
+                        <par-tab-2
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="foundation/components/parsys">
+                            <titlebar
+                                jcr:created="{Date}2016-07-05T03:51:45.429-04:00"
+                                jcr:createdBy="bharan"
+                                jcr:lastModified="{Date}2016-07-05T03:52:12.190-04:00"
+                                jcr:lastModifiedBy="bharan"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="informa/components/commons/titleBar"
+                                title="Anchor 3 Title"/>
+                        </par-tab-2>
+                        <multi jcr:primaryType="nt:unstructured">
+                            <_x0031_
+                                jcr:primaryType="nt:unstructured"
+                                title="Anchor 1"/>
+                            <_x0032_
+                                jcr:primaryType="nt:unstructured"
+                                title="Anchor 2"/>
+                            <_x0033_
+                                jcr:primaryType="nt:unstructured"
+                                title="Anchor 3"/>
+                        </multi>
+                    </anchorlinks>
+                </par-col-1>
+            </column_control_7652206601>
+            <column_control_1741092965
+                jcr:created="{Date}2016-07-04T11:27:47.444-04:00"
+                jcr:createdBy="bharan"
+                jcr:lastModified="{Date}2016-07-04T11:28:02.454-04:00"
+                jcr:lastModifiedBy="bharan"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="informa/components/commons/column-control"
+                columns="2-col-66-33">
+                <par-col-1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="foundation/components/parsys">
+                    <graphic_highlights
+                        jcr:created="{Date}2016-07-04T11:28:50.223-04:00"
+                        jcr:createdBy="bharan"
+                        jcr:lastModified="{Date}2016-07-04T11:28:50.223-04:00"
+                        jcr:lastModifiedBy="bharan"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="informa/components/commons/graphic-highlights"/>
+                </par-col-1>
+                <par-col-2
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="foundation/components/parsys">
+                    <youtube_video
+                        jcr:created="{Date}2016-07-04T11:29:37.818-04:00"
+                        jcr:createdBy="bharan"
+                        jcr:lastModified="{Date}2016-07-04T11:29:37.818-04:00"
+                        jcr:lastModifiedBy="bharan"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="informa/components/commons/youtube-video"/>
+                </par-col-2>
+            </column_control_1741092965>
+        </par_page>
+    </jcr:content>
+</jcr:root>

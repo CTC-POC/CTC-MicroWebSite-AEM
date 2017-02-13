@@ -1,0 +1,8 @@
+#base=js
+
+locations.js
+controllers/LocationListController.js
+controllers/LocationItemController.js
+controllers/LocationDetailController.js
+services/location-service.js
+

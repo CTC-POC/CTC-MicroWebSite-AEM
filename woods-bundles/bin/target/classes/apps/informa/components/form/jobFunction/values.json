@@ -1,0 +1,961 @@
+{
+	"root": [{
+		"text": " ",
+		"value": "Select Job Function"
+	},
+ {
+	"text": "JB_ACSTC",
+	"value": "Acoustics"
+}, {
+	"text": "JB_ADMNOFMGMT",
+	"value": "Administration / Office Management"
+}, {
+	"text": "JB_ADVERT",
+	"value": "Advertising"
+}, {
+	"text": "JB_ADVSR",
+	"value": "Advisors"
+}, {
+	"text": "JB_AESTHMED",
+	"value": "Aesthetics Medicine"
+}, {
+	"text": "JB_AMBLNC",
+	"value": "Ambulance"
+}, {
+	"text": "JB_ANSTHLG",
+	"value": "Anesthesiology"
+}, {
+	"text": "JB_ANMGRM",
+	"value": "Animal Grooming"
+}, {
+	"text": "JB_ANMHLTH",
+	"value": "Animal Health"
+}, {
+	"text": "JB_ANMPHARMA",
+	"value": "Animal Pharmaceuticals"
+}, {
+	"text": "JB_AQUAFRM",
+	"value": "Aqua Farming"
+}, {
+	"text": "JB_AQUACLT",
+	"value": "Aquaculture"
+}, {
+	"text": "JB_ARCHINTRDSGN",
+	"value": "Architectural / Interior Designing"
+}, {
+	"text": "JB_ARMDFRCS",
+	"value": "Armed Forces / Police"
+}, {
+	"text": "JB_ARTCULT",
+	"value": "Arts & Culture"
+}, {
+	"text": "JB_AUDLGY",
+	"value": "Audiology"
+}, {
+	"text": "JB_AUTOMTN",
+	"value": "Automation"
+}, {
+	"text": "JB_AVSNDLGHT",
+	"value": "AV / Sound & Lighting"
+}, {
+	"text": "JB_BTCLTR",
+	"value": "Beauticulture"
+}, {
+	"text": "JB_BTCNSLT",
+	"value": "Beauty Consulting"
+}, {
+	"text": "JB_BIOMEDENG",
+	"value": "Biomedical Engineering"
+}, {
+	"text": "JB_BRDMEM",
+	"value": "Board Member"
+}, {
+	"text": "JB_BRNDMGR",
+	"value": "Brand Manager"
+}, {
+	"text": "JB_BUSCORPSER",
+	"value": "Business / Corporate Services"
+}, {
+	"text": "JB_BUSDVLP",
+	"value": "Business Development"
+}, {
+	"text": "JB_BUSMGMTSTRGY",
+	"value": "Business Management & Strategy"
+}, {
+	"text": "JB_CRDLGY",
+	"value": "Cardiology"
+}, {
+	"text": "JB_CRADV",
+	"value": "Careers Advisor"
+}, {
+	"text": "JB_CATFDSER",
+	"value": "Catering / Food Services"
+}, {
+	"text": "JB_CENTSTRLSERDEPT",
+	"value": "Central Sterile Services Department"
+}, {
+	"text": "JB_CHRTREDBUILDSURV",
+	"value": "Chartered Building Surveyor"
+}, {
+	"text": "JB_CHEFEXCVCHEF",
+	"value": "Chef / Executive Chef"
+}, {
+	"text": "JB_CLNTCUSTSER",
+	"value": "Client / Customer Services"
+}, {
+	"text": "JB_CLNCRSRCH",
+	"value": "Clinical Research"
+}, {
+	"text": "JB_CSTGRD",
+	"value": "Coast Guard"
+}, {
+	"text": "JB_COMMSCLSER",
+	"value": "Community & Social Services"
+}, {
+	"text": "JB_COMPLALTMED",
+	"value": "Complementary & Alternative Medicine"
+}, {
+	"text": "JB_CONST",
+	"value": "Construction"
+}, {
+	"text": "JB_CONSLT",
+	"value": "Consultant"
+}, {
+	"text": "JB_CONSLTGNRL",
+	"value": "Consultation {General}"
+}, {
+	"text": "JB_CONSLTMED",
+	"value": "Consultation {Medical}"
+}, {
+	"text": "JB_CNTNTACQ",
+	"value": "Content Acquisition"
+}, {
+	"text": "JB_CNTNTPROD",
+	"value": "Content Production"
+}, {
+	"text": "JB_CORPMGMT",
+	"value": "Corporate Management"
+}, {
+	"text": "JB_CRTCLCRE",
+	"value": "Critical Care"
+}, {
+	"text": "JB_COPFARM",
+	"value": "Crop Farming"
+}, {
+	"text": "JB_CSTMRRLSHPMGMT",
+	"value": "Customer Relationship Management"
+}, {
+	"text": "JB_DERMA",
+	"value": "Dermatology"
+}, {
+	"text": "JB_DESGN",
+	"value": "Designer"
+}, {
+	"text": "JB_DBT",
+	"value": "Diabetes"
+}, {
+	"text": "JB_DIAGNSTC",
+	"value": "Diagnostics"
+}, {
+	"text": "JB_DGTLSER",
+	"value": "Digital Services"
+}, {
+	"text": "JB_DSTR",
+	"value": "Distribution"
+}, {
+	"text": "JB_EDTRL",
+	"value": "Editorial"
+}, {
+	"text": "JB_EDUCCURLMTCH",
+	"value": "Education, Curriculum & Teaching"
+}, {
+	"text": "JB_EMERGMED",
+	"value": "Emergency Medicine"
+}, {
+	"text": "JB_ENDOCLGY",
+	"value": "Endocrinology"
+}, {
+	"text": "JB_ENG",
+	"value": "Engineering"
+}, {
+	"text": "JB_ENGAUTO",
+	"value": "Engineering {Automation}"
+}, {
+	"text": "JB_ENGCVL",
+	"value": "Engineering {Civil}"
+}, {
+	"text": "JB_ENGELECT",
+	"value": "Engineering {Electrical}"
+}, {
+	"text": "JB_ENGELECTR",
+	"value": "Engineering {Electronics}"
+}, {
+	"text": "JB_ENGINSTRMNT",
+	"value": "Engineering {Instrumentation}"
+}, {
+	"text": "JB_ENGMECH",
+	"value": "Engineering {Mechanical}"
+}, {
+	"text": "JB_ENGOILGAS",
+	"value": "Engineering {Oil & Gas}"
+}, {
+	"text": "JB_ENVDEV",
+	"value": "Environment Development"
+}, {
+	"text": "JB_ENVCONSRVNRM",
+	"value": "Environment, Conservation & NRM"
+}, {
+	"text": "JB_EVNTPLNG",
+	"value": "Event Planning"
+}, {
+	"text": "JB_EXPRT",
+	"value": "Export"
+}, {
+	"text": "JB_FACLTGRNDMGMTMNT",
+	"value": "Facilities / Grounds Management & Maintenance"
+}, {
+	"text": "JB_FACLTDSGNCONSTR",
+	"value": "Facility Design / Construction"
+}, {
+	"text": "JB_FARMMGMT",
+	"value": "Farm Management"
+}, {
+	"text": "JB_FASHDESGN",
+	"value": "Fashion Designing"
+}, {
+	"text": "JB_FILMNG",
+	"value": "Filming"
+}, {
+	"text": "JB_FNCEACCT",
+	"value": "Finance & Accounting"
+}, {
+	"text": "JB_FLEETMGMT",
+	"value": "Fleet Management"
+}, {
+	"text": "JB_FDBVRGEMEMGMT",
+	"value": "Food & Beverage Management"
+}, {
+	"text": "JB_FDTECHDBTS",
+	"value": "Food Technology / Dietetics"
+}, {
+	"text": "JB_FRSHGRAD",
+	"value": "Fresh graduate"
+}, {
+	"text": "JB_GASTRLGY",
+	"value": "Gastroenterology"
+}, {
+	"text": "JB_GEMLGY",
+	"value": "Gemology"
+}, {
+	"text": "JB_GNRLPRACT",
+	"value": "General Practitioner"
+}, {
+	"text": "JB_GERNTLGY",
+	"value": "Gerontology"
+}, {
+	"text": "JB_GOV",
+	"value": "Government"
+}, {
+	"text": "JB_GOVOFCL",
+	"value": "Government Official"
+}, {
+	"text": "JB_GRPHCDSGN",
+	"value": "Graphics Designing"
+}, {
+	"text": "JB_GYNCLGY",
+	"value": "Gynecology"
+}, {
+	"text": "JB_HEADTCHR",
+	"value": "Head Teacher"
+}, {
+	"text": "JB_HLTHMEDNURSMGMT",
+	"value": "Health - Medical & Nursing Management"
+}, {
+	"text": "JB_HLTHSFTY",
+	"value": "Health & Safety"
+}, {
+	"text": "JB_HEMATLGY",
+	"value": "Hematology"
+}, {
+	"text": "JB_HISTPHLGY",
+	"value": "Histopathology"
+}, {
+	"text": "JB_HRSEOWNBREDR",
+	"value": "Horse Owner / Breeder"
+}, {
+	"text": "JB_HSEKEPNG",
+	"value": "Housekeeping"
+}, {
+	"text": "JB_HRTRNGORGDEV",
+	"value": "Human Resources (HR), Training & Organizational Development"
+}, {
+	"text": "JB_HSBNDRY",
+	"value": "Husbandry"
+}, {
+	"text": "JB_IMGDIAG",
+	"value": "Imaging & Diagnostics"
+}, {
+	"text": "JB_IMGRADIOLGY",
+	"value": "Imaging & Radiology"
+}, {
+	"text": "JB_IMPEXP",
+	"value": "Import & Export"
+}, {
+	"text": "JB_INFCTDISCNTRL",
+	"value": "Infectious Diseases & Control"
+}, {
+	"text": "JB_INFLGHTSER",
+	"value": "Inflight services"
+}, {
+	"text": "JB_INFOCOMMTECH",
+	"value": "Information & Communications Technology"
+}, {
+	"text": "JB_INFOSERSTATSRCRDARCH",
+	"value": "Information Services, Statistics, Records, Archives"
+}, {
+	"text": "JB_INFSTRCTRMGMT",
+	"value": "Infrastructure Management - Transport, Utilities"
+}, {
+	"text": "JB_INSUR",
+	"value": "Insurance"
+}, {
+	"text": "JB_INTRNLMED",
+	"value": "Internal Medicine"
+}, {
+	"text": "JB_INVMGMT",
+	"value": "Inventory Management"
+}, {
+	"text": "JB_LABMGMT",
+	"value": "Lab management"
+}, {
+	"text": "JB_LAB",
+	"value": "Laboratory"
+}, {
+	"text": "JB_LGL",
+	"value": "Legal"
+}, {
+	"text": "JB_LGLOFFCRPRACT",
+	"value": "Legal Officers & Practitioners"
+}, {
+	"text": "JB_LIBMGMT",
+	"value": "Librarian & Library Management"
+}, {
+	"text": "JB_LICNSE",
+	"value": "Licensing  "
+}, {
+	"text": "JB_LOGSTPURCHPROC",
+	"value": "Logistics, Purchasing & Procurement"
+}, {
+	"text": "JB_MAINREP",
+	"value": "Maintenance & Repair"
+}, {
+	"text": "JB_MGMT",
+	"value": "Management"
+}, {
+	"text": "JB_MNFCPROD",
+	"value": "Manufacturing & Production"
+}, {
+	"text": "JB_MARSER",
+	"value": "Marine Services"
+}, {
+	"text": "JB_MRKT",
+	"value": "Marketing"
+}, {
+	"text": "JB_MTRLMGMT",
+	"value": "Materials Management"
+}, {
+	"text": "JB_MEDFACLT",
+	"value": "Medical Facilitator"
+}, {
+	"text": "JB_MEDPROF",
+	"value": "Medical Professional"
+}, {
+	"text": "JB_MEMPARLMT",
+	"value": "Member of Parliament"
+}, {
+	"text": "JB_MRCHND",
+	"value": "Merchandising"
+}, {
+	"text": "JB_MDWFRY",
+	"value": "Midwifery"
+}, {
+	"text": "JB_MLTRY",
+	"value": "Military"
+}, {
+	"text": "JB_MLTMDCONTPRDCR",
+	"value": "Multimedia Content Producer"
+}, {
+	"text": "JB_NAVY",
+	"value": "Navy"
+}, {
+	"text": "JB_NPHRLGY",
+	"value": "Nephrology"
+}, {
+	"text": "JB_NEURLGY",
+	"value": "Neurology"
+}, {
+	"text": "JB_NURSE",
+	"value": "Nurse"
+}, {
+	"text": "JB_OBSTRCGYNCLGY",
+	"value": "Obstetrics & Gynecology"
+}, {
+	"text": "JB_OHSMGMT",
+	"value": "OH&S, Risk Management"
+}, {
+	"text": "JB_ONCLGY",
+	"value": "Oncology"
+}, {
+	"text": "JB_OPRMGMT",
+	"value": "Operations Management"
+}, {
+	"text": "JB_OPTHMLGY",
+	"value": "Ophthalmology"
+}, {
+	"text": "JB_OPTMTRY",
+	"value": "Optometry"
+}, {
+	"text": "JB_ORTHO",
+	"value": "Orthopedic"
+}, {
+	"text": "JB_OTLRYGLGST",
+	"value": "Otolaryngologist"
+}, {
+	"text": "JB_OWNRPROPPART",
+	"value": "Owner / Proprietor / Partner"
+}, {
+	"text": "JB_PCKDESG",
+	"value": "Package Design"
+}, {
+	"text": "JB_PRNT",
+	"value": "Parent"
+}, {
+	"text": "JB_PATHLGY",
+	"value": "Pathology"
+}, {
+	"text": "JB_PEDTRCS",
+	"value": "Pediatrics"
+}, {
+	"text": "JB_PHARMA",
+	"value": "Pharmaceutical"
+}, {
+	"text": "JB_PHRMCY",
+	"value": "Pharmacy"
+}, {
+	"text": "JB_PHTGRPHR",
+	"value": "Photographer "
+}, {
+	"text": "JB_PHYSCNDOC",
+	"value": "Physician / Doctor"
+}, {
+	"text": "JB_PLNTMGMT",
+	"value": "Plant Management"
+}, {
+	"text": "JB_PLSTCSURG",
+	"value": "Plastic Surgery"
+}, {
+	"text": "JB_PSTPROD",
+	"value": "Post-Production"
+}, {
+	"text": "JB_POLTRLVSTCKMGMT",
+	"value": "Poultry & Livestock Management"
+}, {
+	"text": "JB_PRCNPL",
+	"value": "Principal"
+}, {
+	"text": "JB_PRNTNGDSGNPUBLWEB",
+	"value": "Printing, Design, Publishing, Web"
+}, {
+	"text": "JB_PRDCTN",
+	"value": "Production"
+}, {
+	"text": "JB_PROFRDNG",
+	"value": "Professional Riding"
+}, {
+	"text": "JB_PRGRMSCH",
+	"value": "Programming / Scheduling"
+}, {
+	"text": "JB_PROJMGMT",
+	"value": "Project Management"
+}, {
+	"text": "JB_PROPASTFLTMGMT",
+	"value": "Property, Assets & Fleet Management"
+}, {
+	"text": "JB_PUBLRLMED",
+	"value": "Public Relations & Media"
+}, {
+	"text": "JB_QACNTLREGCOMPL",
+	"value": "Quality Assurance / Control / Regulatory / Compliance"
+}, {
+	"text": "JB_RDOGRPHY",
+	"value": "Radiography"
+}, {
+	"text": "JB_RDOLGY",
+	"value": "Radiology"
+}, {
+	"text": "JB_RLEST",
+	"value": "Real Estate"
+}, {
+	"text": "JB_REHBLTN",
+	"value": "Rehabilitation"
+}, {
+	"text": "JB_RSRCHDEV",
+	"value": "Research & Development"
+}, {
+	"text": "JB_RESLNG",
+	"value": "Reselling"
+}, {
+	"text": "JB_RESMGMT",
+	"value": "Residence Management"
+}, {
+	"text": "JB_RESPMED",
+	"value": "Respiratory Medicine"
+}, {
+	"text": "JB_RETL",
+	"value": "Retail"
+}, {
+	"text": "JB_RHMTLGY",
+	"value": "Rheumatology"
+}, {
+	"text": "JB_RDNGCLBHCSTBLSTDFRM",
+	"value": "Riding Club / Horse-Camel Stable / Stud Farm"
+}, {
+	"text": "JB_SALES",
+	"value": "Sales"
+}, {
+	"text": "JB_SALESMRKTNG",
+	"value": "Sales & Marketing"
+}, {
+	"text": "JB_SCHCONSLR",
+	"value": "School Counsellor"
+}, {
+	"text": "JB_SCNTECHRSRCHDEV",
+	"value": "Science & Technical Research & Development"
+}, {
+	"text": "JB_SEAFR",
+	"value": "Seafarer"
+}, {
+	"text": "JB_SECRTRLCLRCLWRKS",
+	"value": "Secretarial / Clerical Works"
+}, {
+	"text": "JB_SECURLAWENFRNCMT",
+	"value": "Security & Law Enforcement"
+}, {
+	"text": "JB_SLFEMPLYD",
+	"value": "Self-employed"
+}, {
+	"text": "JB_SNRMGMT",
+	"value": "Senior Management (Director / C Level)"
+}, {
+	"text": "JB_SRVCEDELV",
+	"value": "Service Delivery"
+}, {
+	"text": "JB_SNOGRPHY",
+	"value": "Sonography"
+}, {
+	"text": "JB_SPRTRECRTN",
+	"value": "Sport & Recreation"
+}, {
+	"text": "JB_STRMGMT",
+	"value": "Store Management"
+}, {
+	"text": "JB_STRTGPLNG",
+	"value": "Strategy & Planning"
+}, {
+	"text": "JB_STDNT",
+	"value": "Student"
+}, {
+	"text": "JB_STDNTRECRT",
+	"value": "Student Recruitment"
+}, {
+	"text": "JB_SURG",
+	"value": "Surgery"
+}, {
+	"text": "JB_SURVYNC",
+	"value": "Surveyance"
+}, {
+	"text": "JB_TCHR",
+	"value": "Teacher"
+}, {
+	"text": "JB_TECHSERV",
+	"value": "Technical Services"
+}, {
+	"text": "JB_TRAUMA",
+	"value": "Trauma"
+}, {
+	"text": "JB_TRVLACCOMTRSM",
+	"value": "Travel / Accommodation / Tourism"
+}, {
+	"text": "JB_UROLGY",
+	"value": "Urology"
+}, {
+	"text": "JB_VLDTNQUALFCOMSNG",
+	"value": "Validation / Qualification / Commissioning"
+}, {
+	"text": "JB_VET",
+	"value": "Veterinary"
+}, {
+	"text": "JB_VETMED",
+	"value": "Veterinary Medicine"
+}, {
+	"text": "JB_VETNURS",
+	"value": "Veterinary Nursing"
+}, {
+	"text": "JB_WRHSNGDSTR",
+	"value": "Warehousing / Distribution"
+}, {
+	"text": "JB_WSTMGMT",
+	"value": "Waste Management"
+}, {
+	"text": "JB_WTRTRTMTDSPL",
+	"value": "Water Treatment & Disposal"
+}, {
+	"text": "JB_WEBSERVDEV",
+	"value": "Web Services & Development"
+}, {
+	"text": "JB_WELNSMGR",
+	"value": "Wellness Manager"
+}, {
+	"text": "JB_WIFEHUSB",
+	"value": "Wife/Husband"
+}, {
+	"text": "JB_WOUNDCR",
+	"value": "Wound Care"
+}, {
+	"text": "JB_ANLST",
+	"value": "Analyst"
+}, {
+	"text": "JB_FRMTNDEV",
+	"value": "Formulation and Development"
+}, {
+	"text": "JB_FULFLMTSERV",
+	"value": "Fulfillment Services"
+}, {
+	"text": "JB_NUTRTNMGMT",
+	"value": "Nutrition Management"
+}, {
+	"text": "JB_SOLMGMT",
+	"value": "Solutions Management"
+}, {
+	"text": "JB_SPLYMGMT",
+	"value": "Supply Management"
+}, {
+	"text": "JB_PRDCTDEV",
+	"value": "Product Development"
+}, {
+	"text": "JB_VPDIVGM",
+	"value": "Vice President, Divisional Manager, General Manager"
+}, {
+	"text": "JB_AEDRFTCAD",
+	"value": "A/E Drafter-CAD Operator"
+}, {
+	"text": "JB_AEREP",
+	"value": "A/E Representative"
+}, {
+	"text": "JB_ACTVST",
+	"value": "Activist"
+}, {
+	"text": "JB_ALDPRDTLS",
+	"value": "Allied Products/Tools"
+}, {
+	"text": "JB_ARCHTCT",
+	"value": "Architect"
+}, {
+	"text": "JB_BSEGUNPROD",
+	"value": "Block / Segmental Unit Producer"
+}, {
+	"text": "JB_BRCKPROD",
+	"value": "Brick Producer"
+}, {
+	"text": "JB_BLDRDEV",
+	"value": "Builder/Developer"
+}, {
+	"text": "JB_BLDGINSP",
+	"value": "Building Inspector/Building Official"
+}, {
+	"text": "JB_BMPRVDR",
+	"value": "Building Materials Provider"
+}, {
+	"text": "JB_CBNTMNFCR",
+	"value": "Cabinet Manufacturer"
+}, {
+	"text": "JB_CNBLCKPROD",
+	"value": "Concrete Block Producer"
+}, {
+	"text": "JB_CNCOATAPPL",
+	"value": "Concrete Coatings Applicator"
+}, {
+	"text": "JB_CNCNTRCNTR",
+	"value": "Concrete Contractor"
+}, {
+	"text": "JB_CNCUTNG",
+	"value": "Concrete Cutting"
+}, {
+	"text": "JB_CNPOLCNTR",
+	"value": "Concrete Polishing Contractor"
+}, {
+	"text": "JB_CNPLMBG",
+	"value": "Concrete Pumping"
+}, {
+	"text": "JB_CNREPCNTR",
+	"value": "Concrete Repair Contractor"
+}, {
+	"text": "JB_CONSTCMIND",
+	"value": "Construction {Commercial/Industrial}"
+}, {
+	"text": "JB_CONSTHWBRG",
+	"value": "Construction {Public Works/Highways/Bridges}"
+}, {
+	"text": "JB_CONSTRES",
+	"value": "Construction {Residential}"
+}, {
+	"text": "JB_CONSTRMGT",
+	"value": "Construction Management"
+}, {
+	"text": "JB_CONSTRMGTCNCWRK",
+	"value": "Construction Management {Concrete Work}"
+}, {
+	"text": "JB_CONSTRMGTMSNRY",
+	"value": "Construction Management {Masonry}"
+}, {
+	"text": "JB_CNTRCTADMGR",
+	"value": "Contract Administrator/Manager"
+}, {
+	"text": "JB_CNTRCTR",
+	"value": "Contractor"
+}, {
+	"text": "JB_CONTRMSNRY",
+	"value": "Contractor {Masonry}"
+}, {
+	"text": "JB_CNTRCTRTSINST",
+	"value": "Contractor {Tile/Stone Installation}"
+}, {
+	"text": "JB_CSTESTMTR",
+	"value": "Cost Estimator"
+}, {
+	"text": "JB_CRFTSMNBRLYRMSNRY",
+	"value": "Craftsman/Bricklayer {Masonry}"
+}, {
+	"text": "JB_DSTRBM",
+	"value": "Dealer/Distributor {Building Materials}"
+}, {
+	"text": "JB_DCKBLDR",
+	"value": "Deck/Dock Builder"
+}, {
+	"text": "JB_DECCNCNTR",
+	"value": "Decorative Concrete Contractor"
+}, {
+	"text": "JB_DECORTR",
+	"value": "Decorator"
+}, {
+	"text": "JB_DEMOLCNTR",
+	"value": "Demolition Contractor"
+}, {
+	"text": "JB_ENGFRNSC",
+	"value": "Engineering {Forensic}"
+}, {
+	"text": "JB_ENGMEP",
+	"value": "Engineering {MEP}"
+}, {
+	"text": "JB_EQTLOPRTR",
+	"value": "Equipment/Tool Operator"
+}, {
+	"text": "JB_ESTMTR",
+	"value": "Estimator"
+}, {
+	"text": "JB_FABINSTL",
+	"value": "Fabricator/Installer"
+}, {
+	"text": "JB_FACLTPLNR",
+	"value": "Facility Planner"
+}, {
+	"text": "JB_FLDCRW",
+	"value": "Field Crew"
+}, {
+	"text": "JB_FLRINSTL",
+	"value": "Flooring Installer"
+}, {
+	"text": "JB_FRMNSUP",
+	"value": "Foreman/Superintendent"
+}, {
+	"text": "JB_FRNSCARCH",
+	"value": "Forensic Architect"
+}, {
+	"text": "JB_FNDTNCNTR",
+	"value": "Foundations Contractor"
+}, {
+	"text": "JB_FRBRLOGST",
+	"value": "Freight Broker/Logistics"
+}, {
+	"text": "JB_GENBLDRCONTR",
+	"value": "General Building Contractor"
+}, {
+	"text": "JB_GNRLRNTL",
+	"value": "General Rental"
+}, {
+	"text": "JB_GOVPUBAGNCY",
+	"value": "Government/Public Agency"
+}, {
+	"text": "JB_HNDYMNCRPNTRY",
+	"value": "Handyman/Carpenter"
+}, {
+	"text": "JB_HLTHPROF",
+	"value": "Healthcare Professional"
+}, {
+	"text": "JB_HMBLDR",
+	"value": "Home Builder"
+}, {
+	"text": "JB_HOSPTLTY",
+	"value": "Hospitality"
+}, {
+	"text": "JB_INDDSGN",
+	"value": "Industrial Designer"
+}, {
+	"text": "JB_INSTRCTR",
+	"value": "Instructor"
+}, {
+	"text": "JB_KTCHNBTHSPCLST",
+	"value": "Kitchen & Bath Specialist"
+}, {
+	"text": "JB_LBRUNMBR",
+	"value": "Labor Union Member"
+}, {
+	"text": "JB_LNDSCPARCH",
+	"value": "Landscape Architect"
+}, {
+	"text": "JB_LNDR",
+	"value": "Lender"
+}, {
+	"text": "JB_LGHTARCH",
+	"value": "Lighting Architect"
+}, {
+	"text": "JB_LOBYST",
+	"value": "Lobbyist"
+}, {
+	"text": "JB_MNFCRCNMSN",
+	"value": "Manufacturer {Concrete/Masonry}"
+}, {
+	"text": "JB_MNFCRAGNT",
+	"value": "Manufacturer Agent / Manufacturer Representative"
+}, {
+	"text": "JB_MPNGGIS",
+	"value": "Mapping/GIS"
+}, {
+	"text": "JB_NGONPRFT",
+	"value": "NGO/Non-Profit"
+}, {
+	"text": "JB_NCONSTRPRSNL",
+	"value": "Non-Construction Personnel"
+}, {
+	"text": "JB_PERVCNINST",
+	"value": "Pervious Concrete Installer"
+}, {
+	"text": "JB_URBNREGPLNR",
+	"value": "Planner - Urban/Regional"
+}, {
+	"text": "JB_PSTTSNCNTR",
+	"value": "Post-tensioning Contractor"
+}, {
+	"text": "JB_PRCSTCNERCTR",
+	"value": "Precast Concrete Erector"
+}, {
+	"text": "JB_PRCSTCNPROD",
+	"value": "Precast Concrete Producer"
+}, {
+	"text": "JB_PRSTRCNPROD",
+	"value": "Prestressed Concrete Producer"
+}, {
+	"text": "JB_PRDCTMATSPCLST",
+	"value": "Product Materials Specialist"
+}, {
+	"text": "JB_QUARR",
+	"value": "Quarrier"
+}, {
+	"text": "JB_RMCNPROD",
+	"value": "Ready Mix Concrete Producer"
+}, {
+	"text": "JB_REAGNTBRKR",
+	"value": "Real Estate Agent/Broker"
+}, {
+	"text": "JB_REPROPDEV",
+	"value": "Real Estate Property Development"
+}, {
+	"text": "JB_REPROPASTMGMT",
+	"value": "Real Estate/Property/Assets Manager"
+}, {
+	"text": "JB_RECCNCONTR",
+	"value": "Recycled Concrete Contractor"
+}, {
+	"text": "JB_REMODLR",
+	"value": "Remodeler"
+}, {
+	"text": "JB_REMODLRRES",
+	"value": "Remodeler {Residential}"
+}, {
+	"text": "JB_REPLCMNTCONTR",
+	"value": "Replacement Contractor"
+}, {
+	"text": "JB_RSTCONTR",
+	"value": "Restoration Contractor"
+}, {
+	"text": "JB_RETLBYGRDN",
+	"value": "Retailer - Backyard/Garden"
+}, {
+	"text": "JB_RETLPOOL",
+	"value": "Retailer - Pool"
+}, {
+	"text": "JB_RETLSPA",
+	"value": "Retailer - Spa"
+}, {
+	"text": "JB_ROOFNG",
+	"value": "Roofing"
+}, {
+	"text": "JB_SCNTST",
+	"value": "Scientist"
+}, {
+	"text": "JB_SRWLCONTR",
+	"value": "Self Retaining Wall Contractor"
+}, {
+	"text": "JB_SHTCCONTR",
+	"value": "Shotcrete Contractor"
+}, {
+	"text": "JB_SPCNCONTR",
+	"value": "Specialty Concrete Contractor"
+}, {
+	"text": "JB_SPCONTR",
+	"value": "Specialty Contractor"
+}, {
+	"text": "JB_SPFCONSLT",
+	"value": "Specification Consultant"
+}, {
+	"text": "JB_STDNTADVFAC",
+	"value": "Student Advisor/Faculty"
+}, {
+	"text": "JB_STMCONSLT",
+	"value": "Systems Consultant/VAR/vendor"
+}, {
+	"text": "JB_TECHNCN",
+	"value": "Technician"
+}, {
+	"text": "JB_THNBRTNSTNAPP",
+	"value": "Thin brick/thin stone applicator"
+}, {
+	"text": "JB_TUCNCONTR",
+	"value": "Tilt-up Concrete Contractor"
+}, {
+	"text": "JB_UNIVADVFAC",
+	"value": "University Advisor/Faculty"
+}, {
+	"text": "JB_WDWRKNG",
+	"value": "Woodworking"
+}, {
+	"text": "JB_CURCOLCTR",
+	"value": "Curator/Collector"
+}, {
+	"text": "JB_FRLNCE",
+	"value": "Freelance"
+}, {
+	"text": "JB_COMMS",
+	"value": "Communications"
+}]
+} 

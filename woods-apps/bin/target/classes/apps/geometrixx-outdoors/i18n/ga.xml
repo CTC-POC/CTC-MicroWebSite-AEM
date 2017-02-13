@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:language="ga"
+    jcr:mixinTypes="[mix:language]"
+    jcr:primaryType="sling:Folder">
+    <add-to-cart
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="nt:folder"
+        sling:key="Add to Cart"
+        sling:message="Cuir Le Ciseán"/>
+    <add-to-wishlist
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="nt:folder"
+        sling:key="Add to wishlist"
+        sling:message="Cuir Le Liosta Mianta"/>
+    <checkout
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="nt:folder"
+        sling:key="Checkout"
+        sling:message="Lánseiceáil"/>
+    <color
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="nt:folder"
+        sling:key="Color"
+        sling:message="Dath"/>
+    <empty
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="nt:folder"
+        sling:key="You have no items in your cart."
+        sling:message="Tá an ciseán folamh."/>
+    <messages
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="nt:folder"
+        sling:key="Messages"
+        sling:message="Teachtaireachtaí"/>
+    <my-account
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="nt:folder"
+        sling:key="My Account"
+        sling:message="Mo Chuntas"/>
+    <my-cart
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="nt:folder"
+        sling:key="My Cart"
+        sling:message="Mo Chiseán"/>
+    <quantity
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="nt:folder"
+        sling:key="Quantity"
+        sling:message="Cainníocht"/>
+    <reviews
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="nt:folder"
+        sling:key="Reviews"
+        sling:message="Léirmheasaí"/>
+    <sign-in
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="nt:folder"
+        sling:key="Sign In"
+        sling:message="Logáil Isteach"/>
+    <sign-out
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="nt:folder"
+        sling:key="Sign Out"
+        sling:message="Logáil Amach"/>
+    <size
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="nt:folder"
+        sling:key="Size"
+        sling:message="Méid"/>
+    <total
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="nt:folder"
+        sling:key="Total: {0}"
+        sling:message="Iomlán: {0}"/>
+</jcr:root>

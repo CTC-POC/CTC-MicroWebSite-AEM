@@ -1,0 +1,44 @@
+<!--/*
+
+  ADOBE CONFIDENTIAL
+  __________________
+
+   Copyright 2014 Adobe Systems Incorporated
+   All Rights Reserved.
+
+  NOTICE:  All information contained herein is, and remains
+  the property of Adobe Systems Incorporated and its suppliers,
+  if any.  The intellectual and technical concepts contained
+  herein are proprietary to Adobe Systems Incorporated and its
+  suppliers and are protected by trade secret or copyright law.
+  Dissemination of this information or reproduction of this material
+  is strictly forbidden unless prior written permission is obtained
+  from Adobe Systems Incorporated.
+  
+*/-->
+    <meta charset="utf-8"
+          data-sly-use.head="head.js"
+          data-sly-use.headlibRenderer="headlibs.html"
+          data-sly-use.wcmInit="initwcm.js"
+          data-sly-use.clientLib="${'/libs/granite/sightly/templates/clientlib.html'}"/>
+    <title>${head.title}</title>
+    <link rel="canonical" href="${head.pagePath}" />
+    <link data-sly-test="${head.faviconPath}" rel="shortcut icon" href="${head.faviconPath}" />
+    <meta data-sly-test="${head.keywords}" name="keywords" content="${head.keywords}" />
+    <meta data-sly-test="${head.description}" name="description" content="${head.description}" />
+    <script>
+        <!--/* Adds a js class to the <html> element to create custom CSS rules if JS is enabled/disabled */-->
+        document.documentElement.className+=' js';
+        <!--/* Makes HTML5 elements listen to CSS styling in IE6-8 (aka HTML5 Shiv) - this is using the IE conditional comments feature */-->
+        /*@cc_on(function(){var e=['abbr','article','aside','audio','canvas','details','figcaption','figure','footer','header','hgroup','mark','meter','nav','output','progress','section','summary','time','video'];for (var i = e.length; i-- > 0;) document.createElement(e[i]);})();@*/
+    </script>
+    <meta data-sly-include="author.html" data-sly-unwrap/>
+    <!--/* Include jQuery as a single lib (instead of 3 separate libs, as the stats components would later do) */-->
+    <meta data-sly-call="${clientLib.all @ categories='apps.geometrixx-outdoors.jquery'}" data-sly-unwrap></meta>
+    <meta data-sly-call="${headlibRenderer.headlibs @ designPath=head.designPath}" data-sly-unwrap></meta>
+    <meta data-sly-call="${clientLib.all @ categories='apps.geometrixx-outdoors.desktop.all'}" data-sly-unwrap></meta>
+    <meta data-sly-resource="${'config' @ resourceType='cq/personalization/components/clientcontext_optimized/config'}" data-sly-unwrap></meta>
+    <meta data-sly-resource="${'contexthub' @ resourceType='granite/contexthub/components/contexthub'}" data-sly-unwrap></meta>
+    <meta data-sly-include="/libs/cq/cloudserviceconfigs/components/servicelibs/servicelibs.jsp" data-sly-unwrap></meta>
+    <meta data-sly-include="/libs/wcm/core/browsermap/browsermap.jsp" data-sly-unwrap></meta>
+    <meta data-sly-include="customheaderlibs.html" data-sly-unwrap/>

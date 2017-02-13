@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="Mobile Reviews"
+    xtype="tabpanel">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <first
+            jcr:primaryType="cq:Widget"
+            title="Allowed Ratings"
+            xtype="panel">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <allowed
+                    jcr:primaryType="cq:Widget"
+                    fieldDescription=""
+                    fieldLabel="Allowed Ratings"
+                    name="./allowedRatings"
+                    xtype="multifield"/>
+            </items>
+        </first>
+        <second
+            jcr:primaryType="cq:Widget"
+            title="Required Ratings"
+            xtype="panel">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <required
+                    jcr:primaryType="cq:Widget"
+                    fieldDescription=""
+                    fieldLabel="Required Ratings"
+                    name="./requiredRatings"
+                    xtype="multifield"/>
+            </items>
+        </second>
+        <props
+            jcr:primaryType="cq:Panel"
+            title="Reviews">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <showSummary
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Show Review Summary"
+                    fieldLabel_commentI18n="Show Review Summary"
+                    name="./showSummary"
+                    type="checkbox"
+                    xtype="selection"/>
+                <maxMessageLength
+                    jcr:primaryType="cq:Widget"
+                    defaultValue="{Long}4096"
+                    fieldDescription="Maximum number of characters a comment message text may have. Default: 4096."
+                    fieldLabel="Max Message Length"
+                    name="./maxMessageLength"
+                    xtype="numberfield"/>
+            </items>
+        </props>
+    </items>
+</jcr:root>

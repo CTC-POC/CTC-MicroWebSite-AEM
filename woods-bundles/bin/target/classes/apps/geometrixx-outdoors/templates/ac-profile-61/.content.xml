@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:description="Template for Geometrixx Outdoor pages which allow to edit profile data stored in Adobe Campaign 6.1."
+    jcr:primaryType="cq:Template"
+    jcr:title="Adobe Campaign Profile (AC 6.1)"
+    allowedPaths="/content/geometrixx-outdoors/[^/]+(/.*)?"
+    ranking="{Long}1010">
+    <jcr:content
+        cq:designPath="/etc/designs/geometrixx-outdoors"
+        jcr:primaryType="cq:PageContent"
+        sling:resourceType="geometrixx-outdoors/components/page_campaign_profile"
+        acMapping="mapRecipient"
+        acTemplateId="mail"
+        acTemplateLabel="Email delivery">
+        <par
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="foundation/components/parsys">
+            <start_e8e9
+                jcr:created="2014-03-13T13:58:38.936+01:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="2014-03-13T13:58:38.936+01:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/form/start"
+                actionType="mcm/campaign/components/form/actions/profileSave"
+                formid="_content_geometrixx-outdoors_en_user_campaign-profile_jcr_content_par_start_e8e9"/>
+            <submit_d0f9
+                jcr:created="2014-03-13T13:59:08.941+01:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="2014-03-13T13:59:49.449+01:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceSuperType="foundation/components/form/defaults/field"
+                sling:resourceType="foundation/components/form/submit"/>
+            <form_end_1394715518942
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/form/end"/>
+        </par>
+    </jcr:content>
+</jcr:root>

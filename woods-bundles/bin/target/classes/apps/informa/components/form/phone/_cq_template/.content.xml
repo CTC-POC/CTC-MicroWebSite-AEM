@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    phoneNumberAreaCode="true"
+    phoneNumberBaseNumber="true"
+    phoneNumberCategory="true"
+    phonenumberCountryCode="true">
+    <phonenumbercountryco
+        jcr:created="{Date}2016-08-09T11:40:59.423+05:30"
+        jcr:createdBy="admin"
+        jcr:lastModified="{Date}2016-08-09T11:40:59.423+05:30"
+        jcr:lastModifiedBy="admin"
+        jcr:primaryType="nt:unstructured"
+        sling:resourceSuperType="foundation/components/form/defaults/field"
+        sling:resourceType="informa/components/form/phonenumberCountrycode"
+        options="[ =Select Phone number Country code, +1=+1, +44=+44, +91=+91, +966=+966, +971=+971]"/>
+    <phonenumberareacode
+        jcr:created="{Date}2016-08-09T11:40:49.320+05:30"
+        jcr:createdBy="admin"
+        jcr:lastModified="{Date}2016-08-09T11:40:49.320+05:30"
+        jcr:lastModifiedBy="admin"
+        jcr:primaryType="nt:unstructured"
+        sling:resourceSuperType="foundation/components/form/defaults/field"
+        sling:resourceType="informa/components/form/phonenumberAreacode"/>
+    <phonenumberbasenumber
+        jcr:created="{Date}2016-08-09T11:41:15.174+05:30"
+        jcr:createdBy="admin"
+        jcr:lastModified="{Date}2016-08-09T11:41:15.174+05:30"
+        jcr:lastModifiedBy="admin"
+        jcr:primaryType="nt:unstructured"
+        sling:resourceSuperType="foundation/components/form/defaults/field"
+        sling:resourceType="informa/components/form/phonenumberbasenumber"/>
+    <phonenumberextension
+        jcr:created="{Date}2016-08-09T11:41:12.113+05:30"
+        jcr:createdBy="admin"
+        jcr:lastModified="{Date}2016-08-09T11:41:12.113+05:30"
+        jcr:lastModifiedBy="admin"
+        jcr:primaryType="nt:unstructured"
+        sling:resourceSuperType="foundation/components/form/defaults/field"
+        sling:resourceType="informa/components/form/phonenumberextension"/>
+    <phonenumbercategory
+        jcr:created="{Date}2016-08-31T15:55:24.839+05:30"
+        jcr:createdBy="admin"
+        jcr:lastModified="{Date}2016-08-31T15:55:24.839+05:30"
+        jcr:lastModifiedBy="admin"
+        jcr:primaryType="nt:unstructured"
+        sling:resourceSuperType="foundation/components/form/defaults/field"
+        sling:resourceType="informa/components/form/phonenumberCategory"/>
+</jcr:root>

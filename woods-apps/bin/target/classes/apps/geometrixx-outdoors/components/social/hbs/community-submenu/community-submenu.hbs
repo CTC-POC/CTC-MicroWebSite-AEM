@@ -1,0 +1,56 @@
+{{!
+
+ ADOBE CONFIDENTIAL
+ __________________
+
+  Copyright 2014 Adobe Systems Incorporated
+  All Rights Reserved.
+
+ NOTICE:  All information contained herein is, and remains
+ the property of Adobe Systems Incorporated and its suppliers,
+ if any.  The intellectual and technical concepts contained
+ herein are proprietary to Adobe Systems Incorporated and its
+ suppliers and are protected by trade secret or copyright law.
+ Dissemination of this information or reproduction of this material
+ is strictly forbidden unless prior written permission is obtained
+ from Adobe Systems Incorporated.
+
+}}
+{{#if-wcm-mode mode="EDIT"}}
+    <div class="scf-includeClientLib">{{includeClientLib js="cq.social.commons.widgets, cq.social.toggle"}}</div>
+{{/if-wcm-mode}}
+<div class="community">
+<div class="title section sub-nav" data-component-id="{{id}}" data-scf-component="geometrixx-outdoors/components/social/hbs/community-submenu">
+    <h1><strong>Community</strong> {{properties.communityName}}</h1>
+    <nav>
+        <ul>
+{{#if properties.isHikingCommunity}}
+           <li class="topnav-item-1"><a href="{{properties.HrefHome}}">HOME</a></li>
+           <li class="topnav-item-2"><a href="{{properties.HrefJournal}}">BLOG</a></li>
+           <li class="topnav-item-3"><a href="{{properties.HrefForum}}">FORUM</a></li>
+           <li class="topnav-item-4"><a href="{{properties.HrefCalendar}}">CALENDAR</a></li>
+           <li class="topnav-item-5"><a href="{{properties.HrefAbout}}">ABOUT</a></li>
+{{/if}}
+{{#if properties.isWinterSportsCommunity}}
+           <li class="topnav-item-1"><a href="{{properties.HrefHome}}">HOME</a></li>
+           <li class="topnav-item-2"><a href="{{properties.HrefJournal}}">BLOG</a></li>
+           <li class="topnav-item-3"><a href="{{properties.HrefForum}}">FORUM</a></li>
+           <li class="topnav-item-4"><a href="{{properties.HrefAbout}}">ABOUT</a></li>
+{{/if}}
+{{#if properties.isRunningCommunity}}
+           <li class="topnav-item-1"><a href="{{properties.HrefHome}}">HOME</a></li>
+           <li class="topnav-item-2"><a href="{{properties.HrefCalendar}}">CALENDAR</a></li>           
+           <li class="topnav-item-3"><a href="{{properties.HrefQna}}">Q&amp;A</a></li>
+           <li class="topnav-item-4"><a href="{{properties.HrefAbout}}">ABOUT</a></li>
+{{/if}}
+{{#if properties.isSurfingCommunity}}
+           <li class="topnav-item-1"><a href="{{properties.HrefHome}}">HOME</a></li>
+           <li class="topnav-item-2"><a href="{{properties.HrefJournal}}">BLOG</a></li>
+           <li class="topnav-item-3"><a href="{{properties.HrefForum}}">FORUM</a></li>
+           <li class="topnav-item-4"><a href="{{properties.HrefCalendar}}">CALENDAR</a></li>
+           <li class="topnav-item-5"><a href="{{properties.HrefAbout}}">ABOUT</a></li>
+{{/if}}
+    </nav>
+        </ul>
+</div>
+</div>

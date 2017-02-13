@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Content>
+	<Field  elementName="pageName" type="string">
+		<Value>
+			<![CDATA[cognizantsamplepage1]]>
+		</Value>
+	</Field>
+	<Field  elementName="cq:Template" type="string">
+		<Value>
+			<![CDATA[/apps/hellotrials/templates/clinicaltrialadminpage]]>
+		</Value>
+	</Field>
+	<Field  elementName="sling:resourceType" type="string">
+		<Value>
+			<![CDATA[/apps/test_gem_hosted/components/page/elm/elm]]>
+		</Value>
+	</Field>
+	<Field  elementName="jcr:Title" type="string">
+		<Value>
+			<![CDATA[Cognizant Sample Page 1]]>
+		</Value>
+	</Field>
+	<Item type="Component" name="par">
+		<Field  elementName="sling:resourceType">
+			<Value>
+				<![CDATA[wcm/foundation/components/parsys]]>
+			</Value>
+		</Field>
+		<Item type="Component" name="elm">
+			<Field  elementName="sling:resourceType">
+				<Value>
+					<![CDATA[test_gem_hosted/components/content/elm/ELM]]>
+				</Value>
+			</Field>
+			<Field elementName="layout" type="number">
+				<Value>
+					<![CDATA[2]]>
+				</Value>
+			</Field>
+			<Field elementName="theme" type="number">
+				<Value>
+					<![CDATA[22]]>
+				</Value>
+			</Field>
+			<Field elementName="backimage" type="multimedia">
+				<Value>
+					<![CDATA[/content/dam/learnmore/Yankee_WatchUpdate_Background.jpg]]>
+				</Value>
+			</Field>
+			<Field elementName="isreq" type="Boolean">
+				<Value>
+					<![CDATA[true]]>
+				</Value>
+			</Field>
+			<Field elementName="date" type="Date">
+				<Value>
+					<![CDATA[2016-11-02T13:11:07]]>
+				</Value>
+			</Field>
+			<Field elementName="multivalue" type="stringarray">
+				<Value>
+					<![CDATA[おすすめのカード]]>
+				</Value>
+				<Value>
+					<![CDATA[おすすめのカード]]>
+				</Value>
+				<Value>
+					<![CDATA[おすすめのカード]]>
+				</Value>
+			</Field>
+			<Item name="items" type="Component">
+				<Item type="Component" name="1">
+					<Field elementName="omnId" type="string">
+						<Value>
+							<![CDATA[iNavAchr.id]]>
+						</Value>
+					</Field>
+					<Field elementName="e1Url" type="string">
+						<Value>
+							<![CDATA[/Internet/PZN/en_US/AmexUSMarket/Default/iNav_MyAccount.html]]>
+						</Value>
+					</Field>
+					<Field elementName="e2Url" type="string">
+						<Value>
+							<![CDATA[/Internet/PZN/en_US/AmexUSMarket/Default/iNav_MyAccount.html]]>
+						</Value>
+					</Field>
+					<Field elementName="e3slUrl" type="string">
+						<Value>
+							<![CDATA[/Internet/PZN/en_US/AmexUSMarket/Default/iNav_MyAccount.html]]>
+						</Value>
+					</Field>
+					<Field elementName="e3Url" type="string">
+						<Value>
+							<![CDATA[/Internet/PZN/en_US/AmexUSMarket/Default/iNav_MyAccount.html]]>
+						</Value>
+					</Field>
+					<Field elementName="isPZNApplicable" type="string">
+						<Value>
+							<![CDATA[Yes]]>
+						</Value>
+					</Field>
+				</Item>
+				<Item type="Component" name="2">
+					<Field elementName="omnId" type="string">
+						<Value>
+							<![CDATA[NA]]>
+						</Value>
+					</Field>
+					<Field elementName="e1Url" type="string">
+						<Value>
+							<![CDATA[NA]]>
+						</Value>
+					</Field>
+					<Field elementName="e2Url" type="string">
+						<Value>
+							<![CDATA[NA]]>
+						</Value>
+					</Field>
+					<Field elementName="e3slUrl" type="string">
+						<Value>
+							<![CDATA[NA]]>
+						</Value>
+					</Field>
+					<Field elementName="e3Url" type="string">
+						<Value>
+							<![CDATA[NA]]>
+						</Value>
+					</Field>
+					<Field elementName="isPZNApplicable" type="string">
+						<Value>
+							<![CDATA[Not Applicable]]>
+						</Value>
+					</Field>
+				</Item>
+				<Item type="Component" name="3">
+					<Field elementName="omnId" type="string">
+						<Value>
+							<![CDATA[iNavAchr.id]]>
+						</Value>
+					</Field>
+					<Field elementName="e1Url" type="string">
+						<Value>
+							<![CDATA[/Internet/PZN/en_US/AmexUSMarket/Default/iNav_Travel.html]]>
+						</Value>
+					</Field>
+					<Field elementName="e2Url" type="string">
+						<Value>
+							<![CDATA[/Internet/PZN/en_US/AmexUSMarket/Default/iNav_Travel.html]]>
+						</Value>
+					</Field>
+					<Field elementName="e3slUrl" type="string">
+						<Value>
+							<![CDATA[/Internet/PZN/en_US/AmexUSMarket/Default/iNav_Travel.html]]>
+						</Value>
+					</Field>
+					<Field elementName="e3Url" type="string">
+						<Value>
+							<![CDATA[/Internet/PZN/en_US/AmexUSMarket/Default/iNav_Travel.html]]>
+						</Value>
+					</Field>
+					<Field elementName="isPZNApplicable" type="string">
+						<Value>
+							<![CDATA[Yes]]>
+						</Value>
+					</Field>
+				</Item>
+				<Item type="Component" name="4">
+					<Field elementName="omnId" type="string">
+						<Value>
+							<![CDATA[iNavAchr.id]]>
+						</Value>
+					</Field>
+					<Field elementName="e1Url" type="string">
+						<Value>
+							<![CDATA[/Internet/PZN/en_US/AmexUSMarket/Default/iNav_Rewards.html]]>
+						</Value>
+					</Field>
+					<Field elementName="e2Url" type="string">
+						<Value>
+							<![CDATA[/Internet/PZN/en_US/AmexUSMarket/Default/iNav_Rewards.html]]>
+						</Value>
+					</Field>
+					<Field elementName="e3slUrl" type="string">
+						<Value>
+							<![CDATA[/Internet/PZN/en_US/AmexUSMarket/Default/iNav_Rewards.html]]>
+						</Value>
+					</Field>
+					<Field elementName="e3Url" type="string">
+						<Value>
+							<![CDATA[/Internet/PZN/en_US/AmexUSMarket/Default/iNav_Rewards.html]]>
+						</Value>
+					</Field>
+					<Field elementName="isPZNApplicable" type="string">
+						<Value>
+							<![CDATA[Yes]]>
+						</Value>
+					</Field>
+				</Item>
+				<Item type="Component" name="5">
+					<Field elementName="omnId" type="string">
+						<Value>
+							<![CDATA[iNavAchr.id]]>
+						</Value>
+					</Field>
+					<Field elementName="e1Url" type="string">
+						<Value>
+							<![CDATA[/Internet/PZN/en_US/AmexUSMarket/Default/iNav_Business.html]]>
+						</Value>
+					</Field>
+					<Field elementName="e2Url" type="string">
+						<Value>
+							<![CDATA[/Internet/PZN/en_US/AmexUSMarket/Default/iNav_Business.html]]>
+						</Value>
+					</Field>
+					<Field elementName="e3slUrl" type="string">
+						<Value>
+							<![CDATA[/Internet/PZN/en_US/AmexUSMarket/Default/iNav_Business.html]]>
+						</Value>
+					</Field>
+					<Field elementName="e3Url" type="string">
+						<Value>
+							<![CDATA[/Internet/PZN/en_US/AmexUSMarket/Default/iNav_Business.html]]>
+						</Value>
+					</Field>
+					<Field elementName="isPZNApplicable" type="string">
+						<Value>
+							<![CDATA[Yes]]>
+						</Value>
+					</Field>
+				</Item>
+			</Item>
+			<Item type="Component" name="col1">
+				<Item type="Component" name="image">
+					<Field elementName="fileReference" type="multimedia">
+						<Value>
+							<![CDATA[/content/dam/learnmore/Phone-Watch_v3.png]]>
+						</Value>
+					</Field>
+				</Item>
+			</Item>
+			<Item type="Component" name="col2">
+				<Item type="Component" name="title">
+					<Field elementName="jcr:title" type="string">
+						<Value>
+							<![CDATA[Get all the power of American Express when you use Apple Pay™]]>
+						</Value>
+					</Field>
+					<Field elementName="type" type="string">
+						<Value>
+							<![CDATA[h1]]>
+						</Value>
+					</Field>
+				</Item>
+				<Item type="Component" name="text">
+					<Field elementName="text" type="string">
+						<Value>
+							<![CDATA[<p><img src="https://web.aexp-static.com/us/content/images/apple-pay/HERO_Lockup.png" alt="American Express and Apple Pay"></p>]]>
+						</Value>
+					</Field>
+				</Item>
+			</Item>
+		</Item>
+		<Item type="Component" name="elm1">
+			<Field  elementName="sling:resourceType" type="string">
+				<Value>
+					<![CDATA[test_gem_hosted/components/content/elm/ELM]]>
+				</Value>
+			</Field>
+			<Field elementName="layout" type="number">
+				<Value>
+					<![CDATA[3]]>
+				</Value>
+			</Field>
+			<Field elementName="theme" type="number">
+				<Value>
+					<![CDATA[32]]>
+				</Value>
+			</Field>
+			<Item type="Component" name="header">
+				<Item type="Component" name="title">
+					<Field elementName="jcr:title" type="string">
+						<Value>
+							<![CDATA[Get More from Apple Pay with American Express]]>
+						</Value>
+					</Field>
+					<Field elementName="type" type="string">
+						<Value>
+							<![CDATA[h2]]>
+						</Value>
+					</Field>
+				</Item>
+			</Item>
+			<Item type="Component" name="col1">
+				<Item type="Component" name="title">
+					<Field elementName="jcr:title" type="string">
+						<Value>
+							<![CDATA[Trusted Safety & Security]]>
+						</Value>
+					</Field>
+					<Field elementName="type" type="string">
+						<Value>
+							<![CDATA[h3]]>
+						</Value>
+					</Field>
+				</Item>
+				<Item type="Component" name="text">
+					<Field elementName="text" type="string">
+						<Value>
+							<![CDATA[<p>Whether you swipe, click or tap to pay, American Express has your back. With fraud and online protection, American Express is working to safeguard you.</p><p>&nbsp;</p>
+]]>
+						</Value>
+					</Field>
+				</Item>
+			</Item>
+			<Item type="Component" name="col2">
+				<Item type="Component" name="title">
+					<Field elementName="jcr:title" type="string">
+						<Value>
+							<![CDATA[World-class Service]]>
+						</Value>
+					</Field>
+					<Field elementName="type" type="string">
+						<Value>
+							<![CDATA[h3]]>
+						</Value>
+					</Field>
+				</Item>
+			</Item>
+			<Item type="Component" name="col3">
+				<Item type="Component" name="title">
+					<Field elementName="jcr:title" type="string">
+						<Value>
+							<![CDATA[Benefits & Offers]]>
+						</Value>
+					</Field>
+					<Field elementName="type" type="string">
+						<Value>
+							<![CDATA[h3]]>
+						</Value>
+					</Field>
+				</Item>
+				<Item type="Component" name="text">
+					<Field elementName="text" type="stringarray">
+						<Value>
+							<![CDATA[stringarray1]]>
+						</Value>
+						<Value>
+							<![CDATA[stringarray2]]>
+						</Value>
+						<Value>
+							<![CDATA[stringarray3]]>
+						</Value>
+					</Field>
+				</Item>
+			</Item>
+		</Item>
+	</Item>
+</Content>

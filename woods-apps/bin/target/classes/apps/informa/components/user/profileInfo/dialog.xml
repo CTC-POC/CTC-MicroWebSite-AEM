@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="Sign In"
+    xtype="panel">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <firstName
+            jcr:primaryType="cq:Widget"
+            fieldLabel="First Name Label"
+            name="./firstName"
+            xtype="textfield"/>
+        <lastName
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Last name Label"
+            name="./lastName"
+            xtype="textfield"/>
+        <businessLine
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Business Line Label"
+            name="./businessLine"
+            xtype="textfield"/>
+        <address
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Address Label"
+            name="./address"
+            xtype="textfield"/>
+        <profileInfo
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Profile Information Label"
+            name="./profileInfo"
+            xtype="textfield"/>
+        <signOut
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Sign Out Label"
+            name="./signOut"
+            xtype="textfield"/>
+        <loginPageUrl
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Login Page Url"
+            name="./loginPageUrl"
+            xtype="pathfield"/>
+    </items>
+</jcr:root>

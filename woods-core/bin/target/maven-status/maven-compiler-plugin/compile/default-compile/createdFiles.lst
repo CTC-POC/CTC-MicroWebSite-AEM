@@ -1,0 +1,6 @@
+com\woods\core\package-info.class
+com\woods\core\listeners\SimpleResourceListener.class
+com\woods\core\filters\LoggingFilter.class
+com\woods\core\servlets\SimpleServlet.class
+com\woods\core\schedulers\SimpleScheduledTask.class
+com\woods\core\models\HelloWorldModel.class

@@ -1,0 +1,73 @@
+{{!
+
+ ADOBE CONFIDENTIAL
+ __________________
+
+  Copyright 2014 Adobe Systems Incorporated
+  All Rights Reserved.
+
+ NOTICE:  All information contained herein is, and remains
+ the property of Adobe Systems Incorporated and its suppliers,
+ if any.  The intellectual and technical concepts contained
+ herein are proprietary to Adobe Systems Incorporated and its
+ suppliers and are protected by trade secret or copyright law.
+ Dissemination of this information or reproduction of this material
+ is strictly forbidden unless prior written permission is obtained
+ from Adobe Systems Incorporated.
+
+}}
+{{#if-wcm-mode mode="EDIT"}}
+   <div class="scf-includeClientLib">{{includeClientLib js="cq.social.commons.widgets, cq.social.toggle"}}</div>
+{{/if-wcm-mode}}
+<div class="scf scf-forum" data-component-id="{{id}}" data-scf-component="geometrixx-media/components/social/forum/components/hbs/forum">
+    <div class="forum-component">
+        <div class="section-title clearfix">
+            <p>Discussions</p>
+            <div class="new-topic scf-js-newtopic" data-attrib="new-topic-button" evt="click=showComposer">+ Create Discussion</div>
+            <div class="cancel-new-topic" data-attrib="cancel-new-topic-button" evt="click=hideComposer" style="display:none;">Cancel</div>
+        </div>
+        <div class="composer-block topic-composer reply-box scf-js-composer-block scf-is-collapsed">
+                <label for="subject" class="form-label">Title<span class="required-field">*</span></label>
+                <input type="text" data-attrib="subject" name="subject"/>
+				{{#if taggingAllowed}}
+                    <div><label for="tags" class="form-label">Tags</label>
+                    <select data-attrib = 'tags' name = 'tags' data-field-type="tags" data-tag-filter="{{configuration.tagFilterVal}}" data-tag-limit="{{configuration.tagFilterLimit}}" size='1'></select></div>
+                {{/if}}
+                <label for="message" class="form-label">Message<span class="required-field">*</span></label>    
+                <textarea data-attrib="message" name="message" class="comment-composer-input" data-field-type="rte"></textarea>
+                <div class='scf-composer-toolbar'>
+                {{#if configuration.isAttachmentAllowed}}
+                    <button class="scf-composer-action scf-composer-attach" evt="click=openAttachmentDialog">{{i18n "Attach"}}</button>
+                    <input class="scf-comment-attachment-input scf-js-cmt-att-input" type="file" data-attrib = 'attachment' name="attachment" multiple evt="change=renderAttachmentList" />
+                {{/if}}
+                <div class="scf-composer-actions">
+                    <input type="submit" value="{{i18n "Create Discussion"}}" evt="click=addComment"/>
+                </div>
+                {{#if configuration.isAttachmentAllowed}}
+                    <div class="scf-composer-attachments">
+                        <ul class="scf-attachment-list scf-js-composer-att"></ul>
+                    </div>
+                {{/if}}
+            </div>
+                <div class="composer-message"><span class="required-field">*</span>Required fields</div>
+        </div>
+        <div class="topics">
+            <ul>
+                {{#each items}}
+                    {{#if this.isVisible}}
+                        <li>{{include this resourceType="geometrixx-media/components/social/forum/components/hbs/topic" template="list-item"}}</li>
+                    {{/if}}
+                {{/each}}
+            </ul>
+        </div>
+        <div class="scf-pages">
+            <ul class="scf-pages-list">
+                {{#pages pageInfo}}
+                <li class="scf-pages-list-item">
+                    <a class="scf-page{{#if currentPage}} scf-currentPage{{/if}}" data-page-suffix="{{suffix}}" evt="click=navigate">{{pageNumber}}</a>
+                </li>
+                {{/pages}}
+            </ul>
+	    </div>
+    </div>
+</div>

@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Update Password"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/foundation/container">
+        <layout
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/foundation/layouts/tabs"
+            type="nav"/>
+        <items jcr:primaryType="nt:unstructured">
+            <tab1
+                jcr:primaryType="nt:unstructured"
+                jcr:title="General"
+                sling:resourceType="granite/ui/components/foundation/container">
+                <layout
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"/>
+                <items jcr:primaryType="nt:unstructured">
+                    <columns
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <title
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldDescription="Label for Title"
+                                fieldLabel="Title"
+                                name="./title"/>
+                            <password
+                                cq:showOnCreate="{Boolean}false"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Password"
+                                sling:resourceType="granite/ui/components/foundation/form/fieldset"/>
+                            <passwordLabel
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldDescription="Label for Password"
+                                fieldLabel="Password Label"
+                                name="./password"/>
+                            <currentPassword
+                                cq:showOnCreate="{Boolean}false"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Current Password"
+                                sling:resourceType="granite/ui/components/foundation/form/fieldset"/>
+                            <currentPasswordLabel
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldDescription="Label for Current Password"
+                                fieldLabel="Current Password Label"
+                                name="./currentPassword"/>
+                            <reqCurrentPassword
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldDescription="Provide Error message to be displayed if Current Password not entered"
+                                fieldLabel="Required Error Message"
+                                name="./reqCurrentPassword"/>
+                            <newPassword
+                                cq:showOnCreate="{Boolean}false"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="New Password"
+                                sling:resourceType="granite/ui/components/foundation/form/fieldset"/>
+                            <newPasswordLabel
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldDescription="Label for New Password"
+                                fieldLabel="New Password Label"
+                                name="./newPassword"/>
+                            <reqNewPassword
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldDescription="Provide Error message to be displayed if New Password not entered"
+                                fieldLabel="Required Error Message"
+                                name="./reqNewPassword"/>
+                            <passwordRule
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textarea"
+                                fieldDescription="Label for Password Rules"
+                                fieldLabel="Password Rules"
+                                name="./passwordRule"/>
+                            <confirmNewPassword
+                                cq:showOnCreate="{Boolean}false"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Confirm New Password"
+                                sling:resourceType="granite/ui/components/foundation/form/fieldset"/>
+                            <confirmNewPasswordLabel
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldDescription="Label for Confirm New Password"
+                                fieldLabel="Confirm New Password Label"
+                                name="./confirmNewPassword"/>
+                            <reqconfirmNewPassword
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldDescription="Provide Error message to be displayed if Confirm New Password not entered"
+                                fieldLabel="Required Error Message"
+                                name="./reqConfirmNewPassword"/>
+                            <identicalPassword
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldDescription="Provide Error message to be displayed if mismatch in Passwords"
+                                fieldLabel="Required Error Message for Identical Password"
+                                name="./identicalPassword"/>
+                            <button
+                                cq:showOnCreate="{Boolean}false"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Button Label"
+                                sling:resourceType="granite/ui/components/foundation/form/fieldset"/>
+                            <submit
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldDescription="Label for Save Button"
+                                fieldLabel="Save Button Label"
+                                name="./submit"/>
+                            <cancel
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldDescription="Label for Cancel Button"
+                                fieldLabel="Cancel Button Label"
+                                name="./cancel"/>
+                            <update
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldDescription="Label for UpdateButton"
+                                fieldLabel="Update Button Label"
+                                name="./update"/>
+                        </items>
+                    </columns>
+                </items>
+            </tab1>
+            <messages
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Messages"
+                sling:resourceType="granite/ui/components/foundation/container">
+                <layout
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"/>
+                <items jcr:primaryType="nt:unstructured">
+                    <columns
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <successMessage
+                                cq:showOnCreate="{Boolean}false"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Success "
+                                sling:resourceType="granite/ui/components/foundation/form/fieldset"/>
+                            <successTitle
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldDescription="Title for success message"
+                                fieldLabel="Success Title"
+                                name="./updatePasswordSuccessTitle"/>
+                            <successdescription
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldDescription="Message displayed when success"
+                                fieldLabel="Success Message"
+                                name="./updatePasswordSuccessMsg"/>
+                            <wrongPasswordMessage
+                                cq:showOnCreate="{Boolean}false"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Wrong Current Password "
+                                sling:resourceType="granite/ui/components/foundation/form/fieldset"/>
+                            <wrongPasswordTitle
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldDescription="Title if password entered does not match"
+                                fieldLabel="Wrong Password Title"
+                                name="./wrongPasswordTitle"/>
+                            <wrongPasswordMsg
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldDescription="Message displayed when password entered does not match"
+                                fieldLabel="Wrong Password Message"
+                                name="./wrongPasswordMsg"/>
+                        </items>
+                    </columns>
+                </items>
+            </messages>
+        </items>
+    </content>
+</jcr:root>

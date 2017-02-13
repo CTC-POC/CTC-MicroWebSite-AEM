@@ -1,0 +1,37 @@
+<div data-sly-test="${wcmmode.edit}" data-emptytext="Sponsor Container"
+	class="cq-placeholder"></div>
+
+<!--Horizontal Carousal to showcase images starts-->
+<div class="img-gallery ${properties.spacingstylestop} ${properties.spacingstylesbottom}"
+	data-sly-use.sponsorcase="com.informa.components.commons.Multifield"
+	data-sly-test="${properties.title}">
+	<h3 class="informa-title-color sponsors-box-heading">${properties.title}</h3>
+	<div class="tab_carousel_well home-page-carousel">
+		<!-- Carousel
+            ================================================== -->
+		<div class="">
+			<ul class="sponsorsandpartners"
+				data-sly-list.sponsor="${sponsorcase.childList}">
+				<li class="custom-col-2">
+					<div>
+						<a class="thumbnail tab-carousel-thumbnails homePageCarouselItem"
+							href="${sponsor.linkPath}"
+							target="${sponsor.openInNewWindow==true && '_blank'}">
+							<div class="sponsorsImgItem">
+								<img alt="${sponsor.altText}"
+									class="img-responsive center-block" src="${sponsor.imagePath}">
+							</div>
+							<div class="gallery-img-ribbon-title">
+								<h4 class="gallary-content-title"
+									data-sly-test="${sponsor.subTitle}">${sponsor.subTitle}</h4>
+							</div>
+						</a>
+					</div>
+				</li>
+
+			</ul>
+		</div>
+		<!-- End Carousel -->
+	</div>
+	<!-- End Well -->
+</div>

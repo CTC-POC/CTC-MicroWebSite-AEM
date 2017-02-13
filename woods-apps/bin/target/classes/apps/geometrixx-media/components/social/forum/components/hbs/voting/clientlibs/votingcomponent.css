@@ -1,0 +1,45 @@
+.social.voting {
+	width: auto;
+	cursor: pointer;
+}
+
+.social.voting .votingLabel {
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.social.voting input {
+	border: 0;
+	background-color: transparent;
+	background-position: center;
+	background-repeat: no-repeat;
+	cursor: pointer;
+}
+
+.social.voting input.vote-up {
+	background-image: url("/etc/designs/social/qna/images/vote-up.png")
+}
+
+.social.voting input.vote-down {
+	background-image: url("/etc/designs/social/qna/images/vote-down.png")
+}
+
+.social.voting input.vote-up.voting-unset {
+	background-image: url("/etc/designs/social/qna/images/vote-up-hover.png")
+}
+
+.social.voting input.vote-down.voting-unset {
+	background-image: url("/etc/designs/social/qna/images/vote-down-hover.png")
+}
+
+.social.voting .votingLabel[data-vote-count] {
+	color: green;
+}
+
+.social.voting .votingLabel[data-vote-count='0'] {
+	color: black;
+}
+
+.social.voting .votingLabel[data-vote-count*='-'] {
+	color: red;
+}

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="Link List"
+    width="800"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <generalTab
+                jcr:primaryType="cq:Widget"
+                title="General"
+                xtype="panel">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <links
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Links"
+                        name="./links"
+                        xtype="mtmulticompositefield">
+                        <fieldConfigs jcr:primaryType="cq:WidgetCollection">
+                            <linkTitle
+                                jcr:primaryType="cq:Widget"
+                                allowBlank="true"
+                                fieldLabel="Title"
+                                name="./linktitle"
+                                width="300"
+                                xtype="textfield"/>
+                            <linkPath
+                                jcr:primaryType="cq:Widget"
+                                allowBlank="true"
+                                fieldLabel="Link"
+                                name="./linkPath"
+                                suffix=".html"
+                                width="300"
+                                xtype="pathfield"/>
+                            <openInNewWindow
+                                jcr:primaryType="cq:Widget"
+                                boxLabel="Open In New Window"
+                                name="./openInNewWindow"
+                                type="checkbox"
+                                xtype="selection"/>
+                        </fieldConfigs>
+                    </links>
+                </items>
+            </generalTab>
+            <stylesTab
+                jcr:primaryType="cq:Widget"
+                xtype="componentstyles"/>
+        </items>
+    </items>
+</jcr:root>

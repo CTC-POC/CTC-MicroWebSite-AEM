@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="Dialog"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <tab1
+                jcr:primaryType="cq:Panel"
+                title="tab 1">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <textfield
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Enter Text"
+                        name="./textfield"
+                        xtype="textfield"/>
+                    <path
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Enter the path"
+                        name="./pathfield"
+                        xtype="pathfield"/>
+                    <dropdown
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Make your choice"
+                        name="./dropdown"
+                        type="select"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <option1
+                                jcr:primaryType="nt:unstructured"
+                                text="Textfield"
+                                value="textfield"/>
+                            <option2
+                                jcr:primaryType="nt:unstructured"
+                                text="pathfield"
+                                value="pathfield"/>
+                        </options>
+                        <listeners
+                            jcr:primaryType="nt:unstructured"
+                            selectionchanged="function(field, value) { &#xa;    var dlg = field.findParentByType('dialog');  &#xa;    if(value =='textfield'){        &#xa;        dlg.getField('./textfield').show();&#xa;&#x9;&#x9;dlg.getField('./pathfield').hide();&#xa;    }else {&#xa;        dlg.getField('./pathfield').show();&#xa;        dlg.getField('./textfield').hide();&#xa;    }&#xa;}"/>
+                    </dropdown>
+                    <selection
+                        jcr:primaryType="cq:Widget"
+                        allowedBlank="false"
+                        defaultValue="-select-"
+                        fieldLabel="Select Tab"
+                        name="./selection"
+                        type="select"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <tab2
+                                jcr:primaryType="nt:unstructured"
+                                text="tab2"
+                                value="tab2"/>
+                            <tab3
+                                jcr:primaryType="nt:unstructured"
+                                text="tab3"
+                                value="tab3"/>
+                        </options>
+                        <listeners
+                            jcr:primaryType="nt:unstructured"
+                            selectionchanged="function(box,value){manageTabs(box.findParentByType('tabpanel'),value,true);}"/>
+                    </selection>
+                </items>
+            </tab1>
+            <tab2
+                jcr:primaryType="cq:Panel"
+                title="tab 2">
+                <listeners
+                    jcr:primaryType="nt:unstructured"
+                    render="function() { this.findParentByType('tabpanel').hideTabStripItem(1); }"/>
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <textfield
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Enter Tab 2 Text"
+                        name="./textfield2"
+                        xtype="textfield"/>
+                </items>
+            </tab2>
+            <tab3
+                jcr:primaryType="cq:Panel"
+                title="tab3">
+                <listeners
+                    jcr:primaryType="nt:unstructured"
+                    render="function() { this.findParentByType('tabpanel').hideTabStripItem(2); }"/>
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <textfield
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Enter Tab 3  Text"
+                        name="./textfield3"
+                        xtype="textfield"/>
+                </items>
+            </tab3>
+        </items>
+    </items>
+    <listeners
+        jcr:primaryType="nt:unstructured"
+        beforesubmit="function(dialog){&#xa;&#xa;    alert(&quot;listener&quot;);&#xa;}"
+        loadcontent="function(dialog) { &#xa;    dialog.getField('./textfield').hide();&#xa;&#x9;dialog.getField('./pathfield').hide();   &#xa;}"/>
+</jcr:root>

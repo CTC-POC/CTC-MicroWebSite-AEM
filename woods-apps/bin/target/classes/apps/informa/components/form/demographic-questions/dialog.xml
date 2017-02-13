@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="Demographic"
+    width="800"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <first
+                jcr:primaryType="cq:Panel"
+                title="Demographic questions and answers"
+                xtype="panel">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <questions
+                        jcr:primaryType="cq:Widget"
+                        dname="question"
+                        fieldLabel="Questions"
+                        name="./question"
+                        options="/content/data/informa/servlet/questions"
+                        type="select"
+                        xtype="selection">
+                        <listeners
+                            jcr:primaryType="nt:unstructured"
+                            selectionchanged="function(dialog){ &#xa;&#xa;var componentDialog = this.findParentByType('dialog'); &#xa;&#xa;var questionValue= this.getRawValue();&#xa;var authorableQuestion=this.findParentByType('dialog').findByType('textfield');&#xa;var questionField;&#xa;var que;&#xa;&#xa;for(que = 0; que &lt; authorableQuestion.length; que++) {&#xa;&#xa;&#x9;if(authorableQuestion[que].getName().includes('authorablequestion')) {&#xa;&#x9;&#x9;&#xa;&#x9;&#x9;questionField = authorableQuestion[que];&#xa;&#x9;&#x9;questionField.setValue(questionValue);&#xa;&#x9;&#x9;break;&#xa;&#x9;}&#xa;}&#xa;var question=componentDialog.getField('./question').getValue();&#xa;response = CQ.utils.HTTP.get(&quot;/content/data/informa/servlet/answers&quot;);      &#xa;var select2= this.findParentByType('dialog').findByType('selection');&#xa;var answerField;&#xa;var temp;&#xa;var i;&#xa;var j;&#xa;var q;&#xa;var a;&#xa;var select2opts;&#xa;var v=JSON.parse(response.responseText);&#xa;for(temp = 0; temp &lt; select2.length; temp++) {&#xa;&#x9;select2opts = [];&#xa;&#x9;if(select2[temp].getName().includes('answer')) {&#xa;&#x9;&#x9;answerField = select2[temp];&#xa;&#x9;&#x9;&#x9;for(i = 0; i &lt; v.length; i++) {&#xa;&#x9;&#x9;&#x9;&#x9;q = v[i];&#xa;&#x9;&#x9;&#x9;&#x9;for(j=0;j &lt; q.length; j++) {&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;if(question == q[j].value) {&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;a = q[j+1];&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;if( a.length > 0){&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;for(var k=0; k &lt; a.length; k++) {&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;select2opts.push({value: a[k].value, text:a[k].text});&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;}&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;}&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;else{&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;select2opts.push({value:'Selected question type is free text', text:'Selected question type is free text'});&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;}&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;}&#xa;&#x9;&#x9;&#x9;&#x9;}&#xa;&#x9;&#x9;&#x9;}&#xa;&#x9;&#x9;answerField.setOptions(select2opts);&#x9;&#x9;&#xa;    }&#x9;&#xa;}&#xa;};&#xa;"/>
+                    </questions>
+                    <authorableQuestion
+                        jcr:primaryType="cq:Widget"
+                        dname="authorablequestion"
+                        fieldLabel="Question Text"
+                        name="./authorablequestion"
+                        xtype="textfield"/>
+                    <tooltip
+                        jcr:primaryType="cq:Widget"
+                        dname="authorablequestion"
+                        fieldLabel="Tooltip Message"
+                        name="./tooltip"
+                        xtype="textfield"/>
+                    <multi
+                        jcr:primaryType="cq:Widget"
+                        name="./multi"
+                        title="Demographic Answers"
+                        xtype="multifield">
+                        <fieldConfig
+                            jcr:primaryType="cq:Widget"
+                            border="true"
+                            layout="form"
+                            xtype="multi-field-panel">
+                            <items jcr:primaryType="cq:WidgetCollection">
+                                <answer
+                                    jcr:primaryType="cq:Widget"
+                                    dName="answer"
+                                    fieldLabel="Answers"
+                                    name="./answer"
+                                    type="select"
+                                    xtype="selection">
+                                    <listeners
+                                        jcr:primaryType="nt:unstructured"
+                                        selectionchanged="function(dialog)&#xa;{&#xa;var answer = this.getRawValue();&#xa;var answerEditableField= this.findParentByType('multi-field-panel').findByType('textfield');&#xa;var answerField;&#xa;var hiddenField;&#xa;var temp;&#xa;for(temp = 0; temp &lt; answerEditableField.length; temp++) {&#xa;&#x9;&#xa;&#x9;if(answerEditableField[temp].getRawValue() == answer) {&#xa;&#x9;&#x9;answerField = answerEditableField[temp+1];&#xa;&#x9;&#x9;hiddenField = answerEditableField[temp+2];&#xa;&#x9;&#x9;answerField.setValue(answer);&#xa;&#x9;&#x9;hiddenField.setValue(answer);&#xa;&#x9;&#x9;break;&#xa;&#x9;}&#xa;}&#xa;};"/>
+                                </answer>
+                                <authorableAnswer
+                                    jcr:primaryType="cq:Widget"
+                                    dName="authorableans"
+                                    fieldLabel="Answer Text"
+                                    name="./authorableans"
+                                    width="{Long}408"
+                                    xtype="textfield"/>
+                                <hiddenAnswer
+                                    jcr:primaryType="cq:Widget"
+                                    dName="hiddenAns"
+                                    hidden="{Boolean}true"
+                                    name="./hiddenAns"
+                                    xtype="textfield"/>
+                            </items>
+                        </fieldConfig>
+                    </multi>
+                </items>
+            </first>
+            <second
+                jcr:primaryType="nt:unstructured"
+                title="Constraints"
+                xtype="panel">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <demographicRequired
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Required"
+                        inputValue="true"
+                        name="./demographicRequired"
+                        type="checkbox"
+                        xtype="selection"/>
+                    <demographicRequiredMessage
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Required Message"
+                        name="./demographicRequiredMessage"
+                        xtype="textarea"/>
+                </items>
+            </second>
+        </items>
+    </items>
+</jcr:root>

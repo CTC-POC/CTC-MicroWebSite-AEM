@@ -1,0 +1,43 @@
+<!--/*
+
+     Informa
+	_______________________
+	
+	Dialogue Box component.
+
+*/-->
+
+<div data-sly-test="${wcmmode.edit}" data-emptytext="Alert Box"
+	class="cq-placeholder"></div>
+
+<div class="homepage-modal-body"
+	data-sly-use.dialogueBox="com.informa.components.commons.Multifield">
+	<div class="col-md-12 col-sm-12">
+		<div class="modal-header">
+			<h3 class="modal-title" data-sly-test="${properties.title}">${properties.title}</h3>
+		</div>
+		<div class="modal-body">
+			<p data-sly-test="${properties.description}">${properties.description
+				@ context='html'}</p>
+		</div>
+		<div class="row callaction-btn">
+			<div class="col-md-9 pull-right">
+				<div class="modal-footer"
+					data-sly-list.dialoguelink="${dialogueBox.childList}">
+
+					<div class="col-md-6 col-xs-12 callaction-btn-col pull-right">
+						<a href="${dialoguelink.linkPath}"
+							class="btn btn-primary btn-lg btn-custom" role="button"
+							target="${dialoguelink.openInNewWindow==true && '_blank'}">
+							<div class=" callaction-btn-text-padding">
+								<span class="callaction-btn-title"
+									data-sly-test="${dialoguelink.title}">${dialoguelink.title}
+								</span>
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

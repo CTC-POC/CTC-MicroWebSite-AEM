@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    height="{Long}400"
+    title="HighLight And Text"
+    width="{Long}800"
+    xtype="dialog">
+    <items jcr:primaryType="cq:TabPanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <textTab
+                jcr:primaryType="cq:Widget"
+                jcr:title="Text"
+                xtype="panel">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <title
+                        jcr:primaryType="nt:unstructured"
+                        fieldLabel="Title"
+                        name="./title"
+                        xtype="textfield"/>
+                    <text
+                        jcr:primaryType="nt:unstructured"
+                        allowBlank="true"
+                        configPath="/apps/informa/components/commons/content-tile/dialog/items/items/textTab/items/text"
+                        fieldLabel="Text"
+                        isRichTextFlag="{Boolean}false"
+                        name="./text"
+                        xtype="richtext">
+                        <rtePlugins jcr:primaryType="nt:unstructured">
+                            <format
+                                jcr:primaryType="nt:unstructured"
+                                features="*"/>
+                            <paraformat
+                                jcr:primaryType="nt:unstructured"
+                                features="*">
+                                <formats jcr:primaryType="cq:WidgetCollection">
+                                    <Paragraph
+                                        jcr:primaryType="nt:unstructured"
+                                        description="Paragraph"
+                                        tag="p"/>
+                                    <heading1
+                                        jcr:primaryType="nt:unstructured"
+                                        description="Heading 1"
+                                        tag="h1"/>
+                                    <heading2
+                                        jcr:primaryType="nt:unstructured"
+                                        description="Heading 2"
+                                        tag="h2"/>
+                                    <heading3
+                                        jcr:primaryType="nt:unstructured"
+                                        description="Heading 3"
+                                        tag="h3"/>
+                                    <heading4
+                                        jcr:primaryType="nt:unstructured"
+                                        description="Heading 4"
+                                        tag="h4"/>
+                                    <heading5
+                                        jcr:primaryType="nt:unstructured"
+                                        description="Heading 5"
+                                        tag="h5"/>
+                                    <heading6
+                                        jcr:primaryType="nt:unstructured"
+                                        description="Heading 6"
+                                        tag="h6"/>
+                                </formats>
+                            </paraformat>
+                            <edit
+                                jcr:primaryType="nt:unstructured"
+                                defaultPasteMode="plaintext"
+                                features="[cut,copy,paste-plaintext]"
+                                stripHtmlTags="{Boolean}true"/>
+                        </rtePlugins>
+                    </text>
+                    <buttomText
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="false"
+                        fieldLabel="ButtomText"
+                        name="buttomText"
+                        width="300"
+                        xtype="textfield"/>
+                    <buttomPath
+                        jcr:primaryType="nt:unstructured"
+                        allowBlank="true"
+                        fieldDescription="Internal or external link (if the link is external it should start with &quot;http&quot;)."
+                        fieldLabel="Button Path"
+                        name="./buttomPath"
+                        suffix=".html"
+                        xtype="pathfield"/>
+                </items>
+            </textTab>
+            <linkTab
+                jcr:primaryType="cq:Widget"
+                jcr:title="Links"
+                xtype="panel">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <links
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Links"
+                        name="./links"
+                        xtype="mtmulticompositefield">
+                        <fieldConfigs jcr:primaryType="cq:WidgetCollection">
+                            <linkTitle
+                                jcr:primaryType="cq:Widget"
+                                allowBlank="false"
+                                fieldLabel="Title"
+                                name="title"
+                                width="300"
+                                xtype="textfield"/>
+                            <linkPath
+                                jcr:primaryType="cq:Widget"
+                                allowBlank="false"
+                                fieldLabel="Link"
+                                name="linkpath"
+                                suffix=".html"
+                                width="300"
+                                xtype="pathfield"/>
+                        </fieldConfigs>
+                    </links>
+                </items>
+            </linkTab>
+        </items>
+    </items>
+    <listeners
+        jcr:primaryType="nt:unstructured"
+        beforesubmit="function(dialog) {&#xa;var title = dialog.getField('./jcr:title').getValue().trim();&#xa;var subTitle = dialog.getField('./subTitle').getValue().trim();&#xa;var image = dialog.getField('./imageName');&#xa;var imageValue  = image.getRawValue();&#xa;var text = dialog.getField('./text').getValue();&#xa;var linkPath = dialog.getField('./linkPath').getValue();&#xa;&#xa;if(linkPath==='' &amp;&amp; title ==='' &amp;&amp; subTitle ==='' &amp;&amp; imageValue ==='' &amp;&amp; text === ''){&#xa;     CQ.Ext.Msg.show({title: 'Enter value',  msg: 'No value entered, please add at least one of the following: Title, Subtitle, Image or Text.',icon:CQ.Ext.MessageBox.WARNING,buttons: CQ.Ext.Msg.OK} );&#xa;&#x9; return false;&#xa;}&#xa;if ((linkPath!=='') &amp;&amp; (title ==='' &amp;&amp; imageValue ==='')){&#xa;     CQ.Ext.Msg.show({title: 'Enter value',  msg: 'Link path has been specified. Please provide a Title and/or Image to associate with this link.',icon:CQ.Ext.MessageBox.WARNING,buttons: CQ.Ext.Msg.OK} );&#xa;&#x9; return false;&#xa;}&#xa;}"/>
+</jcr:root>

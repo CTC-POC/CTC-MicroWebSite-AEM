@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    activeTab="{Long}0"
+    height="{Long}400"
+    helpPath="en/cq/current/wcm/default_components.html#Forms Text Field"
+    width="{Long}650"
+    xtype="tabpanel">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <first
+            jcr:primaryType="nt:unstructured"
+            title="Title and Text"
+            xtype="panel">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <title
+                    jcr:primaryType="cq:Widget"
+                    defaultValue="Fax base number"
+                    fieldLabel="Title"
+                    name="./jcr:title"
+                    xtype="textfield"/>
+                <tooltip
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Tooltip Message"
+                    name="./tooltip"
+                    xtype="textfield"/>
+                <elementId
+                    jcr:primaryType="cq:Widget"
+                    defaultValue="FaxBaseNumber"
+                    fieldLabel="Element Id"
+                    name="./jcr:element"
+                    readOnly="{Boolean}true"
+                    xtype="textfield"/>
+            </items>
+        </first>
+        <fourth
+            jcr:primaryType="nt:unstructured"
+            title="Constraints"
+            xtype="panel">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <required
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Required"
+                    inputValue="true"
+                    name="./required"
+                    type="checkbox"
+                    xtype="selection"/>
+                <requiredMessage
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Required Message"
+                    name="./requiredMessage"
+                    xtype="textarea"/>
+            </items>
+        </fourth>
+    </items>
+</jcr:root>

@@ -1,0 +1,43 @@
+<!--/*
+
+     Informa
+                _______________________
+                
+                Accordion component.
+
+*/-->
+
+<div data-sly-test="${wcmmode.edit}" data-emptytext="Accordion"
+	class="cq-placeholder"></div>
+<div class="row"
+	data-sly-use.accordion="com.informa.components.commons.Multifield">
+	<div class="col-md-12 col-xs-12 travel-accordian ${properties.spacingstylestop} ${properties.spacingstylesbottom}">
+		<div class="panel-group"
+			id="accordion_${resource.name}-${resource.parent.name}-${resource.parent.parent.name}-${resource.parent.parent.parent.name}"
+			data-sly-test="${accordion.childList}"
+			data-sly-list.accordionPanel="${accordion.childList}">
+			<div class="panel panel-default panel-custom-header">
+				<div class="panel-prev">
+					<a class="accordion-toggle informa-accordion"
+						data-toggle="collapse"
+						data-parent="#accordion_${resource.name}-${resource.parent.name}-${resource.parent.parent.name}-${resource.parent.parent.parent.name}"
+						href="#panel${accordionPanelList.count}_${resource.name}-${resource.parent.name}-${resource.parent.parent.name}-${resource.parent.parent.parent.name}">
+						<div class="panel-heading">
+							<h4 class="panel-title" data-sly-test="${accordionPanel.title}">
+								<span>${accordionPanel.title}</span> <i
+									class="indicator  ${wcmmode.edit || accordionPanelList.first ? 'accordion-minus' : 'accordion-plus'} pull-right "></i>
+							</h4>
+						</div>
+					</a>
+				</div>
+				<div
+					id="panel${accordionPanelList.count}_${resource.name}-${resource.parent.name}-${resource.parent.parent.name}-${resource.parent.parent.parent.name}"
+					class="panel-collapse collapse  ${wcmmode.edit||accordionPanelList.first ? 'in' : ''} panel-collapse-content">
+					<div class="panel-body"
+						data-sly-test.accordionParsys="${'par-panel-{0}' @ format=[accordionPanelList.count]}"
+						data-sly-resource="${accordionParsys @ resourceType='foundation/components/parsys'}"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

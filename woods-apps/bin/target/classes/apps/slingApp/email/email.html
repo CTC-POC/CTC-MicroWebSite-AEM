@@ -1,0 +1,36 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+ <title>Your Page has been modified</title>
+</head>
+<body topmargin="0" bottommargin="0">
+
+Dear  ${contactName},
+
+Sub: Workflow notification: ${event.EventType},
+
+header=-------------------------------------------------------------------------------------\n \
+Time: ${event.TimeStamp}\n \
+Step: ${item.node.title}\n \
+User: ${participant.name} (${participant.id})\n \
+Workflow: ${model.title}\n \
+-------------------------------------------------------------------------------------\n\n
+
+message=Content: ${host.prefix}${payload.path.open}\n
+
+footer=\n \
+-------------------------------------------------------------------------------------\n \
+View the overview in your ${host.prefix}/inbox\n \
+-------------------------------------------------------------------------------------\n \
+
+Thanks,
+${author}.
+
+<p style="margin:10px 10px 10px 0; padding:0px; line-height:20px;"><font style="font-family:Arial;color:#fefeff;font-size:11px;">
+© 2016 Bimal Gupta. All rights reserved.</font></p>  
+
+This is an automatically generated message. Please do not reply.
+</body>
+</html>

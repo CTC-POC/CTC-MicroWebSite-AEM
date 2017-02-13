@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Widget"
+    sling:resourceType="/libs/granite/ui/components/foundation/form/multifield"
+    aem-composit-multifield=""
+    class="full-width"
+    eaem-nested=""
+    fieldDescription="Click 'Add field' to insert a new image to the gallery"
+    fieldLabel="Add image details"
+    name="./multi">
+    <field
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/foundation/form/fieldset"
+        eaem-nested=""
+        name="./multi">
+        <layout
+            jcr:primaryType="nt:unstructured"
+            sling:resouceType="granite/ui/components/foundation/layouts/fixedcolumns"
+            method="absolute"/>
+        <items jcr:primaryType="nt:unstructured">
+            <column
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                    <imagepath
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
+                        fieldDescription="Select image from DAM"
+                        fieldLabel="Image path"
+                        name="./imagePath"
+                        rootPath="{Path}/content/dam"/>
+                    <alttext
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/form/textfield"
+                        fieldDescription="Enter textual alternative of the content and function ot the icon. This is important for SEO"
+                        fieldLabel="Image alt text"
+                        name="./altText"/>
+                </items>
+            </column>
+        </items>
+    </field>
+</jcr:root>

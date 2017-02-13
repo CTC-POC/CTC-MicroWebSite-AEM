@@ -1,0 +1,39 @@
+<html data-sly-test.lang="${properties.lang || properties.dir || inheritedPageProperties.dir || inheritedPageProperties.lang}" lang="${properties.lang || inheritedPageProperties.lang }" dir="${properties.dir || inheritedPageProperties.dir}">
+<div data-sly-include="head.html" data-sly-unwrap></div>
+<body>
+	<div data-sly-include="analytics.html" data-sly-unwrap></div>
+	<div
+ 	data-sly-resource="${'header_ipar_page' @ resourceType='foundation/components/iparsys'}"
+	data-sly-unwrap></div>
+	<div data-sly-resource="${'contexthub' @ resourceType='granite/contexthub/components/contexthub'}" data-sly-unwrap></div>
+	
+	<div class="container-fluid">
+		<div class="row-offcanvas row-offcanvas-left">
+			<div data-sly-include="header.html" data-sly-unwrap></div>
+            <div data-sly-include="content.html" data-sly-unwrap></div>
+			<div data-sly-include="footer.html" data-sly-unwrap></div>			
+
+		</div>
+	</div>
+	<div data-sly-resource="${'cloudservices' @ resourceType='cq/cloudserviceconfigs/components/servicecomponents'}" data-sly-unwrap></div>
+</body>
+</html>
+<html data-sly-test="${!lang}">
+<div data-sly-include="head.html" data-sly-unwrap></div>
+<body>
+<div data-sly-include="analytics.html" data-sly-unwrap></div>
+<div
+ 	data-sly-resource="${'header_ipar_page' @ resourceType='foundation/components/iparsys'}"
+	data-sly-unwrap></div>
+	<div data-sly-resource="${'contexthub' @ resourceType='granite/contexthub/components/contexthub'}" data-sly-unwrap></div>
+	<div class="container-fluid">
+		<div class="row-offcanvas row-offcanvas-left">
+			<div data-sly-include="header.html" data-sly-unwrap></div>
+           <div data-sly-include="content.html" data-sly-unwrap></div>
+			<div data-sly-include="footer.html" data-sly-unwrap></div>
+
+		</div>
+	</div>
+	<div data-sly-resource="${'cloudservices' @ resourceType='cq/cloudserviceconfigs/components/servicecomponents'}" data-sly-unwrap></div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="Breadcrumb"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <generalTab
+                jcr:primaryType="cq:Widget"
+                title="General"
+                xtype="panel">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <parentLabel
+                        jcr:primaryType="nt:unstructured"
+                        fieldLabel="Parent Label"
+                        name="./parentlabel"
+                        xtype="textfield"/>
+                    <parentLabelPath
+                        jcr:primaryType="nt:unstructured"
+                        fieldLabel="Parent Label Path"
+                        name="./parentpath"
+                        xtype="pathfield"/>
+                    <absoluteParent
+                        jcr:primaryType="nt:unstructured"
+                        allowDecimals="{Boolean}false"
+                        fieldDescription="(eg: 4 for /content/lineOfBusiness/region/site/language)"
+                        fieldLabel="Parent Level (absolute)"
+                        minValue="1"
+                        name="./absoluteParent"
+                        xtype="numberfield"/>
+                    <relativeDepth
+                        jcr:primaryType="nt:unstructured"
+                        allowDecimals="{Boolean}false"
+                        fieldDescription="(eg: 0 for current page)"
+                        fieldLabel="Relative stop level"
+                        minValue="0"
+                        name="./relativeDepth"
+                        xtype="numberfield"/>
+                </items>
+            </generalTab>
+            <stylesTab
+                jcr:primaryType="cq:Widget"
+                xtype="componentstyles"/>
+        </items>
+    </items>
+</jcr:root>

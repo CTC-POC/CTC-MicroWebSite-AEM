@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="Calendar"
+    width="800"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <generalTab
+                jcr:primaryType="cq:Widget"
+                title="Event Details"
+                xtype="panel">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <startdate
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="false"
+                        fieldLabel="Event Start Date"
+                        name="./startdate"
+                        xtype="datefield"/>
+                    <enddate
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="false"
+                        fieldLabel="Event End Date"
+                        name="./enddate"
+                        xtype="datefield"/>
+                    <starttime
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Event Start Time"
+                        name="./starttime"
+                        xtype="timefield"/>
+                    <endtime
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Event End Time"
+                        name="./endtime"
+                        xtype="timefield"/>
+                    <venueAddress
+                        jcr:primaryType="nt:unstructured"
+                        fieldLabel="Address of the venue"
+                        name="./venueAddress"
+                        xtype="textfield"/>
+                    <venue
+                        jcr:primaryType="nt:unstructured"
+                        fieldLabel="Venue"
+                        name="./venue"
+                        xtype="textfield"/>
+                </items>
+            </generalTab>
+        </items>
+    </items>
+</jcr:root>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <tab1
+                jcr:primaryType="cq:Panel"
+                title="Box Details"
+                xtype="panel">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <uploadLabel
+                        jcr:primaryType="nt:unstructured"
+                        fieldDescription="Provide the label text for file upload."
+                        fieldLabel="Upload Label"
+                        name="./labelName"
+                        xtype="textfield"/>
+                    <tooltip
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Provide the Tooltip value to be displayed."
+                        fieldLabel="Tooltip Message"
+                        name="./tooltip"
+                        xtype="textfield"/>
+                    <enterprise_id
+                        jcr:primaryType="nt:unstructured"
+                        fieldDescription="Provide the Box account Enterprise Id."
+                        fieldLabel="Enterprise Id"
+                        name="./enterprise_id"
+                        xtype="textfield"/>
+                    <client_id
+                        jcr:primaryType="nt:unstructured"
+                        fieldDescription="Provide the one time generated Client Id which can be found under OAuth 2 Parameters section of the Box.com configuration page."
+                        fieldLabel="Client Id"
+                        name="./client_id"
+                        xtype="textfield"/>
+                    <client_secret
+                        jcr:primaryType="nt:unstructured"
+                        fieldDescription="Provide the one time generated Client Secret which can be found under OAuth 2 Parameters section of the Box.com configuration page"
+                        fieldLabel="Client Secret value"
+                        name="./client_secret"
+                        xtype="textfield"/>
+                    <public_key_id
+                        jcr:primaryType="nt:unstructured"
+                        fieldDescription="Provide the Public Key Id which is required for authenticating Private Key."
+                        fieldLabel="Public Key Id"
+                        name="./public_key_id"
+                        xtype="textfield"/>
+                    <private_key_file
+                        jcr:primaryType="nt:unstructured"
+                        fieldDescription="Provide the Private Key file path(*.pem format)."
+                        fieldLabel="Private Key File"
+                        name="./private_key_file"
+                        rootPath="/etc"
+                        xtype="pathfield"/>
+                    <private_key_password
+                        jcr:primaryType="nt:unstructured"
+                        fieldDescription="Provide the Password for Private Key."
+                        fieldLabel="Private Key Password"
+                        name="./private_key_password"
+                        xtype="password"/>
+                </items>
+            </tab1>
+            <fourth
+                jcr:primaryType="nt:unstructured"
+                title="Constraints"
+                xtype="panel">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <required
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Required"
+                        inputValue="true"
+                        name="./required"
+                        type="checkbox"
+                        xtype="selection"/>
+                    <requiredMessage
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Required Message"
+                        name="./requiredMessage"
+                        xtype="textarea"/>
+                </items>
+            </fourth>
+        </items>
+    </items>
+</jcr:root>

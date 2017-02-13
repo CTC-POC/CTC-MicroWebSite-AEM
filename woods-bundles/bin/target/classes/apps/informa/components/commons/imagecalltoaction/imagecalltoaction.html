@@ -1,0 +1,68 @@
+<!--/*
+
+     Informa
+	_______________________
+	
+	Image Call to action component.
+
+*/-->
+<!--event overview starts-->
+<div data-sly-test="${wcmmode.edit}"
+	data-emptytext="CTA Image - Title, Desc, Link, Highlight, Button"
+	class="cq-placeholder"></div>
+<div class="row">
+	<div class="col-md-12 col-xs-12 col-sm-12 col-lg-12  ${properties.spacingstylestop} ${properties.spacingstylesbottom}">
+		<div class="informa-image-call-to-action"
+			data-sly-use.ica="com.informa.components.commons.Multifield">
+			<div class="col-md-12 col-xs-12 col-sm-12 col-lg-12">
+				<div class="informa-image-call-to-action-title row">
+					<h3 data-sly-test="${properties.title}">${properties.title}</h3>
+				</div>
+				<div
+					data-sly-test="${properties.imageRef || properties.subtitle || properties.text || properties.buttonText}">
+					<div
+						class="informa-image-call-to-action-content-section row contentHeaderImage-container imageCalltoaction-main ${properties.ica5?'paddingCallToActionContainer':''}">
+						<div
+							class="${properties.flag ? 'informa-image-call-to-action-content-image col-md-4 col-xs-12 col-sm-4 col-lg-4 paddingZero':'informa-image-call-to-action-content-image col-md-4 col-xs-12 col-sm-4 col-lg-4 paddingZero'}">
+							<img data-sly-test="${properties.imageRef}"
+								src="${properties.imageRef}" class="img-responsive" />
+						</div>
+						<div
+							class="${properties.flag ? 'col-md-8 col-xs-12 col-sm-8 col-lg-8':'col-md-8 col-xs-12 col-sm-8 col-lg-8'}">
+							<div class=callToActionContent"">
+
+								<h4 class="informa-image-call-to-action-content-subtitle"
+									data-sly-test="${properties.subtitle}">
+									${properties.subtitle}</h4>
+								<p
+									class="informa-image-call-to-action-content-bottom-text marginBottomCalltoAct"
+									data-sly-test="${properties.text}">${properties.text @
+									context='html'}</p>
+
+
+							</div>
+							<div class="col-md-12 paddingZero">
+								<div data-sly-list.link="${ica.childList}">
+									<div class="${properties.button?'col-md-12':'col-md-6'} btn-left-padding">
+										<a class="btn btn-primary btn-lg btn-custom"
+											href="${link.linkPath}"
+											target="${link.openInNewWindow==true && '_blank'}">
+											<div class="col-xs-11 HomePageBtn paddingZero">
+												<h4 class="event-overview-btn-title text-left">${link.title}</h4>
+											</div>
+											<div class="col-xs-1 HomePageBtnArrow">
+												<img 
+													src="${currentDesign.path}/clientlibs/images/arrow1.png"
+													alt="">
+											</div>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div> 
+	</div>
+</div>

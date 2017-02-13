@@ -1,0 +1,23 @@
+<script language="javascript" type="text/javascript">
+  $(document).ready(function() {
+  $(window).keydown(function(event){
+    if(event.keyCode == 13) {
+      event.preventDefault();
+      return false;
+    }
+  });
+});
+</script>
+
+<h1 data-sly-test="${currentPage.title}"> ${currentPage.title}</h1>
+<div data-sly-test="${wcmmode.edit}">
+<div data-sly-resource="${ @path='eventSelection', resourceType='foundation/components/parsys'}"></div>
+</div>
+
+
+<div data-sly-resource="${ @path='par', resourceType='foundation/components/parsys'}"></div>
+
+
+
+
+

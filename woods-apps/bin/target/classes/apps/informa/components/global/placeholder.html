@@ -1,0 +1,15 @@
+<!--/*
+
+	Informa
+	_______________________
+	
+	Placeholder for Classic and Touch UI when no content is present.
+
+*/-->
+<template data-sly-template.placeholderTemplate="${@ placeholderComponent}">
+	<!--/* CLASSIC UI Placeholder */-->
+    <div data-sly-test="${wcmmode.edit && !placeholderComponent.hasContent && !placeholderComponent.isTouch}" class="cq-text-placeholder">${component.title}</div>
+
+	<!--/* TOUCH UI Placeholder */-->
+    <div data-sly-test="${wcmmode.edit && !placeholderComponent.hasContent && placeholderComponent.isTouch}" class="cq-placeholder" data-emptytext="${component.title}"></div>
+</template>

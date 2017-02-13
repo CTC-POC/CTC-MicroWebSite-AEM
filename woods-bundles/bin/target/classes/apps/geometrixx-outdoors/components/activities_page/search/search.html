@@ -1,0 +1,30 @@
+<!--/*
+
+  ADOBE CONFIDENTIAL
+  __________________
+
+   Copyright 2014 Adobe Systems Incorporated
+   All Rights Reserved.
+
+  NOTICE:  All information contained herein is, and remains
+  the property of Adobe Systems Incorporated and its suppliers,
+  if any.  The intellectual and technical concepts contained
+  herein are proprietary to Adobe Systems Incorporated and its
+  suppliers and are protected by trade secret or copyright law.
+  Dissemination of this information or reproduction of this material
+  is strictly forbidden unless prior written permission is obtained
+  from Adobe Systems Incorporated.
+  
+*/-->
+<div data-sly-use.clientLib="${'/libs/granite/sightly/templates/clientlib.html'}"></div>
+<div data-sly-call="${clientLib.all @ categories='cq.commerce'}" data-sly-unwrap></div>
+<div data-sly-use.search="search.js" data-sly-unwrap></div>
+<form class="search-form" action="${search.searchFormAction}" method="get">
+    <p class="search-field">
+        <label for="search-field" style="display: none">Search: </label>
+        <input id="search-field" type="text" name="${search.querytextParam}" placeholder="${'Search' @ i18n, locale='search.pageLanguage'}" value="${search.queryString}" />
+    </p>
+    <p class="search-submit">
+        <input type="submit" />
+    </p>
+</form>

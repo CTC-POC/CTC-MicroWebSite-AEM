@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Column Control"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/foundation/container">
+        <layout
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/foundation/layouts/tabs"
+            type="nav"/>
+        <items jcr:primaryType="nt:unstructured">
+            <generalTab
+                jcr:primaryType="nt:unstructured"
+                jcr:title="General"
+                sling:resourceType="granite/ui/components/foundation/container">
+                <layout
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"/>
+                <items jcr:primaryType="nt:unstructured">
+                    <columns
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <fullWidth
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                                name="./fullWidth"
+                                text="Full width"
+                                value="true"/>
+                            <removePadding
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                                name="./removePadding"
+                                text="Remove Padding"
+                                value="true"/>
+                            <columns
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/select"
+                                fieldDescription="Note: Removing columns does not delete the components within it. Before deleting a column please ensure all components within it are deleted first."
+                                fieldLabel="How would you like to split this column?"
+                                name="./columns">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <_x0031_-col
+                                        jcr:primaryType="nt:unstructured"
+                                        cssClass="col-xs-12"
+                                        text="1 column (100%)"
+                                        value="1-col"/>
+                                    <_x0032_-col-equal
+                                        jcr:primaryType="nt:unstructured"
+                                        cssClass="[col-sm-6 col-xs-12,col-sm-6 col-xs-12]"
+                                        text="2 columns (50%, 50%)"
+                                        value="2-col-equal"/>
+                                    <_x0032_-col-33-66
+                                        jcr:primaryType="nt:unstructured"
+                                        cssClass="[col-sm-9 col-xs-12 col-sm-push-3,col-sm-3 col-xs-12 col-sm-pull-9]"
+                                        text="2 columns (33%, 66%)"
+                                        value="2-col-33-66"/>
+                                    <_x0032_-col-66-33
+                                        jcr:primaryType="nt:unstructured"
+                                        cssClass="[col-sm-9 col-xs-12,col-sm-3 col-xs-12]"
+                                        text="2 columns (66%, 33%)"
+                                        value="2-col-66-33"/>
+                                    <_x0033_-col-equal
+                                        jcr:primaryType="nt:unstructured"
+                                        cssClass="[col-sm-4 col-xs-12,col-sm-4 col-xs-12,col-sm-4 col-xs-12]"
+                                        text="3 columns (33%, 33%, 33%)"
+                                        value="3-col-equal"/>
+                                    <_x0033_-col-50-25-25
+                                        jcr:primaryType="nt:unstructured"
+                                        cssClass="[col-sm-6 col-xs-12,col-sm-3 col-xs-12,col-sm-3 col-xs-12]"
+                                        text="3 columns (50%, 25%, 25%)"
+                                        value="3-col-50-25-25"/>
+                                    <_x0033_-col-25-50-25
+                                        jcr:primaryType="nt:unstructured"
+                                        cssClass="[col-sm-6 col-xs-12 col-sm-push-3,col-sm-3 col-xs-12 col-sm-pull-6,col-sm-3 col-xs-12]"
+                                        text="3 columns (25%, 50%, 25%)"
+                                        value="3-col-25-50-25"/>
+                                    <_x0033_-col-25-25-50
+                                        jcr:primaryType="nt:unstructured"
+                                        cssClass="[col-sm-6 col-xs-12 col-sm-push-6,col-sm-3 col-xs-12 col-sm-pull-6,col-sm-3 col-xs-12 col-sm-pull-6]"
+                                        text="3 columns (25%, 25%, 50%)"
+                                        value="3-col-25-25-50"/>
+                                    <_x0034_-col-equal
+                                        jcr:primaryType="nt:unstructured"
+                                        cssClass="[col-sm-3 col-xs-12,col-sm-3 col-xs-12,col-sm-3 col-xs-12,col-sm-3 col-xs-12]"
+                                        text="4 columns (equal width)"
+                                        value="4-col-equal"/>
+                                    <_x0036_-col-equal
+                                        jcr:primaryType="nt:unstructured"
+                                        cssClass="[col-sm-2 col-xs-12,col-sm-2 col-xs-12,col-sm-2 col-xs-12,col-sm-2 col-xs-12,col-sm-2 col-xs-12,col-sm-2 col-xs-12]"
+                                        text="6 columns (equal width)"
+                                        value="6-col-equal"/>
+                                </items>
+                            </columns>
+                        </items>
+                    </columns>
+                </items>
+            </generalTab>
+            <developerTab
+                jcr:primaryType="nt:unstructured"
+                jcr:title="CSS classes"
+                sling:resourceType="granite/ui/components/foundation/container">
+                <layout
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"/>
+                <items jcr:primaryType="nt:unstructured">
+                    <columns
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <cssClassNames
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Class names"
+                                name="./cssClassNames"/>
+                        </items>
+                    </columns>
+                </items>
+            </developerTab>
+            <spacingControl
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Spacing Control"
+                sling:resourceType="granite/ui/components/foundation/container">
+                <layout
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"/>
+                <items jcr:primaryType="nt:unstructured">
+                    <column
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <spacingstylestop
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/select"
+                                fieldDescription="Select top spacing for component"
+                                fieldLabel="Top Spacing"
+                                name="./spacingstylestop">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <default
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Default"
+                                        value="Default"/>
+                                    <spacingtop-0px
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Spacing Top-0px"
+                                        value="spacingtop-zeropx"/>
+                                    <spacingtop-10px
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Spacing Top-10px"
+                                        value="spacingtop-10px"/>
+                                    <spacingtop-20px
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Spacing Top-20px"
+                                        value="spacingtop-20px"/>
+                                </items>
+                            </spacingstylestop>
+                            <spacingstylesbottom
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/select"
+                                fieldDescription="Select bottom spacing for component"
+                                fieldLabel="Bottom Spacing"
+                                name="./spacingstylesbottom">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <default
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Default"
+                                        value="Default"/>
+                                    <spacingbottom-0px
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Spacing Bottom-0px"
+                                        value="spacingbottom-zeropx"/>
+                                    <spacingbottom-10px
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Spacing Bottom-10px"
+                                        value="spacingbottom-10px"/>
+                                    <spacingbottom-20px
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Spacing Bottom-20px"
+                                        value="spacingbottom-20px"/>
+                                </items>
+                            </spacingstylesbottom>
+                        </items>
+                    </column>
+                </items>
+            </spacingControl>
+        </items>
+    </content>
+</jcr:root>

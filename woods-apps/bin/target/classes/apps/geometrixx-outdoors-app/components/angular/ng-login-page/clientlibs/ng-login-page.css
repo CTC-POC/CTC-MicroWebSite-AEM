@@ -1,0 +1,15 @@
+.ng-login-page {
+	padding: 35px;
+}
+
+.ng-login-page .topcoat-text-input {
+	width: 100%;
+}
+
+.ng-login-page .topcoat-button--cta {
+	float: right;
+}
+
+.ng-login-page .error {
+    color: #ec514e;
+}

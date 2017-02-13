@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:cloudserviceconfigs="[[]]"
+        cq:contextHubPath="/etc/cloudsettings/default/contexthub"
+        cq:contextHubSegmentsPath="/etc/segmentation/contexthub"
+        cq:designPath="/etc/designs/woods"
+        cq:lastModified="{Date}2017-02-10T17:28:15.033+05:30"
+        cq:lastModifiedBy="admin"
+        cq:template="/apps/woods-apps/templates/base-page"
+        jcr:lastModified="{Date}2017-02-10T17:09:15.877+05:30"
+        jcr:lastModifiedBy="admin"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="English"
+        sling:resourceType="woods-apps/components/structure/basepage"
+        pageType="basepage">
+        <header_ipar
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="foundation/components/iparsys"/>
+        <par_page
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="foundation/components/parsys"/>
+        <footer_ipar
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="foundation/components/iparsys">
+            <footercontainer
+                jcr:created="{Date}2017-02-10T16:25:06.199+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2017-02-10T16:25:06.199+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="woods-apps/components/content/footercontainer">
+                <footerlinklist
+                    jcr:lastModified="{Date}2017-02-10T17:28:15.015+05:30"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="woods-apps/components/content/linklist">
+                    <multi jcr:primaryType="nt:unstructured">
+                        <_x0031_
+                            jcr:primaryType="nt:unstructured"
+                            linkPath="#"
+                            title="FAQ"/>
+                        <_x0032_
+                            jcr:primaryType="nt:unstructured"
+                            linkPath="#"
+                            title="Contact US"/>
+                        <_x0033_
+                            jcr:primaryType="nt:unstructured"
+                            linkPath="#"
+                            title="SiteMAP"/>
+                        <_x0034_
+                            jcr:primaryType="nt:unstructured"
+                            linkPath="#"
+                            title="PRIVACY POLICY"/>
+                        <_x0035_
+                            jcr:primaryType="nt:unstructured"
+                            title="TERMS &amp; CONDITIONS"/>
+                    </multi>
+                </footerlinklist>
+                <sociallinks
+                    jcr:lastModified="{Date}2017-02-10T17:27:16.815+05:30"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="woods-apps/components/content/sociallinks">
+                    <multi jcr:primaryType="nt:unstructured">
+                        <_x0031_
+                            jcr:primaryType="nt:unstructured"
+                            linkPath="#"
+                            title="facebookIcon"/>
+                        <_x0032_
+                            jcr:primaryType="nt:unstructured"
+                            linkPath="#"
+                            title="twitterIcon"/>
+                        <_x0033_
+                            jcr:primaryType="nt:unstructured"
+                            linkPath="#"
+                            title="instagramIcon"/>
+                    </multi>
+                </sociallinks>
+            </footercontainer>
+        </footer_ipar>
+        <image
+            jcr:lastModified="{Date}2017-02-10T17:09:15.877+05:30"
+            jcr:lastModifiedBy="admin"
+            jcr:primaryType="nt:unstructured"/>
+    </jcr:content>
+</jcr:root>

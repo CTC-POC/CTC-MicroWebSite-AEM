@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <tab1
+                jcr:primaryType="cq:Panel"
+                title="Contact Details"
+                xtype="panel">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <title
+                        jcr:primaryType="nt:unstructured"
+                        fieldLabel="Title"
+                        name="./title"
+                        xtype="textfield"/>
+                    <subTitle
+                        jcr:primaryType="nt:unstructured"
+                        fieldLabel="SubTitle"
+                        name="./subTitle"
+                        xtype="textfield"/>
+                    <telNumber
+                        jcr:primaryType="nt:unstructured"
+                        fieldLabel="Telephone Number"
+                        name="./telNumber"
+                        xtype="numberfield"/>
+                    <faxNumber
+                        jcr:primaryType="nt:unstructured"
+                        fieldLabel="Fax Number"
+                        name="./faxNumber"
+                        xtype="numberfield"/>
+                    <email
+                        jcr:primaryType="nt:unstructured"
+                        fieldDescription="Please enter email address(s)"
+                        fieldLabel="Email"
+                        name="./email"
+                        regex="/^[A-za-z0-9]+[\\._]*[A-za-z0-9]*@[A-za-z.-]+[\\.]+[A-Za-z]{2,4}$/"
+                        xtype="textfield"/>
+                    <subject
+                        jcr:primaryType="nt:unstructured"
+                        fieldLabel="Subject"
+                        name="./subject"
+                        xtype="textfield"/>
+                    <contactUsInfo
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Contact Us Info"
+                        name="./contactUsInfo"
+                        width="500"
+                        xtype="mtmulticompositefield">
+                        <fieldConfigs jcr:primaryType="cq:WidgetCollection">
+                            <title
+                                jcr:primaryType="nt:unstructured"
+                                fieldLabel="Title"
+                                name="./title"
+                                xtype="textfield"/>
+                            <subTitle
+                                jcr:primaryType="nt:unstructured"
+                                fieldLabel="SubTitle"
+                                name="./subTitle"
+                                xtype="textfield"/>
+                            <telNumber
+                                jcr:primaryType="nt:unstructured"
+                                fieldLabel="Telephone Number"
+                                name="./telNumber"
+                                xtype="numberfield"/>
+                            <faxNumber
+                                jcr:primaryType="nt:unstructured"
+                                fieldLabel="Fax Number"
+                                name="./faxNumber"
+                                xtype="numberfield"/>
+                            <email
+                                jcr:primaryType="nt:unstructured"
+                                fieldDescription="Please enter email address(s)"
+                                fieldLabel="Email"
+                                name="./email"
+                                regex="/^[A-za-z0-9]+[\\._]*[A-za-z0-9]*@[A-za-z.-]+[\\.]+[A-Za-z]{2,4}$/"
+                                xtype="textfield"/>
+                            <subject
+                                jcr:primaryType="nt:unstructured"
+                                fieldLabel="Subject"
+                                name="./subject"
+                                xtype="textfield"/>
+                        </fieldConfigs>
+                    </contactUsInfo>
+                </items>
+            </tab1>
+        </items>
+    </items>
+</jcr:root>

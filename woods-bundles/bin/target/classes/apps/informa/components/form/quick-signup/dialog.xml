@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    activeTab="{Long}0"
+    height="{Long}400"
+    helpPath="en/cq/current/wcm/default_components.html#Forms Dropdown List"
+    title="dfsdf"
+    width="{Long}650"
+    xtype="tabpanel">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <first
+            jcr:primaryType="nt:unstructured"
+            title="Sign Up"
+            xtype="panel">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <signupText
+                    jcr:primaryType="cq:Widget"
+                    defaultValue="I would like to Sign Up with Informa"
+                    fieldLabel="Text"
+                    name="./signupText"
+                    xtype="textfield"/>
+            </items>
+        </first>
+        <second
+            jcr:primaryType="nt:unstructured"
+            title="Secret Questions"
+            xtype="panel">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <security
+                    jcr:primaryType="cq:Widget"
+                    defaultValue="Secret Questions"
+                    fieldLabel="Title"
+                    name="./security"
+                    xtype="textfield"/>
+                <questionsLabel
+                    jcr:primaryType="cq:Widget"
+                    defaultValue="Question"
+                    fieldLabel="Questions Label"
+                    name="./questionsLabel"
+                    xtype="textfield"/>
+                <multiQuestions
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Questions"
+                    name="./options"
+                    xtype="multifield"/>
+                <questionsTooltip
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Question Tooltip Message"
+                    name="./questionsTooltip"
+                    xtype="textfield"/>
+                <answerLabel
+                    jcr:primaryType="cq:Widget"
+                    defaultValue="Answer"
+                    fieldLabel="Answer Label"
+                    name="./answerLabel"
+                    xtype="textfield"/>
+                <answerTooltip
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Answer Tooltip Message"
+                    name="./answerTooltip"
+                    xtype="textfield"/>
+            </items>
+        </second>
+        <three
+            jcr:primaryType="nt:unstructured"
+            title="Password"
+            xtype="panel">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <password
+                    jcr:primaryType="cq:Widget"
+                    defaultValue="Set Password"
+                    fieldLabel="Title"
+                    name="./password"
+                    xtype="textfield"/>
+                <passwordLabel
+                    jcr:primaryType="cq:Widget"
+                    defaultValue="Password"
+                    fieldLabel="Password Label"
+                    name="./passwordLabel"
+                    xtype="textfield"/>
+                <passwordTooltip
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Tooltip Message"
+                    name="./passwordTooltip"
+                    xtype="textfield"/>
+                <confirmPasswordLabel
+                    jcr:primaryType="cq:Widget"
+                    defaultValue="Confirm Password"
+                    fieldLabel="Confirm Password Label"
+                    name="./confirmPasswordLabel"
+                    xtype="textfield"/>
+                <passwordRule
+                    jcr:primaryType="cq:Widget"
+                    defaultValue="should be alphanumeric, with minimum one capital letter and special character, minimum 8 character length"
+                    fieldLabel="Passwod Rule"
+                    name="./passwordRule"
+                    xtype="textarea"/>
+            </items>
+        </three>
+        <four
+            jcr:primaryType="nt:unstructured"
+            title="Condition"
+            xtype="panel">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <text
+                    jcr:primaryType="cq:Widget"
+                    defaultValue="By Signing up you will agree to"
+                    fieldLabel="Text"
+                    name="./text"
+                    xtype="textfield"/>
+                <linkTitle
+                    jcr:primaryType="cq:Widget"
+                    defaultValue="Terms and Conditions."
+                    fieldLabel="Link Title"
+                    name="./linkTitle"
+                    xtype="textfield"/>
+                <linkPath
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Link Path"
+                    name="./linkPath"
+                    xtype="pathfield"/>
+                <checkPath
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="If External Path"
+                    inputValue="true"
+                    name="./checkPath"
+                    type="checkbox"
+                    xtype="selection"/>
+            </items>
+        </four>
+        <five
+            jcr:primaryType="nt:unstructured"
+            title="Required Messages"
+            xtype="panel">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <questionQSErrorMessage
+                    jcr:primaryType="cq:Widget"
+                    defaultValue="Security question is required"
+                    fieldLabel="Question Error Message"
+                    name="./questionQSErrorMessage"
+                    xtype="textfield"/>
+                <answerQSErrorMessage
+                    jcr:primaryType="cq:Widget"
+                    defaultValue="Security answer is required"
+                    fieldLabel="Answer Error Message"
+                    name="./answerQSErrorMessage"
+                    xtype="textfield"/>
+                <passwordQSErrorMessage
+                    jcr:primaryType="cq:Widget"
+                    defaultValue="Password is required"
+                    fieldLabel="Password Error Message"
+                    name="./passwordQSErrorMessage"
+                    xtype="textfield"/>
+                <passwordQSValidationErrorMessage
+                    jcr:primaryType="cq:Widget"
+                    defaultValue="Password is weak"
+                    fieldLabel="Password Validation Error Message"
+                    name="./passwordQSValidationErrorMessage"
+                    xtype="textfield"/>
+                <confirmQSPasswordErrorMessage
+                    jcr:primaryType="cq:Widget"
+                    defaultValue="The confirm password is required"
+                    fieldLabel="Confirm Password Error Message"
+                    name="./confirmQSPasswordErrorMessage"
+                    xtype="textfield"/>
+                <passwordsQSValidationMessage
+                    jcr:primaryType="cq:Widget"
+                    defaultValue="Passwords do not match"
+                    fieldLabel="Passwords Validation Error Message"
+                    name="./passwordsQSValidationMessage"
+                    xtype="textfield"/>
+            </items>
+        </five>
+    </items>
+</jcr:root>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    activeTab="{Long}0"
+    height="{Long}400"
+    helpPath="en/cq/current/wcm/default_components.html#Forms Dropdown List"
+    width="{Long}650"
+    xtype="tabpanel">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <first
+            jcr:primaryType="nt:unstructured"
+            title="Title and Text"
+            xtype="panel">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <phonenumberCountryCode
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Phone Number Country Code"
+                    inputValue="true"
+                    name="./phonenumberCountryCode"
+                    type="checkbox"
+                    xtype="selection"/>
+                <phoneNumberAreaCode
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Phone Number Area Code"
+                    inputValue="true"
+                    name="./phoneNumberAreaCode"
+                    type="checkbox"
+                    xtype="selection"/>
+                <phoneNumberBaseNumber
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Phone Number Base Number"
+                    inputValue="true"
+                    name="./phoneNumberBaseNumber"
+                    type="checkbox"
+                    xtype="selection"/>
+                <phoneNumberExtension
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Phone Number Extension"
+                    inputValue="true"
+                    name="./phoneNumberExtension"
+                    type="checkbox"
+                    xtype="selection"/>
+                <phoneNumberCategory
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Phone Number Category"
+                    inputValue="true"
+                    name="./phoneNumberCategory"
+                    type="checkbox"
+                    xtype="selection"/>
+                <selectList
+                    jcr:primaryType="cq:Widget"
+                    defaultValue="personal"
+                    fieldLabel="Phone Class"
+                    name="./phoneClass"
+                    type="select"
+                    xtype="selection">
+                    <options jcr:primaryType="cq:WidgetCollection">
+                        <one
+                            jcr:primaryType="nt:unstructured"
+                            text="Personal"
+                            value="personal"/>
+                        <two
+                            jcr:primaryType="nt:unstructured"
+                            text="Business"
+                            value="business"/>
+                    </options>
+                </selectList>
+                <selectList1
+                    jcr:primaryType="cq:Widget"
+                    defaultValue="Mobile"
+                    fieldLabel="Phone Type"
+                    name="./phoneType"
+                    type="select"
+                    xtype="selection">
+                    <options jcr:primaryType="cq:WidgetCollection">
+                        <one
+                            jcr:primaryType="nt:unstructured"
+                            text="Mobile"
+                            value="Mobile"/>
+                        <two
+                            jcr:primaryType="nt:unstructured"
+                            text="Landline"
+                            value="Landline"/>
+                    </options>
+                </selectList1>
+            </items>
+        </first>
+    </items>
+</jcr:root>

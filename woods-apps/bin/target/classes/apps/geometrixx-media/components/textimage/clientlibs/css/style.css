@@ -1,0 +1,22 @@
+.welcome-author img {
+	float: left;
+}
+.welcome-author-name {
+	margin: 15px 0 0 110px;
+}
+.welcome-author-name h5 {
+	font-size: 22px;
+	color: #1a1a1a;
+	margin: 0 0 10px;
+}
+.welcome-message .welcome-author-name p {
+	font-size: 14px;
+	line-height: 16px;
+	margin: 0;
+}
+.welcome-message > p {
+    font-style: italic;
+}
+.welcome-message .author-position {
+    color: #999;
+}

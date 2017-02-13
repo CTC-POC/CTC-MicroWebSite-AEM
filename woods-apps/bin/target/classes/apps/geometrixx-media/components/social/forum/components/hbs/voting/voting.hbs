@@ -1,0 +1,30 @@
+<div data-component-id="{{id}}" data-scf-component="geometrixx-media/components/social/forum/components/hbs/voting">
+    <div class='social voting'>
+            {{#if loggedInUser.loggedIn}}
+                {{#if currentUserResponse}}
+                    {{#if currentUserLike}}
+             <span class='votingLabel'>{{positiveCount}}</span>
+                        <span class='voting-unset vote-up' type='button' data-voting-value='unset' alt='[Thumbs Up]' evt='click=vote'></span> 
+                        <span class='voting-set vote-down' type='button' data-voting-value='-1' alt='[Thumbs Down]' evt='click=vote'></span> 
+                                     <span class='votingLabel'>{{negativeCount}}</span>
+                    {{else}}
+                                  <span class='votingLabel'>{{positiveCount}}</span>
+                        <span class='voting-set vote-up' type='button' data-voting-value='1' alt='[Thumbs Up]' evt='click=vote'></span> 
+                        <span class='voting-unset vote-down' type='button' data-voting-value='unset' alt='[Thumbs Down]' evt='click=vote'></span>
+                        <span class='votingLabel'>{{negativeCount}}</span>
+                    {{/if}}
+                {{else}}
+                              <span class='votingLabel'>{{positiveCount}}</span>
+                        <span class='voting-set vote-up' type='button' data-voting-value='1' alt='[Thumbs Up]' evt='click=vote'></span> 
+                        <span class='voting-set vote-down' type='button' data-voting-value='-1' alt='[Thumbs Down]' evt='click=vote'></span>
+                        <span class='votingLabel'>{{negativeCount}}</span>
+                {{/if}}
+            {{else}}
+                          <span class='votingLabel'>{{positiveCount}}</span>
+                <span class='vote-up' type='button' data-voting-value='unset' alt='[Thumbs Up]'></span> 
+                <span class='vote-down' type='button' data-voting-value='-1' alt='[Thumbs Down]'></span> 
+                <span class='votingLabel'>{{negativeCount}}</span>
+                <span class='sign-in-text'>Sign in in order to vote.</span>
+            {{/if}}
+    </div>
+</div>

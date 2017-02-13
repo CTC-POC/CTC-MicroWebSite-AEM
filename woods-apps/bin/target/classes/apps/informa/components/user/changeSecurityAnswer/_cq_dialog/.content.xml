@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Change Secret Question"
+    sling:resourceType="cq/gui/components/authoring/dialog"
+    helpPath="en/cq/current/wcm/default_components.html#Text">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/foundation/container">
+        <layout
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/foundation/layouts/tabs"
+            type="nav"/>
+        <items jcr:primaryType="nt:unstructured">
+            <tab1
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Secret Question"
+                sling:resourceType="granite/ui/components/foundation/container">
+                <layout
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"/>
+                <items jcr:primaryType="nt:unstructured">
+                    <columns
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <title
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldDescription="Label for Title"
+                                fieldLabel="Title"
+                                name="./title"/>
+                            <securityQues
+                                cq:showOnCreate="{Boolean}false"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Secret Question"
+                                sling:resourceType="granite/ui/components/foundation/form/fieldset"/>
+                            <securityQuestion
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldDescription="Label for Secret Questions"
+                                fieldLabel="Secret Questions Label"
+                                name="./secretQuestion"/>
+                            <securityAns
+                                cq:showOnCreate="{Boolean}false"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Secret Answer"
+                                sling:resourceType="granite/ui/components/foundation/form/fieldset"/>
+                            <answer
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldDescription="Label for Secret Answer "
+                                fieldLabel="Secret Answer Label"
+                                name="./answer"/>
+                            <reqAnswer
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldDescription="Provide Error message to be displayed if Secret Answer not entered"
+                                fieldLabel="Required Error Message"
+                                name="./reqAnswer"/>
+                            <button
+                                cq:showOnCreate="{Boolean}false"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Button Label"
+                                sling:resourceType="granite/ui/components/foundation/form/fieldset"/>
+                            <submit
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldDescription="Label for Submit Button"
+                                fieldLabel="Submit Button Label"
+                                name="./submit"/>
+                            <cancel
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldDescription="Label for Cancel Button"
+                                fieldLabel="Cancel Button Label"
+                                name="./cancel"/>
+                            <update
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldDescription="Label for UpdateButton"
+                                fieldLabel="Update Button Label"
+                                name="./update"/>
+                        </items>
+                    </columns>
+                </items>
+            </tab1>
+            <tab2
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Secret Question List"
+                sling:resourceType="granite/ui/components/foundation/container">
+                <layout
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"/>
+                <items jcr:primaryType="nt:unstructured">
+                    <columns
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <securityQuestions
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="/libs/granite/ui/components/foundation/form/multifield"
+                                aem-composit-multifield=""
+                                class="full-width"
+                                eaem-nested=""
+                                fieldDescription="Click 'Add field' to add a secret question"
+                                fieldLabel="Secret Question"
+                                name="./securityQuestions">
+                                <field
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/foundation/form/fieldset"
+                                    eaem-nested=""
+                                    name="./securityQuestions">
+                                    <layout
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resouceType="granite/ui/components/foundation/layouts/fixedcolumns"
+                                        method="absolute"/>
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <column
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/foundation/container">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <securityQuestion
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                                    fieldLabel="Secret Question"
+                                                    name="./securityQuestion"/>
+                                            </items>
+                                        </column>
+                                    </items>
+                                </field>
+                            </securityQuestions>
+                        </items>
+                    </columns>
+                </items>
+            </tab2>
+            <messages
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Messages"
+                sling:resourceType="granite/ui/components/foundation/container">
+                <layout
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"/>
+                <items jcr:primaryType="nt:unstructured">
+                    <columns
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <successMessage
+                                cq:showOnCreate="{Boolean}false"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Success "
+                                sling:resourceType="granite/ui/components/foundation/form/fieldset"/>
+                            <successTitle
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldDescription="Title for success message"
+                                fieldLabel="Success Title"
+                                name="./updateSecuritySuccessTitle"/>
+                            <successdescription
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldDescription="Message displayed when success"
+                                fieldLabel="Success Message"
+                                name="./updateSecuritySuccessMsg"/>
+                        </items>
+                    </columns>
+                </items>
+            </messages>
+        </items>
+    </content>
+</jcr:root>

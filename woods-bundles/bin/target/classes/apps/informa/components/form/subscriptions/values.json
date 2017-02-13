@@ -1,0 +1,10 @@
+[{
+	"value": "CH_PHONE",
+	"text": "Phone"
+}, {
+	"value": "CH_DIRECTPOST",
+	"text": "Direct Post"
+}, {
+	"value": "CH_SMS",
+	"text": "SMS"
+}]

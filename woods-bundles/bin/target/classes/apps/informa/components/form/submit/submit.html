@@ -1,0 +1,13 @@
+<div data-sly-test="${wcmmode.edit}" data-emptytext="Submit" class="cq-placeholder"></div>
+<div class="form-group submit-form-group">
+	<div  class="col-md-3 col-sm-3 custom-submit-hide-div"></div>
+	<div class="col-md-9  col-sm-9 col-xs-11 col-lg-9 custom-submit-btn-div ">
+			<div data-sly-test="${properties.submit}">
+				<input type="submit" name="formSubmit" class="btn form-one-submit-btn mob-nxtbtn" id="formSubmit" value=${properties.title}>
+			</div>
+			<div data-sly-test="${properties.reset}">
+				<input type="reset" name-"formSubmit" class="btn form-one-submit-btn mob-nxtbtn reset-btn" id="formReset" value=${properties.resetTitle}>
+			</div>
+			<div class="submit-loadgif"><span></span></div>
+	</div>
+</div>

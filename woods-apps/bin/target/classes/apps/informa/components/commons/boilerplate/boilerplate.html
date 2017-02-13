@@ -1,0 +1,61 @@
+<!--/*
+
+     Informa
+	_______________________
+	
+	Boiler Plate component.
+
+*/-->
+
+<div class="hidden-label">
+	<a href="#mainContent" class="skipscreen" title="Skip to main content" style="opacity:0">Skip to main content</a>
+</div>
+<div data-sly-test="${wcmmode.edit}" data-emptytext="Boilerplate"
+	class="cq-placeholder"></div>
+<div class="container-fluid  ${properties.spacingstylestop} ${properties.spacingstylesbottom}">	
+	<div
+		class="${properties.text|| boilerplate.childList|| properties.title ?'row informa':''}">
+		<div class="col-md-12">
+			<div id="informaDetails"
+				data-sly-test="${properties.title|| properties.text}"
+				data-sly-use.boilerplate="com.informa.components.commons.Multifield"
+				style="display: none;">
+				<div class="col-md-12">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="container padding-top-btm25px informalist-color">
+								<div class="col-md-6">
+									<p><span class="siteNameContainer"></span> ${properties.title}</p>
+									<ul class="nav navbar-nav navbar-left"
+										data-sly-list.link="${boilerplate.childList}">
+										<li><a href="${link.linkPath}" target="${link.openInNewWindow==true && '_blank'}"> <i
+												class="searchIcon"></i>${link.title}
+										</a></li>
+									</ul>
+								</div>
+								<div class="col-md-6 padding-right-border">
+									<p>${properties.text}</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+				   <div class="dropdown" data-sly-test.img1="${properties.scrollHeader && properties.imageRef}">
+						<button type="button" style="margin: 7px 0px;padding:0px!important;"><img src="${properties.imageRef}" style="height: auto;width: 92px;" /><span class="caret rotate"></span></button>
+					</div>
+					<div  data-sly-test.test1="${(properties.scrollHeader || properties.imageRef) && !img1}" data-sly-unwrap> 
+						<div class="dropdown" data-sly-test.imageVal="${properties.imageRef}" data-id="Image">
+							<button type="button" style="margin: 7px 0px;padding:0px!important;"><img src="${properties.imageRef}" style="height: auto;width: 92px;" />&nbsp;<span class="caret rotate"></span></button>
+						</div>
+						<div class="dropdown" data-sly-test.textVal="${properties.scrollHeader}" data-id="text">
+							<button type="button">${properties.scrollHeader}<span class="caret rotate"></span></button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

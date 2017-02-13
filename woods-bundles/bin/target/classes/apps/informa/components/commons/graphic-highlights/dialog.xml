@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Dialog"
+    width="800"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <graphicHighlight
+                jcr:primaryType="cq:Widget"
+                title="Showcase"
+                xtype="panel">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <graphicHighlight
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Showcase States"
+                        name="./links"
+                        xtype="mtmulticompositefield">
+                        <fieldConfigs jcr:primaryType="cq:WidgetCollection">
+                            <icon
+                                jcr:primaryType="cq:Widget"
+                                allowBlank="true"
+                                fieldLabel="Icon"
+                                name="icon"
+                                width="300"
+                                xtype="pathfield"/>
+                            <data
+                                jcr:primaryType="cq:Widget"
+                                allowBlank="true"
+                                fieldLabel="Data"
+                                name="data"
+                                width="300"
+                                xtype="textfield"/>
+                            <text
+                                jcr:primaryType="cq:Widget"
+                                allowBlank="true"
+                                fieldLabel="Text"
+                                name="text"
+                                width="300"
+                                xtype="textfield"/>
+                        </fieldConfigs>
+                    </graphicHighlight>
+                </items>
+            </graphicHighlight>
+        </items>
+    </items>
+</jcr:root>

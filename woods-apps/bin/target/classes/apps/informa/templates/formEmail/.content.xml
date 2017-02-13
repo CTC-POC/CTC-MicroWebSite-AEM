@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:description="Informa Form Confirmation Email "
+    jcr:primaryType="cq:Template"
+    jcr:title="Informa Form Confirmation Email "
+    ranking="{Long}18"
+    shortTitle=" Form Confirmation Email ">
+    <jcr:content
+        jcr:primaryType="cq:PageContent"
+        sling:resourceType="/apps/informa/components/page/formEmail">
+        <par
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="foundation/components/parsys">
+            <text
+                jcr:created="{Date}2016-11-09T11:06:18.834+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2016-11-17T13:18:17.692+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="informa/components/commons/text"
+                spacingstylesbottom="Default"
+                spacingstylestop="Default"
+                text="&lt;p>Hi, &lt;span data-sly-test=&quot;${title}&quot;>${title}&lt;/span>${firstName} ${surname}&lt;br>&#xa;We have received your request.&lt;/p>&#xa;&lt;p>Will revert to you shortly.&lt;/p>&#xa;&lt;p>Your Payment Transaction Id is : ${transactionID}&lt;/p>&#xa;&lt;p>Your Unique Registration Number is : ${uRN}&lt;/p>&#xa;&lt;p>${eventEditionLongName}&lt;/p>&#xa;&lt;p>From,&lt;/p>&#xa;&lt;p>Informa Team&lt;/p>&#xa;&lt;p>-------------------------------------------------------------------------------------&lt;/p>&#xa;&lt;p>This is an automatic generated message. Please do not reply.&lt;/p>&#xa;"
+                textIsRich="true"/>
+        </par>
+    </jcr:content>
+</jcr:root>

@@ -1,0 +1,42 @@
+/*
+ *
+ * ADOBE CONFIDENTIAL
+ * __________________
+ *
+ *  Copyright 2015 Adobe Systems Incorporated
+ *  All Rights Reserved.
+ *
+ * NOTICE:  All information contained herein is, and remains
+ * the property of Adobe Systems Incorporated and its suppliers,
+ * if any.  The intellectual and technical concepts contained
+ * herein are proprietary to Adobe Systems Incorporated and its
+ * suppliers and are protected by trade secret or copyright law.
+ * Dissemination of this information or reproduction of this material
+ * is strictly forbidden unless prior written permission is obtained
+ * from Adobe Systems Incorporated.
+ */
+
+@import-once "/libs/screens/clientlibs/ux/styles/mixins.less";
+@import-once "commons.less";
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100%;
+  font: normal 16px/1.4em @font--primary;
+}
+
+img {
+    user-select: none;
+    user-drag: none;
+}
+
+button:focus {
+  outline: none;
+}
+
+@import-once "icons.less";
+@import-once "views.less";

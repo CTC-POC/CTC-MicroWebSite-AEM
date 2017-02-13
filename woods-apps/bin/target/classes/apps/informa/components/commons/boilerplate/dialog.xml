@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    height="{Long}400"
+    title="Boilerplate"
+    width="{Long}800"
+    xtype="dialog">
+    <items jcr:primaryType="cq:TabPanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <generalTab
+                jcr:primaryType="cq:Widget"
+                jcr:title="General"
+                xtype="panel">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <scrollHeader
+                        jcr:primaryType="nt:unstructured"
+                        fieldLabel="Scroll Header"
+                        name="./scrollHeader"
+                        xtype="textfield"/>
+                    <title
+                        jcr:primaryType="nt:unstructured"
+                        fieldLabel="Title"
+                        name="./title"
+                        xtype="textfield"/>
+                    <text
+                        jcr:primaryType="nt:unstructured"
+                        fieldLabel="Text"
+                        name="./text"
+                        xtype="textarea"/>
+                    <links
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Links"
+                        name="./links"
+                        xtype="mtmulticompositefield">
+                        <fieldConfigs jcr:primaryType="cq:WidgetCollection">
+                            <linkTitle
+                                jcr:primaryType="cq:Widget"
+                                allowBlank="false"
+                                fieldLabel="Title"
+                                name="title"
+                                width="300"
+                                xtype="textfield"/>
+                            <linkPath
+                                jcr:primaryType="cq:Widget"
+                                allowBlank="false"
+                                fieldLabel="Link"
+                                name="linkpath"
+                                suffix=".html"
+                                width="300"
+                                xtype="pathfield"/>
+                            <openInNewWindow
+                                jcr:primaryType="cq:Widget"
+                                boxLabel="Open In New Window"
+                                name="openInNewWindow"
+                                type="checkbox"
+                                xtype="selection"/>
+                        </fieldConfigs>
+                    </links>
+                </items>
+            </generalTab>
+        </items>
+    </items>
+    <listeners
+        jcr:primaryType="nt:unstructured"
+        beforesubmit="function(dialog) {&#xa;var title = dialog.getField('./jcr:title').getValue().trim();&#xa;var subTitle = dialog.getField('./subTitle').getValue().trim();&#xa;var image = dialog.getField('./imageName');&#xa;var imageValue  = image.getRawValue();&#xa;var text = dialog.getField('./text').getValue();&#xa;var linkPath = dialog.getField('./linkPath').getValue();&#xa;&#xa;if(linkPath==='' &amp;&amp; title ==='' &amp;&amp; subTitle ==='' &amp;&amp; imageValue ==='' &amp;&amp; text === ''){&#xa;     CQ.Ext.Msg.show({title: 'Enter value',  msg: 'No value entered, please add at least one of the following: Title, Subtitle, Image or Text.',icon:CQ.Ext.MessageBox.WARNING,buttons: CQ.Ext.Msg.OK} );&#xa;&#x9; return false;&#xa;}&#xa;if ((linkPath!=='') &amp;&amp; (title ==='' &amp;&amp; imageValue ==='')){&#xa;     CQ.Ext.Msg.show({title: 'Enter value',  msg: 'Link path has been specified. Please provide a Title and/or Image to associate with this link.',icon:CQ.Ext.MessageBox.WARNING,buttons: CQ.Ext.Msg.OK} );&#xa;&#x9; return false;&#xa;}&#xa;}"/>
+</jcr:root>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="Program Search"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <generalTab
+                jcr:primaryType="cq:Widget"
+                jcr:title="General"
+                xtype="panel">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <title
+                        jcr:primaryType="nt:unstructured"
+                        fieldDescription="Program search component title"
+                        fieldLabel="Title"
+                        name="./title"
+                        xtype="textfield"/>
+                    <buttontext
+                        jcr:primaryType="nt:unstructured"
+                        fieldDescription="submit button text"
+                        fieldLabel="Submit button text"
+                        name="./buttontext"
+                        xtype="textfield"/>
+                    <url
+                        jcr:primaryType="nt:unstructured"
+                        fieldDescription="Exhibitor Program Url"
+                        fieldLabel="Exhibitor Program Url"
+                        name="./url"
+                        xtype="pathfield"/>
+                    <sectorList
+                        jcr:primaryType="nt:unstructured"
+                        fieldDescription="Add the sector List comma(,) seperated"
+                        fieldLabel="Sector List"
+                        name="./sectorList"
+                        xtype="textarea"/>
+                    <countryList
+                        jcr:primaryType="nt:unstructured"
+                        fieldDescription="Add the sector List comma(,) seperated"
+                        fieldLabel="Country List"
+                        name="./countryList"
+                        xtype="textarea"/>
+                    <cityList
+                        jcr:primaryType="nt:unstructured"
+                        fieldDescription="Add the sector List comma(,) seperated"
+                        fieldLabel="City List"
+                        name="./cityList"
+                        xtype="textarea"/>
+                </items>
+            </generalTab>
+            <stylesTab
+                jcr:primaryType="cq:Widget"
+                xtype="componentstyles"/>
+        </items>
+    </items>
+</jcr:root>

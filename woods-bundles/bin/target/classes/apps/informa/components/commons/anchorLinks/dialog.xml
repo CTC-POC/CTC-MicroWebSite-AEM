@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="Anchor Links"
+    width="800"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <generalTab
+                jcr:primaryType="cq:Widget"
+                title="General"
+                xtype="panel">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <tabs
+                        jcr:primaryType="cq:Widget"
+                        description="Note: Items will be displayed in the order specified in this dialog."
+                        fieldLabel="Tabs"
+                        name="./tabs"
+                        xtype="mtmulticompositefield">
+                        <fieldConfigs jcr:primaryType="cq:WidgetCollection">
+                            <title
+                                jcr:primaryType="cq:Widget"
+                                allowBlank="false"
+                                fieldLabel="Title"
+                                name="title"
+                                width="300"
+                                xtype="textfield"/>
+                            <uniqueIdentifier
+                                jcr:primaryType="cq:Widget"
+                                name="uniqueIdentifier"
+                                xtype="hidden"/>
+                            <defaultTab
+                                jcr:primaryType="cq:Widget"
+                                boxLabel="Set as default"
+                                name="defaultTab"
+                                type="checkbox"
+                                xtype="selection">
+                                <listeners
+                                    jcr:primaryType="nt:unstructured"
+                                    selectionChanged="function(field, value, isChecked) { var tabpanel = field.findParentByType('mtmulticompositefield'); var checkboxes = tabpanel.findByType('selection'); if(isChecked) { checkboxes.forEach(function(checkbox){ if(checkbox.id !== field.id ) { checkbox.setValue(['false']);}});}}"/>
+                            </defaultTab>
+                        </fieldConfigs>
+                    </tabs>
+                </items>
+            </generalTab>
+            <stylesTab
+                jcr:primaryType="cq:Widget"
+                xtype="componentstyles"/>
+        </items>
+    </items>
+    <listeners
+        jcr:primaryType="nt:unstructured"
+        beforesubmit="function(dialog) { var multiField = dialog.findByType('mtmulticompositefield')[0], prefix = multiField.fieldNamePrefix, fieldItems = dialog.findByType('mtmulticompositefielditem'), currentTime = new Date().getTime(), i=1, isSelected = false, firstCheckbox; fieldItems.forEach( function(fieldItem){ var uniqueIdentifierField = fieldItem.find('name',prefix + fieldItem.name + '/' + 'uniqueIdentifier')[0], defaultTabField = fieldItem.find('name',prefix + fieldItem.name + '/'+'defaultTab')[0]; if(uniqueIdentifierField.getValue() === '') { uniqueIdentifierField.setValue('' + currentTime + i); } if(defaultTabField.getValue()[0]==='true') { isSelected = true; } i++; }); if(!isSelected) { if(fieldItems.length > 0){var firstCheckbox = dialog.find('name',prefix + fieldItems[0].name+'/'+'defaultTab')[0]; firstCheckbox.setValue(['true']);} } }"/>
+</jcr:root>

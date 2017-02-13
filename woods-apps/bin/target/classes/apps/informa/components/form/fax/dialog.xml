@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    activeTab="{Long}0"
+    height="{Long}400"
+    helpPath="en/cq/current/wcm/default_components.html#Forms Dropdown List"
+    width="{Long}650"
+    xtype="tabpanel">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <first
+            jcr:primaryType="nt:unstructured"
+            title="Title and Text"
+            xtype="panel">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <faxCountryCode
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Fax Country Code"
+                    inputValue="true"
+                    name="./faxCountryCode"
+                    type="checkbox"
+                    xtype="selection"/>
+                <faxAreaCode
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Fax Area Code"
+                    inputValue="true"
+                    name="./faxAreaCode"
+                    type="checkbox"
+                    xtype="selection"/>
+                <faxBaseNumber
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Fax Base Number"
+                    inputValue="true"
+                    name="./faxBaseNumber"
+                    type="checkbox"
+                    xtype="selection"/>
+                <faxExtension
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Fax Extension"
+                    inputValue="true"
+                    name="./faxExtension"
+                    type="checkbox"
+                    xtype="selection"/>
+                <selectList
+                    jcr:primaryType="cq:Widget"
+                    defaultValue="personal"
+                    fieldLabel="Class"
+                    name="./faxClass"
+                    type="select"
+                    xtype="selection">
+                    <options jcr:primaryType="cq:WidgetCollection">
+                        <one
+                            jcr:primaryType="nt:unstructured"
+                            text="Personal"
+                            value="personal"/>
+                        <two
+                            jcr:primaryType="nt:unstructured"
+                            text="Business"
+                            value="business"/>
+                    </options>
+                </selectList>
+            </items>
+        </first>
+    </items>
+</jcr:root>

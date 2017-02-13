@@ -1,0 +1,39 @@
+<sly data-sly-use.payment="com.informa.components.commons.model.RegistrationPaymentModel" data-sly-unwrap></sly>
+<form name="saorder" method="POST" action="${payment.postUrl}">
+    <input type="hidden" name="access_key" value="${payment.accessKey}"/>
+    <input type="hidden" name="profile_id" value="${payment.profileId}"/>
+    <input type="hidden" name="transaction_uuid" value="${payment.tUUID}"/>
+    <input type="hidden" name="signed_date_time" value="${payment.signedDateTime}"/>
+    <input type="hidden" name="locale" value="${payment.locale}"/>
+    <input type="hidden" name="transaction_type" value="${payment.transactionType}"/>
+    <input type="hidden" name="reference_number" value="${payment.referenceNumber}"/>
+    <input type="hidden" name="amount" value="${payment.amount}"/>
+    <input type="hidden" name="currency" value="${payment.currency}"/>
+    <input type="hidden" name="override_custom_receipt_page" value="${payment.receiptPage}"/>
+    <input type="hidden" name="override_custom_cancel_page" value="${payment.cancelPage}" />
+    <input type='hidden' name='card_type' value='${payment.cardType}'/>
+    <input type="hidden" name="bill_to_forename" value="${payment.billToForeName}"/>
+    <input type="hidden" name="bill_to_surname" value="${payment.billToSurname}"/>
+    <input type="hidden" name="bill_to_address_line1" value="${payment.billToAddressLine1}"/>
+    <input type="hidden" name="bill_to_address_city" value="${payment.billToAddressCity}"/>
+    <input type="hidden" name="bill_to_address_state" value="${payment.billToAddressState}"/>
+    <input type="hidden" name="bill_to_address_postal_code" value="${payment.billToAddressPostalCode}"/>
+    <input type="hidden" name="bill_to_address_country" value="${payment.billToAddressCountry}"/>
+    <input type="hidden" name="bill_to_email" value="${payment.billToEmail}"/>
+    <input type="hidden" name="bill_to_phone" value="${payment.billToPhone}"/>
+    <sly data-sly-test="${payment.unSignedFieldNames==''}" data-sly-unwrap>
+		<input type="hidden" name="unsigned_field_names" value=""/>
+	</sly>
+    <sly data-sly-test="${payment.unSignedFieldNames!=''}" data-sly-unwrap>
+		<input type="hidden" name="unsigned_field_names" value="${payment.unSignedFieldNames}"/>
+	</sly>
+    <input type="hidden" name="signed_field_names" value="${payment.singedFieldNames}"/>
+    <input type="hidden" name="signature" id="signature" value="${payment.signature}"/>
+    <input id="submit-btn" type="submit" value="${properties.redirectionMsg}" style="width:100%"/>
+</form>
+<sly data-sly-test="${!(wcmmode.edit || wcmmode.design)}" data-sly-unwrap>
+    <script>
+        $("#submit-btn").click();
+    </script>
+</sly>	
+

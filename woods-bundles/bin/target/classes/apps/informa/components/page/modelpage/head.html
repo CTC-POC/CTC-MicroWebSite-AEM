@@ -1,0 +1,30 @@
+
+<head
+	data-sly-use.clientLib="${'/libs/granite/sightly/templates/clientlib.html'}">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta data-sly-test="${properties.defaulttags}" property="title" content="${properties.jcr:title @ context ='html'}"/>
+<div data-sly-use.metaTag="com.informa.components.commons.MetaTag" data-sly-unwrap>
+	<!-- Default tags are loaded -->
+    <meta data-sly-test="${properties.defaulttags}" name="creation_date" content="${metaTag.created @ context='attribute'}"/>
+    <meta data-sly-test="${properties.defaulttags}" name="modified_date" content="${metaTag.lastModified @ context='attribute'}"/>
+<div data-sly-test="${metaTag.hasContent}" data-sly-list.TagList="${metaTag.metaTagsList}" data-sly-unwrap>
+    <meta name="${TagList.metaName}" content="${TagList.metaContent @ context='attribute'}"/>
+</div>
+</div>
+    <title>${currentPage.pageTitle || properties.jcr:title}</title>
+<script src="//assets.adobedtm.com/3b41413f9bbdb62cdba92f3da1f7cb49a066fa16/satelliteLib-7024b6b55d4e403609580d798976a23193ceedb8-staging.js"></script>
+<clientlib
+	data-sly-call="${clientLib.all @ categories=['apps.informa.global']}"
+	data-sly-unwrap />
+<includeSidekick
+	data-sly-include="/libs/wcm/core/components/init/init.jsp"
+	data-sly-unwrap />
+<div data-sly-use.clientlibType="${'com.informa.components.commons.model.ClientlibModel' @ designpath=currentDesign}" data-sly-unwrap> 
+<clientlib
+	data-sly-call="${clientLib.all @ categories=clientlibType.type}"
+	data-sly-unwrap />
+</div>
+<script src='https://www.google.com/recaptcha/api.js'></script>
+</head>

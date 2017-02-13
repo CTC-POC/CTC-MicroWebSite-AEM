@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:language="ar"
+    jcr:mixinTypes="[mix:language]"
+    jcr:primaryType="sling:Folder">
+    <addressCity
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="nt:folder"
+        sling:key="Address City"
+        sling:message="العنوان المدينة"/>
+    <addressClass
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="nt:folder"
+        sling:key="Address Class"
+        sling:message="الفئة عنوان"/>
+    <addressCountry
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="nt:folder"
+        sling:key="Address Country"
+        sling:message="عنوان البلد"/>
+    <addressLine1
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="nt:folder"
+        sling:key="Address Line 1"
+        sling:message="العنوان الأول"/>
+    <addressLine2
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="nt:folder"
+        sling:key="Address Line 2"
+        sling:message="سطر العنوان 2"/>
+    <addressLine3
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="nt:folder"
+        sling:key="Address Line 3"
+        sling:message="خط العنوان 3"/>
+    <addressPObox
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="nt:folder"
+        sling:key="Address PO box"
+        sling:message="عنوان صندوق بريد"/>
+    <addressPostcode
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="nt:folder"
+        sling:key="Address Postcode"
+        sling:message="عنوان الرمز البريدي"/>
+    <addressState
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="nt:folder"
+        sling:key="Address State"
+        sling:message="الدولة عنوان"/>
+    <addressStateOrCountry
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="nt:folder"
+        sling:key="Address State or Country"
+        sling:message="الدولة العنوان أو البلد"/>
+    <addressTownCity
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="nt:folder"
+        sling:key="Address Town/City"
+        sling:message="عنوان تاون / المدينة"/>
+    <email
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="nt:folder"
+        sling:key="Email"
+        sling:message="البريد الإلكتروني"/>
+    <faxBaseNumber
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="nt:folder"
+        sling:key="Fax base number"
+        sling:message="عدد قاعدة الفاكس"/>
+    <firstname
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="nt:folder"
+        sling:key="First Name"
+        sling:message="الاسم الاول"/>
+    <formContainer
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="nt:folder"
+        sling:key="Form Container"
+        sling:message="شكل حاويات"/>
+    <industryName
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="nt:folder"
+        sling:key="Industry Name"
+        sling:message="اسم الصناعة"/>
+    <jobTitle
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="nt:folder"
+        sling:key="Job Title"
+        sling:message="المسمى الوظيفي"/>
+    <middlename
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="nt:folder"
+        sling:key="Middle Name"
+        sling:message="الاسم الأوسط"/>
+    <phoneNumberBaseNumber
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="nt:folder"
+        sling:key="Phone number base number"
+        sling:message="رقم الهاتف قاعدة رقم"/>
+    <surname
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="nt:folder"
+        sling:key="Surname"
+        sling:message="لقب العائلة"/>
+    <title
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="nt:folder"
+        sling:key="Title"
+        sling:message="عنوان"/>
+</jcr:root>

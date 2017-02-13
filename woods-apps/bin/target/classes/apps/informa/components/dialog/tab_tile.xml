@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Panel"
+    title="Tile">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <title
+            jcr:primaryType="cq:Widget"
+            fieldDescription="E.g.&quot;News&quot;"
+            fieldLabel="Title"
+            name="./tile/title"
+            xtype="textfield"/>
+        <linkPath
+            jcr:primaryType="nt:unstructured"
+            allowBlank="true"
+            fieldDescription="Internal or external link (if the link is external it should start with &quot;http&quot;)."
+            fieldLabel="Link Path"
+            name="./tile/linkPath"
+            suffix=".html"
+            xtype="pathfield"/>
+        <openInNewWindow
+            jcr:primaryType="nt:unstructured"
+            fieldLabel="Open in new window"
+            name="./tile/openInNewWindow"
+            type="checkbox"
+            xtype="selection"/>
+        <tags
+            jcr:primaryType="cq:Widget"
+            cls="cq-propsdialog-tags"
+            fieldLabel="Tags/Keywords"
+            name="./tile/cq:tags"
+            xtype="tags"/>
+        <hideTags
+            jcr:primaryType="nt:unstructured"
+            fieldDescription="Important: hidden tags are still visible in the source HTML of a webpage."
+            fieldLabel="Hide Tags"
+            name="./tile/hideTags"
+            type="checkbox"
+            xtype="selection"/>
+    </items>
+</jcr:root>

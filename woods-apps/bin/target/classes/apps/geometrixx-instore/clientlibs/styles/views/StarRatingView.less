@@ -1,0 +1,70 @@
+/*
+ *
+ * ADOBE CONFIDENTIAL
+ * __________________
+ *
+ *  Copyright 2015 Adobe Systems Incorporated
+ *  All Rights Reserved.
+ *
+ * NOTICE:  All information contained herein is, and remains
+ * the property of Adobe Systems Incorporated and its suppliers,
+ * if any.  The intellectual and technical concepts contained
+ * herein are proprietary to Adobe Systems Incorporated and its
+ * suppliers and are protected by trade secret or copyright law.
+ * Dissemination of this information or reproduction of this material
+ * is strictly forbidden unless prior written permission is obtained
+ * from Adobe Systems Incorporated.
+ */
+.geo-StarRatingView {
+  text-align: center;
+  margin: 14px 0;
+}
+
+.geo-StarRatingView-title {
+  color: #0a0a0a;
+  margin-bottom: 20px;
+}
+
+.geo-StarRatingView-rate {
+  position: relative;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  line-height: 22px;
+}
+
+.geo-StarRatingView-rate-frame {
+  position: absolute;
+  left: 0;
+  color: rgb(189, 189, 189);
+  font-style: normal;
+
+  &:before {
+    content: "\2605";
+  }
+
+}
+
+.geo-StarRatingView-rate-fill {
+  position: absolute;
+  left: 0;
+  color: @highlight-color;
+  font-style: normal;
+  visibility: hidden;
+  z-index: 1;
+
+  &:before {
+    content: "\2605";
+  }
+
+}
+
+.geo-StarRatingView-rate.is-filled > .geo-StarRatingView-rate-fill {
+  visibility: visible;
+}
+
+.geo-StarRatingView-count {
+  color: #0a0a0a;
+  margin-left: 10px;
+  display: inline-block;
+}

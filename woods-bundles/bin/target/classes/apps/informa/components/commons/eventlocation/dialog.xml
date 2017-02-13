@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="Event Details"
+    width="800"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <eventdetails
+                jcr:primaryType="cq:Widget"
+                title="Event Details"
+                xtype="panel">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <eventDate
+                        jcr:primaryType="cq:Widget"
+                        jcr:title="./eventDate"
+                        fieldLabel="Date"
+                        name="./eventDate"
+                        xtype="textfield"/>
+                    <address
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Search Address"
+                        fieldLabel="Address"
+                        name="./address"
+                        xtype="textfield"/>
+                    <linkText
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Link Text"
+                        name="./linkText"
+                        xtype="textfield"/>
+                    <linkPath
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Link Path"
+                        name="./linkPath"
+                        xtype="pathfield"/>
+                </items>
+            </eventdetails>
+            <admission-times
+                jcr:primaryType="cq:Widget"
+                title="Admission Times"
+                xtype="panel">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <startDate
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Admission Start Date"
+                        name="./startDate"
+                        xtype="datefield"/>
+                    <endDate
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Admission End Date"
+                        name="./endDate"
+                        xtype="datefield"/>
+                    <startTime
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Start Time"
+                        name="./startTime"
+                        xtype="timefield"/>
+                    <endTime
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="End Time"
+                        name="./endTime"
+                        xtype="timefield"/>
+                </items>
+            </admission-times>
+        </items>
+    </items>
+</jcr:root>

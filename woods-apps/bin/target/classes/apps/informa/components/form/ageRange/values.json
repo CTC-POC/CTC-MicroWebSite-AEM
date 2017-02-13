@@ -1,0 +1,33 @@
+{   
+	"root": [
+
+{
+	"text": " ",
+	"value": "Select Age Range"
+},
+{
+	"text": "AR_BELOW18",
+	"value": "Below 18"
+}, {
+	"text": "AR_18TO20",
+	"value": "18-20"
+}, {
+	"text": "AR_21TO24",
+	"value": "21-24"
+}, {
+	"text": "AR_25TO34",
+	"value": "25-34"
+}, {
+	"text": "AR_35TO44",
+	"value": "35-44"
+}, {
+	"text": "AR_45TO54",
+	"value": "45-54"
+}, {
+	"text": "AR_55TO64",
+	"value": "55-64"
+}, {
+	"text": "AR_ABOVE65",
+	"value": "65+"
+}]
+}

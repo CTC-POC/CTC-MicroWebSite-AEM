@@ -1,0 +1,98 @@
+.up-down-gradient-background (@start, @end) {
+    background-color: @start;
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(@start), to(@end));
+    background-image: -webkit-linear-gradient(top, @start, @end);
+    background-image:    -moz-linear-gradient(top, @start, @end);
+    background-image:     -ms-linear-gradient(top, @start, @end);
+    background-image:      -o-linear-gradient(top, @start, @end);
+}
+
+.rounded-corners (@radius) {
+    -webkit-border-radius: @radius;
+    -moz-border-radius: @radius;
+    -ms-border-radius: @radius;
+    -o-border-radius: @radius;
+    border-radius: @radius;
+}
+
+.box-shadow(@style) {
+    box-shadow: @style;
+    -webkit-box-shadow: @style;
+    -moz-box-shadow: @style;
+}
+
+#cq-hovercart {
+    padding-top: 20px;
+    max-width: 500px;
+    min-width: 300px;
+    > div.cq-hovercart-border {
+        .rounded-corners(5px);
+        .box-shadow(0 0 15px 2px #000);
+        .up-down-gradient-background(#ed692b, #D45E26);
+        padding: 5px;
+        > div.cq-hovercart-inner {
+            .up-down-gradient-background(#dbdcdd, #fcfcfc);
+            padding: 10px;
+            > h1 {
+                float: left;
+                font-size: 1em;
+                margin: 0;
+                padding: 0;
+            }
+            > a.cq-hovercart-checkout {
+                float: right;
+                font-weight: bold;
+            }
+            > table {
+                width: 100%;
+                clear: both;
+                border-style: none;
+                border-collapse: collapse;
+                position: relative;
+                top: 10px;
+                margin-bottom: 10px;
+                border-top: 1px solid #cacaca;
+                > tbody > tr {
+                    cursor: pointer;
+                    > td {
+                        padding: 3px 0 3px 0;
+                        vertical-align: middle;
+                    }
+                    > td.cq-hovercart-quantity, > td.cq-hovercart-price {
+                        text-align: right;
+                        padding-left: 5px;
+                    }
+                    > td.cq-hovercart-thumb {
+                        width: 32px;
+                        img {
+                            position: relative;
+                            left: -6px;
+                        }
+                    }
+                    &:hover > td > a {
+                        text-decoration: underline;
+                    }
+                }
+            }
+            .cq-hovercart-promotion {
+                padding-top: 8px;
+                border-top: 1px solid #cacaca;
+                font-size: 12px;
+                color: #4C4C4C;
+            }
+            .cq-hovercart-wrapping {
+              padding-top: 5px;
+              border-top: 1px solid #cacaca;
+              font-size: 10px;
+              color: #4C4C4C;
+            }
+        }
+    }
+    a {
+        color: #ed692b;
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}

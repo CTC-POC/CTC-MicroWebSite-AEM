@@ -1,0 +1,64 @@
+<div class="personalization">
+<div class="myaccount-personalization myaccount-tab-content">
+<form id="myaccount-form-Account-Information-email" method="post" role="form" class="form-horizontal" action="#">
+										    <div class="myaccount-container">
+
+											    <div class="form-group margin-top-zero">
+													<h3  class="col-sm-12  col-md-4 col-lg-4 control-label myaccountsub-title">${properties.title || 'Email'}</h3>
+												</div>
+
+													<div class="form-group updateEmail">
+													<label for="currentEmail" class="col-sm-12 col-md-2 col-lg-2 control-label">${properties.email || 'Email'}
+													<span class="asterisk-sign-clr asterisk-sign-clr-account">*</span></label>
+													<div class="col-sm-12  col-md-6 col-lg-6">
+														<span class="col-md-6 padding-left-zero" id="currentEmail" name="currentEmail"></span><a class="col-md-6 updateEmaillink" href="#updateEmail">${properties.update || 'Update'}</a>
+													</div>
+													</div>
+													<div class="emailUpdateDiv">
+													<div class="form-group ">
+													    <label for="newEmail" class="col-sm-12 col-md-2 col-lg-2 control-label">${properties.email || 'Email'}</label>
+														<div class="col-sm-12  col-md-10 col-lg-10">
+															<input type="email" name="newEmail" class="form-control col-sm-12  col-md-4 col-lg-4 signup-validate" aria-required="true" id="newEmail"  >
+														</div>
+													</div>
+													 <input type="hidden" id="emailExistingTitle" name='emailExistingTitle' value="${properties.emailExistingTitle || 'Account with this email already Exist!'}"/>
+                                                    <input type="hidden" id="emailExistingMessage" name='emailExistingMessage' value="${properties.emailExistingMessage || 'Please enter some other email id '}"/>
+                                                    <input type="hidden" id="changeEmailSuccessMsg" name='changeEmailSuccessMsg' value="${properties.changeEmailSuccessMsg || 'Click on confirmation link sent to your mail for email change!'}"/>
+                                                    <input type="hidden" id="changeEmailSuccessTitle" name='changeEmailSuccessTitle' value="${properties.changeEmailSuccessTitle || 'Email sent'}"/>
+                                                    <input type="hidden" name="emailTemplate"  id="emailTemplate"  value="${properties.emailTemplate}">
+                                                    <input type="hidden" name="confirmaEmailPage"  id="confirmaEmailPage"  value="${properties.confirmEmailPage}">
+													<div class="form-group">
+													<div class="col-xs-4 col-sm-6 col-md-2 col-lg-offset-2 col-lg-2 sm-float-left">
+														<button type="button" name="btnSaveEmail" id="btnSaveEmail" class="btn-u btn-u-brown signup-not-allowed">${properties.submit || 'Submit'} </button>
+													</div>
+													<div class="col-xs-4 col-sm-6 col-md-2 col-lg-2 sm-float-right">
+														<button type="button" name="btnCancelEmail" id="btnCancelEmail" class="btn-u btn-u-brown">${properties.cancel || 'Cancel'}</button>
+													</div>
+                                                     <div class="col-xs-12 col-lg-2 col-md-2 col-sm-4 loader-pic hide" id="loader-pic-ce">
+                                                              <span class="row"><p class="fa fa-cog fa-spin fa-1x"></p>&nbsp;Loading ...</span>
+                                                     </div>
+													</div>
+													</div>	
+
+												
+											</div>		
+										</form>
+                                        </div>
+                                        </div> 
+  <!-- modal -->                           
+	<div id="changeemail-model" class="modal fade modalCustomCss" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content panel-body">
+                <div class="modal-header">
+                    <button aria-hidden="true" data-dismiss="modal" class="close" type="button"><i class="fa fa-times fa-1x"></i></button>
+                    <h2 id="myLargeModalLabel2" class="modal-title"></h2>
+                </div>
+                <div class="modal-body">
+                    <p></p>
+
+                    <button class="btn buttomCommonCss" aria-hidden="true" data-dismiss="modal">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+	<!-- end modal -->        

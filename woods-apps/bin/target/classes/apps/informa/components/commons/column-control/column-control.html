@@ -1,0 +1,25 @@
+<!--/*
+
+	Informa
+	_______________________
+	
+	Column control component.
+
+*/-->
+
+<div data-sly-test="${wcmmode.edit}" data-emptytext="Column Control"
+	class="cq-placeholder"></div>
+<div
+	class="${properties.fullWidth ? 'container-fluid' : 'container'} ${properties.removePadding ? 'paddingZero marginZero' : ''}"
+	data-sly-use.columnControl="com.informa.components.commons.ColumnControl"
+	data-sly-unwrap="${columnControl.childColumnControl}">
+	<div class="row ${properties.removePadding ? '' : 'row-custom-divider'}  ${properties.spacingstylestop} ${properties.spacingstylesbottom}"
+		data-sly-list.columnsCssClass="${columnControl.columnsCssClass}">
+		<div class="${columnsCssClass @ context='attribute'}"
+			data-sly-test.columnParsys="${'par-col-{0}' @ format=[columnsCssClassList.count]}">
+			<div
+				data-sly-resource="${columnParsys @ resourceType='foundation/components/parsys'}"
+				data-sly-unwrap></div>
+		</div>
+	</div>
+</div>

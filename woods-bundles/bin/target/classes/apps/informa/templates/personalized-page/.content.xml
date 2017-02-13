@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:description="Informa Personalized Page template"
+    jcr:primaryType="cq:Template"
+    jcr:title="Informa Personalized Page"
+    allowedPaths="[/content/informa-poc(/.*)?,/content/informa(/.*)?]"
+    ranking="{Long}17"
+    shortTitle="Personalized Content Page">
+    <jcr:content
+        cq:lastReplicated="{Date}2016-07-04T06:50:28.424-04:00"
+        cq:lastReplicatedBy="midhun.sivasankaran@cognizant.com"
+        cq:lastReplicationAction="Activate"
+        jcr:primaryType="cq:PageContent"
+        sling:resourceType="informa/components/page/personalized/page"
+        pageType="standardpage">
+        <par_page
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="foundation/components/parsys"/>
+    </jcr:content>
+</jcr:root>

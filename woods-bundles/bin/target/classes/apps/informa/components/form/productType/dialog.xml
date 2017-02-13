@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    activeTab="{Long}0"
+    height="{Long}250"
+    helpPath="en/cq/current/wcm/default_components.html#Forms Dropdown List"
+    width="800"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <first
+                jcr:primaryType="cq:Panel"
+                title="Business Types"
+                xtype="panel">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <title
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="Product Type"
+                        fieldLabel="Title"
+                        name="./jcr:title"
+                        xtype="textfield"/>
+                    <defaultText
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="Please select the product type"
+                        fieldLabel="Default  Drop Down Text"
+                        name="./jcr:default"
+                        xtype="textfield"/>
+                    <tooltip
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Tooltip Message"
+                        name="./tooltip"
+                        xtype="textfield"/>
+                    <elementId
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="InformaProductCode"
+                        fieldLabel="Element Id"
+                        name="./jcr:element"
+                        readOnly="{Boolean}true"
+                        xtype="textfield"/>
+                    <multi
+                        jcr:primaryType="cq:Widget"
+                        name="./multi"
+                        title="Product Types"
+                        xtype="multifield">
+                        <fieldConfig
+                            jcr:primaryType="cq:Widget"
+                            border="true"
+                            layout="form"
+                            xtype="multi-field-panel">
+                            <items jcr:primaryType="cq:WidgetCollection">
+                                <productType
+                                    cq:noDecoration="{Boolean}true"
+                                    jcr:primaryType="cq:Widget"
+                                    dName="natureOfBusinessText"
+                                    fieldLabel="Product Type"
+                                    name="./natureOfBusinessText"
+                                    options="/apps/informa/components/form/productType/values.json/jcr:content"
+                                    type="combobox"
+                                    xtype="selection">
+                                    <listeners
+                                        jcr:primaryType="nt:unstructured"
+                                        selectionchanged="function(dialog)&#xa;{&#xa;var businessValue = this.getRawValue();&#xa;var responce = CQ.HTTP.get(CQ.HTTP.externalize(&quot;/apps/informa/components/form/productType/values.json/jcr:content&quot;));&#xa;&#xa;var productTypeResponce = CQ.shared.HTTP.eval(responce);&#xa;var businessHiddenField= this.findParentByType('multi-field-panel').findByType('textfield');&#xa;var answerField;&#xa;var hiddenField;&#xa;var textField;&#xa;var codeField;&#xa;var temp;&#xa;for(temp = 0; temp &lt; businessHiddenField.length; temp++) {&#xa;&#x9;&#xa;&#x9;if(businessHiddenField[temp].getRawValue() == businessValue) {&#xa;&#x9;&#x9;&#xa;&#x9;&#x9;hiddenField = businessHiddenField[temp+1];&#x9;&#x9;&#xa;&#x9;&#x9;hiddenField.setValue(businessValue);&#xa;&#x9;&#x9;textField = businessHiddenField[temp+2];&#xa;&#x9;&#x9;textField.setValue(businessValue);&#xa;&#x9;&#x9;codeField = businessHiddenField[temp+3];&#xa;&#x9;&#x9;for(var count = 0; count&lt;productTypeResponce.length; count++){&#xa;&#x9;&#x9;&#x9;if(productTypeResponce[count].text == businessValue){&#x9;&#x9;&#x9;&#x9;&#xa;&#x9;&#x9;&#x9;&#x9;codeField.setValue(productTypeResponce[count].value);&#xa;&#x9;&#x9;&#x9;&#x9;break;&#xa;&#x9;&#x9;&#x9;}&#xa;&#x9;&#x9;}&#xa;&#x9;&#x9;break;&#xa;&#x9;}&#xa;}&#xa;};"/>
+                                </productType>
+                                <productTypeHiddenName
+                                    jcr:primaryType="cq:Widget"
+                                    dName="businessHiddenName"
+                                    fieldLabel="Text"
+                                    name="./businessHiddenName"
+                                    width="{Long}408"
+                                    xtype="textfield"/>
+                                <productTypeText
+                                    jcr:primaryType="cq:Widget"
+                                    dName="natureOfBusinessText"
+                                    fieldLabel="Text"
+                                    hidden="{Boolean}true"
+                                    name="./natureOfBusinessText"
+                                    width="{Long}408"
+                                    xtype="textfield"/>
+                                <productTypeCode
+                                    jcr:primaryType="cq:Widget"
+                                    dName="natureOfBusinessCode"
+                                    fieldLabel="Text"
+                                    hidden="{Boolean}true"
+                                    name="./natureOfBusinessCode"
+                                    width="{Long}408"
+                                    xtype="textfield"/>
+                            </items>
+                        </fieldConfig>
+                    </multi>
+                </items>
+            </first>
+            <second
+                jcr:primaryType="nt:unstructured"
+                title="Constraints"
+                xtype="panel">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <required
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Required"
+                        inputValue="true"
+                        name="./required"
+                        type="checkbox"
+                        xtype="selection"/>
+                    <requiredMessage
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Required Message"
+                        name="./requiredMessage"
+                        xtype="textarea"/>
+                </items>
+            </second>
+        </items>
+    </items>
+</jcr:root>
