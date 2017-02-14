@@ -2,11 +2,31 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2016-05-10T11:15:40.357+05:30"
+        cq:lastModified="{Date}2017-02-14T12:51:52.531+05:30"
         cq:lastModifiedBy="admin"
         jcr:primaryType="nt:unstructured"
         jcr:title="Woods"
-        sling:resourceType="wcm/core/components/designer"/>
+        sling:resourceType="wcm/core/components/designer">
+        <basepage jcr:primaryType="nt:unstructured">
+            <header_ipar
+                jcr:lastModified="{Date}2017-02-14T11:04:06.701+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                components="group:Woods-Global">
+                <section jcr:primaryType="nt:unstructured"/>
+            </header_ipar>
+        </basepage>
+        <standardpage jcr:primaryType="nt:unstructured">
+            <par_page
+                jcr:lastModified="{Date}2017-02-14T12:51:52.529+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                components="group:Woods-Global">
+                <section jcr:primaryType="nt:unstructured"/>
+            </par_page>
+        </standardpage>
+    </jcr:content>
     <clientlibs/>
     <footer/>
+    <header/>
 </jcr:root>

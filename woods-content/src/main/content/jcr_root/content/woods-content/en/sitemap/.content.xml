@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2017-02-14T13:45:48.224+05:30"
+        cq:lastModifiedBy="admin"
+        cq:template="/apps/woods-apps/templates/standard-page"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="sitemap"
+        sling:resourceType="woods-apps/components/structure/standardpage"
+        pageType="standardpage">
+        <par_page
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="foundation/components/parsys">
+            <text
+                jcr:created="{Date}2017-02-14T13:45:31.089+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2017-02-14T13:45:48.221+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="woods-apps/components/content/text"
+                text="&lt;h1>SITE MAP&lt;/h1>&#xa;"
+                textIsRich="true"/>
+        </par_page>
+    </jcr:content>
+</jcr:root>

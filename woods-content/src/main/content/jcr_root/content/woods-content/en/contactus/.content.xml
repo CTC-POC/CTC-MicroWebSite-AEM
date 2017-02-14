@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2017-02-14T13:27:48.661+05:30"
+        cq:lastModifiedBy="admin"
+        cq:template="/apps/woods-apps/templates/standard-page"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="contactus"
+        sling:resourceType="woods-apps/components/structure/standardpage"
+        pageType="standardpage">
+        <par_page
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="foundation/components/parsys">
+            <text
+                jcr:created="{Date}2017-02-14T12:56:16.016+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2017-02-14T13:27:48.658+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="woods-apps/components/content/text"
+                text="&lt;h1>CONTACT WOODS CANADA&lt;/h1>&#xa;&lt;h1>&amp;nbsp;&lt;/h1>&#xa;&lt;h3>Woods Canada values your feedback. If you have questions or comments, you can always get in touch with us by completing the form below. Also, we encourage you to visit our&amp;nbsp;&lt;a href=&quot;/content/woods-content/en/faq.html&quot;>Frequently Asked Questions&lt;/a>&amp;nbsp;page.&lt;/h3>&#xa;&lt;h2>&amp;nbsp;&lt;/h2>&#xa;&lt;h3>All fields are required.&lt;/h3>&#xa;&lt;h2>&amp;nbsp;&lt;/h2>&#xa;&lt;h3>NOTE: When you hit Send Email below, it may take a moment before your message is actually sent. Please be patient and don’t resubmit your message. Thank you.&lt;br>&#xa;&lt;/h3>&#xa;"
+                textIsRich="true"/>
+        </par_page>
+    </jcr:content>
+</jcr:root>

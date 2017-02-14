@@ -5,7 +5,7 @@
         jcr:primaryType="cq:InplaceEditingConfig"
         active="{Boolean}true"
         cols="{Long}2"
-        configPath="/apps/informa/components/commons/text/dialog/items/items/tab1/items/text"
+        configPath="/apps/woods-apps/components/content/text/dialog/items/items/tab1/items/text"
         editorType="text"
         rows="{Long}10">
         <config jcr:primaryType="nt:unstructured">

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2017-02-14T13:47:01.324+05:30"
+        cq:lastModifiedBy="admin"
+        cq:template="/apps/woods-apps/templates/standard-page"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="privacypolicy"
+        sling:resourceType="woods-apps/components/structure/standardpage"
+        pageType="standardpage">
+        <par_page
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="foundation/components/parsys">
+            <text
+                jcr:created="{Date}2017-02-14T13:46:13.981+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2017-02-14T13:47:01.322+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="woods-apps/components/content/text"
+                text="&lt;h1>PRIVACY&lt;/h1>&#xa;&lt;h2>&amp;nbsp;&lt;/h2>&#xa;&lt;h3>Canadian Tire Corporation, Limited and its family of companies and business units are committed to protecting the privacy and security of your personal information obtained by reason of your doing business with us. Please follow this&amp;nbsp;link&amp;nbsp;to the Canadian Tire Corporation, Limited Privacy Charter for more details.&lt;/h3>&#xa;"
+                textIsRich="true"/>
+        </par_page>
+    </jcr:content>
+</jcr:root>

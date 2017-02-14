@@ -23,16 +23,6 @@
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="granite/ui/components/foundation/container">
                         <items jcr:primaryType="nt:unstructured">
-                            <searchPath
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="/libs/granite/ui/components/foundation/form/pathbrowser"
-                                fieldLabel="Search path"
-                                name="./searchPath"/>
-                            <searchresult
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
-                                fieldLabel="Search result page"
-                                name="./searchresult"/>
                             <freeTextLabel
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="/libs/granite/ui/components/foundation/form/textfield"
