@@ -1,0 +1,39 @@
+
+<div data-sly-test="${wcmmode.edit}" data-emptytext="Carousel"	class="cq-placeholder"></div>
+
+<div class="container">
+	
+		<!-- Carousel -->
+    	<div id="myCarousel" class="carousel slide" data-ride="carousel" data-sly-use.carosel="com.woods.core.components.Multifield">
+			<!-- Indicators -->
+			<ol class="carousel-indicators" data-sly-list.carouselChild="${carosel.childList}">
+			  	<li data-target="#myCarousel" data-slide-to="${carouselChildList.index}" class="${carouselChildList.first ? 'active' : ''}"></li>
+
+			</ol>
+			<!-- Wrapper for slides -->
+			<div class="carousel-inner" role="listbox" data-sly-list.carouselChild="${carosel.childList}">
+			    <div class="item ${carouselChildList.first ? 'active' : ''}">
+			    	<a href="${carouselChild.imagePath}.html" target="_blank">	
+                    	<img src="${carouselChild.image}" alt="Image">
+                    </a>
+                    <!-- Static Header -->
+                    <div class="carousel-caption slider_wraper">
+						<h1 class="slider__header slider__header_font-size" style="color : #fff;">${carouselChild.titledescription}</h1>
+						<div class="slider__text slider__description_font-size" style="color : #fff;">${carouselChild.text}</div>
+						<a class="button slider__button slider__button_colors" href="${carouselChild.linkPath}.html" rel="nofollow">${carouselChild.title}</a>
+					</div>
+                    <!-- /header-text -->
+			    </div>		    
+			</div>
+			<!-- Controls -->
+			<a class="left carousel-control" href="#myCarousel" data-slide="prev">
+		    	<span class="glyphicon glyphicon-chevron-left"></span>
+			</a>
+			<a class="right carousel-control" href="#myCarousel" data-slide="next">
+		    	<span class="glyphicon glyphicon-chevron-right"></span>
+			</a>
+		</div><!-- /carousel -->
+
+</div>
+
+
