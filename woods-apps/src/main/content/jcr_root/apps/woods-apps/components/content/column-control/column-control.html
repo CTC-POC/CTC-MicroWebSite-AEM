@@ -11,9 +11,10 @@
 	class="cq-placeholder"></div>
 <div
 	class="${properties.fullWidth ? 'container-fluid' : 'container'} ${properties.removePadding ? 'paddingZero marginZero' : ''}"
-	data-sly-use.columnControl="com.woods.components.content.model.ColumnControl"
+	data-sly-use.columnControl="com.woods.core.components.ColumnControl"
 	data-sly-unwrap="${columnControl.childColumnControl}">
-	<div class="row ${properties.removePadding ? '' : 'row-custom-divider'} "
+	<div
+		class="row ${properties.removePadding ? '' : 'row-custom-divider'} "
 		data-sly-list.columnsCssClass="${columnControl.columnsCssClass}">
 		<div class="${columnsCssClass @ context='attribute'}"
 			data-sly-test.columnParsys="${'par-col-{0}' @ format=[columnsCssClassList.count]}">

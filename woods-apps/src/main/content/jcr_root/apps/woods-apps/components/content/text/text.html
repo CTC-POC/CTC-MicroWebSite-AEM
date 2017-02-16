@@ -1,13 +1,16 @@
 <!--/*
 
-     Informa
+     Woods
 	_______________________
 	
      Text component.
 
 */-->
-<div data-sly-test="${wcmmode.edit}" data-emptytext="Text" class="cq-placeholder"></div>
+<div data-sly-test="${wcmmode.edit}" data-emptytext="Text"
+	class="cq-placeholder"></div>
 
 <div>
-<p data-sly-use.text="text.js" data-sly-unwrap="${text.context == text.CONST.CONTEXT_HTML}" class=" " data-emptytext="Text">${text.text @ context=text.context}</p>
-    </div>
+	<p data-sly-use.text="text.js"
+		data-sly-unwrap="${text.context == text.CONST.CONTEXT_HTML}" class=" "
+		data-emptytext="Text">${text.text @ context=text.context}</p>
+</div>

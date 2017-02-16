@@ -1,0 +1,97 @@
+.contact-us .container .slider h1 {
+    font-size: 36px !important;
+    margin: 20px 0px;
+    font-weight: bold !important;
+	text-transform:uppercase;	
+}
+.contact-us .container .slider a {
+    color: #005841;
+	text-decoration: underline;
+}
+.contact-us .container .slider a:hover {
+    color: #005841;
+	text-decoration: none;
+}
+.contact-us .container .slider h1,.contact-us .container .slider p {
+    font: 40px HelveticaLTStd-BlkCond,Helvetica,Arial,sans-serif;
+}
+.contact-us h1.page-info__title {
+    text-transform: uppercase;
+}
+.contact-us .container .slider p {
+      font-size: 15px;
+    margin: 0 0 20px;
+}
+.contact-us .container .article img {
+    width: 100%;
+    height: 200px;
+}
+.articles-list__item__header {
+    font: normal 20px HelveticaLTStd-BlkCond,Helvetica,Arial,sans-serif;
+    margin: 16px 0 0;
+    text-transform: uppercase;
+	font-weight: bold;
+}
+.articles-list__item__text {
+    font: normal 16px HelveticaLTStd-Cond,Helvetica,Arial,sans-serif;
+    margin: 7px 0 11px;
+}
+.articles-list__item__details {
+    font: bold 14px HelveticaLTStd-BoldCond,Helvetica,Arial,sans-serif;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #005841;
+}
+.articles-list__item__details:hover
+{
+text-decoration:none;	
+ color: #005841;
+}
+.container .article h2, .container .article p, .container .article .anchor {
+    text-align: center;
+}
+@media(max-width:768px)
+{
+	.article1,.article2,.article3
+	{
+		margin-bottom:30px;
+	}
+	.container .slider h1 {
+    font-size: 20px !important;
+    margin: 20px 0px;
+    font-weight: bold !important;	
+}
+.container .slider p {
+    font-size: 1rem;
+    margin:0 0 20px;
+}
+}
+@media(min-width:768px) and (max-width:990px)
+{
+	.article1,.article2,.article3
+	{
+		height:360px;
+	}
+}
+@media (min-width: 768px){
+.contact-us .container {
+    width: 930px;
+}.contact-us .container .slider p {
+    font-size: 15px !important;
+    margin: 0 0 20px;
+}
+    }
+@media (min-width: 1200px){
+.contact-us .container {
+    width: 1028px;
+}
+        .contact-us .container .slider p {
+    font-size: 15px !important;
+    margin: 0 0 20px;
+}}
+
+@media (min-width: 320px) and (max-width:767px){
+.contact-us .container .slider p {
+    font-size: 15px !important;
+    margin: 0 0 20px;
+}}

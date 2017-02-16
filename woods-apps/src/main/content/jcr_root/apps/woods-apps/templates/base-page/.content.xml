@@ -3,7 +3,7 @@
     jcr:description="Woods Base Page Template"
     jcr:primaryType="cq:Template"
     jcr:title="Woods Base Page"
-    allowedPaths="[/content/woods-content(/.*)?]"
+    allowedPaths="[/content(/.*)?]"
     ranking="{Long}1">
     <jcr:content
         jcr:primaryType="cq:PageContent"

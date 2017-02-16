@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Widget"
+    sling:resourceType="/libs/granite/ui/components/foundation/form/multifield"
+    aem-composit-multifield=""
+    class="full-width"
+    eaem-nested=""
+    fieldDescription="Click on ‘Add field’ button below to create a new frame"
+    fieldLabel="Add details of image"
+    name="./multi">
+    <field
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/foundation/form/fieldset"
+        eaem-nested=""
+        name="./multi">
+        <layout
+            jcr:primaryType="nt:unstructured"
+            sling:resouceType="granite/ui/components/foundation/layouts/fixedcolumns"
+            method="absolute"/>
+        <items jcr:primaryType="nt:unstructured">
+            <column
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                    <image
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
+                        fieldDescription="select image "
+                        fieldLabel="Select Image"
+                        name="./image"/>
+                    <imagepath
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
+                        fieldDescription="Enter full path of the image if you already have it, otherwise, click on the browse button to select an icon from DAM"
+                        fieldLabel="Image URL to Redirect"
+                        name="./imagePath"/>
+                    <title
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/form/textarea"
+                        fieldLabel="Title"
+                        name="./titledescription"/>
+                    <text
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/form/textarea"
+                        fieldDescription="Enter description for image in the field below. Use HTML tags to apply styles"
+                        fieldLabel="Image description"
+                        name="./text"/>
+                    <linkTitle
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/form/textfield"
+                        fieldDescription="Enter Button text in the field below. It is advisable to keep the name short"
+                        fieldLabel="Button text"
+                        name="./title"/>
+                    <linkPath
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
+                        fieldDescription="Enter link to a page or file which should open when the button is clicked"
+                        fieldLabel="Button URL "
+                        name="./linkPath"/>
+                    <externalLink
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                        name="./externalURL"
+                        text="External URL"
+                        value="true"/>
+                </items>
+            </column>
+        </items>
+    </field>
+</jcr:root>

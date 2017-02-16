@@ -57,9 +57,6 @@
                         xtype="pathfield"/>
                 </items>
             </generalTab>
-            <stylesTab
-                jcr:primaryType="cq:Widget"
-                xtype="componentstyles"/>
         </items>
     </items>
 </jcr:root>

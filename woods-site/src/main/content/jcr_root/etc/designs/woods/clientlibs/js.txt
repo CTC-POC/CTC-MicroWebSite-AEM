@@ -1,4 +1,4 @@
 #base=js
 
-bootstrap.min.js
 jquery.min.js
+bootstrap.min.js

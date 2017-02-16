@@ -6,25 +6,20 @@
 	Image Call to action component.
 
 */-->
-<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html" data-sly-unwrap/>
-<sly data-sly-call="${clientlib.css @ categories='woods.imagecalltoaction'}" data-sly-unwrap/>
 
 <div data-sly-test="${wcmmode.edit}"
-	data-emptytext="Image call to action"
-	class="cq-placeholder"></div>
+	data-emptytext="Image call to action" class="cq-placeholder"></div>
 
 <section id="SECTION_1">
-	<div id="DIV_2" >
+	<div id="DIV_2">
 		<article id="ARTICLE_3">
-			 <a href="${properties.imagePath}" rel="nofollow" id="A_4">
-             <img data-sly-test="${properties.imageRef}" src="${properties.imageRef}" alt="${properties.alttext}" id="IMG_5" /></a>
-             <a href="${properties.imagePath}" rel="nofollow" id="A_6"></a>
-			<h2 id="H2_7">
-				${properties.title}
-			</h2>
-			<p id="P_8">
-				${properties.subtitle}
-			</p> <a href="${properties.linkPath}" rel="nofollow" id="A_9">${properties.linkTitle}</a>
+			<a href="${properties.imagePath}" rel="nofollow" id="A_4"> <img
+				data-sly-test="${properties.imageRef}" src="${properties.imageRef}"
+				alt="${properties.alttext}" id="IMG_5" /></a> <a
+				href="${properties.imagePath}" rel="nofollow" id="A_6"></a>
+			<h2 id="H2_7">${properties.title}</h2>
+			<p id="P_8">${properties.subtitle}</p>
+			<a href="${properties.linkPath}" rel="nofollow" id="A_9">${properties.linkTitle}</a>
 		</article>
 	</div>
 </section>
