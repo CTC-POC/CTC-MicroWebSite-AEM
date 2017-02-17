@@ -33,8 +33,8 @@ public class NavigationMapper {
 			ModelMapper modelMapper) {
 		log.info("Inside NavigationMapper----------getNavigationModel");
 		Catalog catalog = new Catalog();
-		List<CatalogVersions> catalogVersionsList = null;
-		if (null != catalog) {
+		List<CatalogVersions> catalogVersionsList = new ArrayList<CatalogVersions>();
+		if (null != catalogjson) {
 			try {
 				catalog.setId(catalogjson.get("id").toString());
 				catalog.setName(catalogjson.get("name").toString());
