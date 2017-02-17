@@ -1,0 +1,18 @@
+<!--/*
+
+	Woods
+	_______________________
+	
+	Header Links component.
+
+*/-->
+<div data-sly-test="${wcmmode.edit}" data-emptytext="Header Links"
+	class="cq-placeholder"></div>
+
+<nav class="menu menu_second"
+	data-sly-use.linkList="com.woods.core.components.Multifield">
+	<ul data-sly-list.linkComp="${linkList.childList}">
+		<li class="" dir="ltr"><a href="${linkComp.linkPath}.html">${linkComp.title}</a></li>
+
+	</ul>
+</nav>

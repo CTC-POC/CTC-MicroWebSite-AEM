@@ -1,25 +1,64 @@
- <header>
+<!--/*
+
+	Woods
+	_______________________
+	
+	Header Container component.
+
+*/-->
+<!-- NAVBAR
+================================================== -->
+<header>
 	<nav class="navbar navbar-inverse navbar-fixed-top">
-		<div class="container customBg">	
+		<div class="container customBg">
 			<div class="row">
 				<div class="col-md-12">
 					<div class="col-md-offset-1 col-xs-7 col-sm-7 col-md-5">
-						// data-sly-resouce title
-						<div class="col-xs-5 col-sm-5 col-md-5">
-							// data-sly-resouce header links
-						</div>
+						<div
+							data-sly-resource="${'ttilebar' @ resourceType='/apps/woods-apps/components/content/titleBar'}"
+							data-sly-unwrap></div>
 					</div>
+					<div class="col-xs-3 col-sm-3 col-md-5">
+						<div
+							data-sly-resource="${'headerlinks' @ resourceType='/apps/woods-apps/components/content/header-links'}"
+							data-sly-unwrap></div>
 					</div>
-					<div class="navbar-header">
-						// data-sly-resouce header logo
-					</div>	
-				<div id="navbar" class="col-xs-12 col-sm-7 col-md-6 collapse navbarToggleBg navbar-collapse">
-						// data-sly-resouce header navigation
-				</div><!--/.nav-collapse -->
-				<div class="col-xs-12 col-sm-12  col-md-4  pull-right predictive-search">
-					<div data-sly-resource="${'headersearch' @ resourceType='/apps/woods-apps/components/content/headerSearch'}" data-sly-unwrap></div>
+					<div class="col-xs-1 col-sm-1 col-md-1">
+						<span class="cart_item">0</span> <span
+							class="glyphicon glyphicon-shopping-cart"></span>
+					</div>
 				</div>
 			</div>
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed"
+					data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+					aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<div
+					data-sly-resource="${'logo' @ resourceType='/apps/woods-apps/components/content/logo'}"
+					data-sly-unwrap></div>
+			</div>
+
+			<div id="navbar"
+				class="col-xs-12 col-sm-7 col-md-6 navbarToggleBg navbar-collapse">
+				<div
+					data-sly-resource="${'topnav' @ resourceType='/apps/woods-apps/components/content/top-nav'}"
+					data-sly-unwrap></div>
+
+			</div>
+
+			<div
+				class="col-xs-12 col-sm-12  col-md-4  pull-right predictive-search">
+				<div
+					data-sly-resource="${'headerSearch' @ resourceType='/apps/woods-apps/components/content/headerSearch'}"
+					data-sly-unwrap></div>
+			</div>
+
 		</div>
 	</nav>
 </header>
+<div data-sly-test="${wcmmode.edit}" data-emptytext="Header Container"
+	class="cq-placeholder"></div>

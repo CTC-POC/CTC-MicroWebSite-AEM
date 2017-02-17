@@ -1,11 +1,16 @@
-<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html" data-sly-unwrap/>
-<sly data-sly-call="${clientlib.css @ categories='woods.logo'}" data-sly-unwrap/>
+<!--/*
 
-<div class="logo">
-    <a href="${properties.imageLink}${properties.externalUrl ?'':'.html'}" target="${properties.openUrlInNewWindow=='yes' && '_blank'}">
-		<img data-sly-test="${properties.imageRef}" src="${properties.imageRef}" alt="${properties.alttext}" id="IMG_1">
-    </a>
-</div>
+	Woods
+	_______________________
+	
+	Logo component.
+
+*/-->
+<a class="navbar-brand woods-logo"
+	href="${properties.imageLink}${properties.externalUrl ?'':'.html'}"
+	target="${properties.openUrlInNewWindow=='yes' && '_blank'}"
+	data-sly-resource="${'image' @ resourceType='wcm/foundation/components/image', wcmmode='disabled'}">
+</a>
 
 <div data-sly-test="${wcmmode.edit}" data-emptytext="Logo Component"
 	class="cq-placeholder"></div>

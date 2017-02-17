@@ -74,7 +74,8 @@ footer .instagramIcon {
 .menu_social__header {
     font-size: 1.125rem;
     line-height: 2rem;
-	
+
+
 }
 }
 .menu.menu_social ul,.menu.menu_social li{
@@ -110,12 +111,13 @@ footer .menu.menu_social{
     height: 19.6rem;
 }
 .menu_social__header {
-    font-size: 1.125rem;
+   /* font-size: 1.125rem;
     line-height: 2rem;
-	padding-left: 0;
+	padding-left: 0;*/
+            display : none;
 }
 footer .menu.menu_social{
-	padding-left:19px;
+	padding-left:6px;
 	padding-right : 0;
 	padding-top : 10px;
 }
@@ -128,6 +130,14 @@ footer .menu.menu_social{
     margin: 0 auto;
     width : 100%;
     padding-top: 31px;
+    text-align : center;
+}
+.footer-main-menu{
+
+    text-align : center; 
+}
+.footer {
+	border-top: 1px solid #64a70b;
 }
 }
 @media only screen and (min-width : 321px) and (max-width : 768px) {
@@ -144,6 +154,7 @@ footer .menu.menu_social{
 .menu_social__header {
     font: 14px HelveticaLTStd-BlkCond,Helvetica,Arial,sans-serif;
     margin-right: 21px;
+
 }
 
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {

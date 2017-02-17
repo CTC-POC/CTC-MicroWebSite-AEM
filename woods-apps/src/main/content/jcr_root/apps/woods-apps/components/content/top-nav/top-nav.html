@@ -3,5 +3,45 @@
  Top Navigation component.
 
 */-->
-<div data-sly-test="${wcmmode.edit}" data-emptytext="Top Navigation"
-	class="cq-placeholder"></div>
+
+<div data-sly-test="${properties.absParent}" data-sly-use.topnav="com.woods.components.content.model.TopNavigation" >
+				<ul class="nav mainNavlogoSpace navbar-nav" data-sly-list.navpage="${topnav.pageList}">
+				<li class="dropdown" data-sly-test=${navpageList.first}>
+				
+                  <a class="dropdown menu_dynamic dropdown-toggle menu__item menu_main__item disabled" target="_blank" href="${navpage.parentPagePath}"  data-toggle="dropdown" >
+				  <span class="glyphicon glyphicon-menu-hamburger"></span>products</a>
+                  <ul class="dropdown-content dropdown-menu">
+				  <header class="menu__products__header" data-products-menu-title="">${navpage.parentPageTitle}</header>
+				  <nav class=" menu menu__products menu-holder" >
+					<ul class="menu__products__items" data-sly-list.childPage="${topnav.childPage}">
+						<li data-sly-test=${!childPage.sublevels} class="menu__products__item ">
+							<a href="https://10.232.196.163:9002/ctcstorefront/en/${childPage.url}" >
+								${childPage.name} 	 </a>
+								
+						</li>
+						
+						<li data-sly-test=${childPage.sublevels} class="menu__products__item dropdown-submenu">
+							<a href="https://10.232.196.163:9002/ctcstorefront/en/${childPage.url}">
+								${childPage.name}<span class="glyphicon glyphicon-chevron-right"></span></a>
+								<ul class="dropdown-menu" data-sly-list.child=${childPage.sublevels}>
+									<li><a href="https://10.232.196.163:9002/ctcstorefront/en/${child.url}">${child.name}</a></li>			                  
+									
+								</ul>
+						</li>
+
+						
+					</ul>
+				   </nav>
+				   </ul>
+				   </li>
+				<li data-sly-test=${!navpageList.first}><a href="${navpage.parentPagePath}.html" class="menu__item menu_main__item">${navpage.parentPageTitle}</a></li>
+				
+				</ul>				
+				
+			</div><!--/.nav-collapse -->
+
+
+<div data-sly-test="${wcmmode.edit}" data-emptytext="Top Navigation" class="cq-placeholder"></div>
+
+
+				
