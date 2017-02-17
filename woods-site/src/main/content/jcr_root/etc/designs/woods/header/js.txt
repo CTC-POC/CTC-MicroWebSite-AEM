@@ -1,3 +1,5 @@
 #base=js
 
+jquery.min.js
+carousel.js
 script.js
