@@ -27,47 +27,106 @@
     <packaging>bundle</packaging>
     <name>Woods-Core</name>
     <description>Woods-Core</description>
+    
     <build>
         <plugins>
+            
             <plugin>
                 <groupId>org.apache.felix</groupId>
                 <artifactId>maven-scr-plugin</artifactId>
             </plugin>
+            <plugin>
+		          <groupId>org.codehaus.mojo</groupId>
+		          <artifactId>cobertura-maven-plugin</artifactId>
+		          <version>2.6</version>
+					<configuration>
+			           <formats>
+                    	<format>html</format>
+                		</formats>
+            	     </configuration>     
+			        <executions>
+			          <execution>
+			            <goals>
+			              <goal>clean</goal>
+			            </goals>
+			          </execution>
+			        </executions>		          
+		        </plugin> 
             <plugin>
                 <groupId>org.apache.felix</groupId>
                 <artifactId>maven-bundle-plugin</artifactId>
                 <extensions>true</extensions>
                 <configuration>
                     <instructions>
-                    	<Bundle-Category>Woods</Bundle-Category>
                         <!--
                         <Embed-Dependency>
                             artifactId1,
                             artifactId2;inline=true
                         </Embed-Dependency>
                         -->
-                       <export-package>
-                          	com.woods.core.components.*,
-							com.woods.core.models.*,
-							com.adobe.cq.commerce.hybris;version=5.7.2,
-                        	com.adobe.cq.commerce.hybris.impl.*,
-                        	org.apache.commons.lang3;version=3.1,
-							org.apache.sling.commons.json,
-							com.day.cq.commons;version=6.0.0,*
-                       </export-package>
-                       <import-package>
-                           javax.inject;version=1,
-						</import-package>
-                        <Sling-Model-Packages>
-                            com.woods.core.components,
+                        <Export-Package>
+                        	<!-- org.apache.commons.lang3.*, -->
+                          	com.woods.core.*,
+                          	com.wood.core.mapper.*,
+                          	com.woods.core.dao.*,
+                          	com.woods.core.dao.impl.*,
+                          	com.woods.core.dto.*,
+                          	com.woods.core.mapper.*,
+                          	com.woods.core.service.*,
+                          	com.woods.core.service.impl.*, 
+                          	com.woods.core.servicehelper.*, 
+                          	com.woods.core.servicehelper.impl.*, 
+                          	com.woods.components.content.model.*,
+                          	com.woods.core.models.*,
+                          	com.woods.core.model.navigation.*, 
+                          	com.woods.core.components,                         
+                            <!-- org.apache.http.conn.*,
+							org.apache.http.auth.*,
+							org.apache.http.*,
+							org.apache.http.conn.ssl.*;version=4.5,
+							org.apache.http.impl.conn.*, 
+							org.apache.felix.scr.annotations.*,
+							org.modelmapper.internal.asm.util.*,                                             
+							com.adobe.cq.commerce.api,
+                            com.adobe.cq.commerce.hybris.impl.*,							
+							com.adobe.cq.commerce.hybris;version=5.7.2,	
+							org.apache.felix.scr.annotations.*,-->	 
+							
+							
+						</Export-Package>
+						 <Sling-Model-Packages>                           
+							com.woods.components.content.model,
+							com.woods.core.components,
 							com.woods.core.models,*
                         </Sling-Model-Packages>
+                        <Import-Package>
+                        	<!-- com.adobe.cq.commerce.hybris;version=5.7.2,
+                       		com.adobe.cq.commerce.hybris.impl.*,
+                        	javax.inject;version=0.0.0,
+                         	org.modelmapper.*,
+                         	
+                         	org.modelmapper.internal.asm.util.*,
+                        	org.apache.commons.lang3;version=3.1,
+							org.apache.sling.commons.json,
+							com.adobe.cq.commerce.hybris;version=1.1.0,
+							com.day.cq.commons;version=6.0.0,						
+							javax.inject;version=1.0.0, -->	
+													
+							*;resolution:=optional
+							</Import-Package>
+							
+							<Embed-Directory>OSGI-INF/lib</Embed-Directory>
+						<Embed-Dependency>jackson-core,jackson-annotations,jackson-databind,asm-all,objenesis,minimal-json,httpclient,modelmapper,commons-lang3,cq-commerce-hybris-impl</Embed-Dependency>
+						<Embed-Transitive>true</Embed-Transitive>
+						
+                       
                     </instructions>
                 </configuration>
             </plugin>
         </plugins>
     </build>
     <profiles>
+     
         <!-- Development profile: install only the bundle -->
         <profile>
             <id>autoInstallBundle</id>
@@ -92,30 +151,73 @@
         </profile>
     </profiles>
     <dependencies>
-  <dependency>
-    <groupId>javax.inject</groupId>
-    <artifactId>javax.inject</artifactId>
+    <dependency>
+    <groupId>com.sun.jersey</groupId>
+    <artifactId>jersey-client</artifactId>
+   
 </dependency>
-        <!-- HYBRIS Dependencies -->
-	    <dependency>
-	    <groupId>org.apache.commons</groupId>
-	    <artifactId>commons-lang3</artifactId>
-	   
-	</dependency>
-	<dependency>
-	    <groupId>org.apache.httpcomponents</groupId>
-	    <artifactId>httpclient</artifactId>
-	    
-	</dependency>
-	<dependency>
-	    <groupId>com.adobe.cq.commerce</groupId>
-	    <artifactId>cq-commerce-hybris-impl</artifactId>
-	    
-	</dependency>
-	<dependency>
-	    <groupId>com.adobe.cq.commerce</groupId>
-	    <artifactId>cq-commerce-core</artifactId>
-	</dependency>
+    <dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-core</artifactId>
+			<version>1.10.8</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.11</version>
+			<scope>test</scope>
+		</dependency>	
+		<dependency>
+			<groupId>org.powermock</groupId>
+			<artifactId>powermock-module-junit4</artifactId>
+			<version>1.5.6</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.powermock</groupId>
+			<artifactId>powermock-api-mockito</artifactId>
+			<version>1.5.6</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-simple</artifactId>
+			<version>1.7.6</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+		  <groupId>com.day.cq</groupId>
+		  <artifactId>cq-search</artifactId>
+		  <version>5.6.2</version>
+		  <scope>test</scope>
+		</dependency>
+    <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
+<dependency>
+    <groupId>org.apache.commons</groupId>
+    <artifactId>commons-lang3</artifactId>
+   
+</dependency>
+<dependency>
+    <groupId>org.apache.httpcomponents</groupId>
+    <artifactId>httpclient</artifactId>
+    
+</dependency>
+<dependency>
+    <groupId>com.adobe.cq.commerce</groupId>
+    <artifactId>cq-commerce-hybris-impl</artifactId>
+    
+</dependency>
+<dependency>
+    <groupId>com.adobe.cq.commerce</groupId>
+    <artifactId>cq-commerce-core</artifactId>
+    
+</dependency>
+<dependency>
+			<groupId>org.modelmapper</groupId>
+			<artifactId>modelmapper</artifactId>
+			
+		</dependency>
       <dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-core</artifactId>
@@ -128,12 +230,17 @@
 			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-databind</artifactId>
 		</dependency>
-    
         <!-- OSGi Dependencies -->
         <dependency>
             <groupId>org.apache.felix</groupId>
             <artifactId>org.apache.felix.scr</artifactId>
         </dependency>
+        <dependency>
+  <groupId>com.day.cq</groupId>
+  <artifactId>cq-commons</artifactId>
+  </dependency>
+ 
+
         <dependency>
             <groupId>org.apache.felix</groupId>
             <artifactId>org.apache.felix.scr.annotations</artifactId>
@@ -168,14 +275,18 @@
             <artifactId>aem-api</artifactId>
         </dependency>
         <dependency>
-			<groupId>org.apache.geronimo.specs</groupId>
-			<artifactId>geronimo-atinject_1.0_spec</artifactId>
-			<scope>provided</scope>
-		</dependency>
+<groupId>org.apache.geronimo.specs</groupId>
+<artifactId>geronimo-atinject_1.0_spec</artifactId>
+<scope>provided</scope>
+</dependency>
         <dependency>
             <groupId>org.apache.sling</groupId>
             <artifactId>org.apache.sling.models.api</artifactId>
         </dependency>
+        	<dependency>
+			<groupId>org.apache.sling</groupId>
+			<artifactId>org.apache.sling.models.impl</artifactId>
+		</dependency>
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
@@ -188,5 +299,11 @@
             <groupId>junit-addons</groupId>
             <artifactId>junit-addons</artifactId>
         </dependency>
+        	<dependency>
+			<groupId>com.adobe.aem</groupId>
+			<artifactId>uber-jar</artifactId>
+			<classifier>obfuscated-apis</classifier>
+			<scope>provided</scope>
+		</dependency>
     </dependencies>
 </project>
