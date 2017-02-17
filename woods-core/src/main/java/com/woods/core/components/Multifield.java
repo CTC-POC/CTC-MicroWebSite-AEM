@@ -40,7 +40,7 @@ public class Multifield {
 		print="Inside Sling model";
 		
 	
-		final Resource itemsResource = resource.getChild("multi");
+		final Resource itemsResource = resource.getChild(ITEM_CHILD);
 		if (null != itemsResource) {
 			final Iterable<Resource> multiResources = itemsResource
 					.getChildren();

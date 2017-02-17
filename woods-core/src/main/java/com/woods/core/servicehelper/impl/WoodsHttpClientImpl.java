@@ -70,6 +70,7 @@ public class WoodsHttpClientImpl implements WoodsHttpClient {
 
 			log.error("Exception in doGetResponse" + e.getMessage());
 		}
+		log.info("WoodsHttpClientImpl response"+response);
 		return response;
 
 	}

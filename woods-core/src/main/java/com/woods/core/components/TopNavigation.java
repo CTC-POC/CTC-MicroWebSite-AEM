@@ -14,7 +14,6 @@ import org.apache.sling.models.annotations.injectorspecific.SlingObject;
 
 import com.day.cq.wcm.api.Page;
 import com.day.cq.wcm.api.PageManager;
-import com.woods.core.model.navigation.NavigationSublevel;
 import com.woods.core.model.navigation.NavigationVO;
 import com.woods.core.models.ParentPage;
 import com.woods.core.service.NavigationService;
@@ -25,7 +24,7 @@ public class TopNavigation {
 	private int absParent;
 
 	private List<ParentPage> pageList = new ArrayList<>();
-	private List<NavigationSublevel> childPageList = new ArrayList<>();
+	
 	private List<NavigationVO> childPage = new ArrayList<>();
 
 	@Inject
@@ -69,7 +68,4 @@ public class TopNavigation {
 		return pageList;
 	}
 
-	public List<NavigationSublevel> getChildPageList() {
-		return childPageList;
-	}
 }

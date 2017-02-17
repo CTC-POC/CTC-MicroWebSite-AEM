@@ -1,8 +1,6 @@
 package com.woods.core.dao.impl;
 
-import java.util.ArrayList;
 import java.util.Dictionary;
-import java.util.List;
 
 import org.apache.felix.scr.annotations.Activate;
 import org.apache.felix.scr.annotations.Component;
@@ -11,16 +9,12 @@ import org.apache.felix.scr.annotations.Reference;
 import org.apache.felix.scr.annotations.Service;
 import org.apache.sling.commons.json.JSONObject;
 import org.apache.sling.commons.osgi.PropertiesUtil;
-import org.modelmapper.ModelMapper;
 import org.osgi.service.component.ComponentContext;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.woods.core.dao.NavigationDao;
-import com.woods.core.mapper.NavigationMapper;
-import com.woods.core.model.navigation.NavigationVO;
 import com.woods.core.servicehelper.WoodsHttpClient;
-import com.woods.core.servicehelper.impl.WoodsHttpClientImpl;
 
 @Component(metatype = true, label = "Woods  NavigationDaoImpl", description = "Navigation that get sub levels from hybris", immediate = true)
 @Service(NavigationDao.class)
@@ -50,11 +44,11 @@ public class NavigationDaoImpl implements NavigationDao {
 	public JSONObject getProductsCatalog() {
 
 		try {
+			log.info("Inside NavigationDaoImpl"+hybrisNavigationUrl);
 			catalog = woodsHttpsClient.getProductCatalog(
-					DEFAULT_NAVIGATION_HYBRIS_URL, "");
-			List<NavigationVO> navigationVO = new ArrayList<>();
-			navigationVO = NavigationMapper.getNavigationModel(navigationVO,
-					catalog, new ModelMapper());
+					hybrisNavigationUrl, "");
+			log.info("End of  NavigationDaoImpl"+catalog);
+			
 		} catch (Exception e) {
 			log.error(e.getMessage());
 		}
