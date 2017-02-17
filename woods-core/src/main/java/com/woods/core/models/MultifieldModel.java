@@ -13,6 +13,11 @@ public class MultifieldModel {
 	@Inject
 	@Optional
 	private String title;
+	
+	@Inject
+	@Optional
+	private boolean externalUrl=false;
+
 	@Inject
 	@Optional
 	private boolean openInNewWindow=false;
@@ -54,6 +59,14 @@ public class MultifieldModel {
 
 	public String getTitledescription() {
 		return titledescription;
+	}
+	
+	public boolean isExternalUrl() {
+		return externalUrl;
+	}
+
+	public void setExternalUrl(boolean externalUrl) {
+		this.externalUrl = externalUrl;
 	}
 
 	public void setTitledescription(String titledescription) {

@@ -14,13 +14,9 @@ import com.woods.core.models.MultifieldModel;
 public class Multifield {
 	
 	private static final String ITEM_CHILD = "multi";
-	private String print;
-	private ArrayList<MultifieldModel> childList = new ArrayList();
-	private Resource resource;
 	
-	public String getPrint() {
-		return print;
-	}
+	private ArrayList<MultifieldModel> childList = new ArrayList<>();
+	private Resource resource;
 	
 	@Inject
 	public Multifield(@Named("resource") Resource resource) {
@@ -28,6 +24,7 @@ public class Multifield {
 
 		init();
 	}
+	
 	protected void init() {
 		populateChildList(childList);
 
@@ -37,8 +34,6 @@ public class Multifield {
 	 * This method is used to get all the child nodes of the multifield
 	 */
 	private void populateChildList(final ArrayList<MultifieldModel> childList) {
-		print="Inside Sling model";
-		
 	
 		final Resource itemsResource = resource.getChild(ITEM_CHILD);
 		if (null != itemsResource) {
