@@ -76,6 +76,20 @@
                             </column>
                         </items>
                     </hybris>
+                    <favicon
+                        cq:showOnCreate="{Boolean}false"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Fav Icon"
+                        sling:resourceType="granite/ui/components/foundation/form/fieldset">
+                        <items jcr:primaryType="nt:unstructured">
+                            <favicon
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
+                                fieldDescription="Fav Icon for the site"
+                                fieldLabel="Fav icon path"
+                                name="./favicon"/>
+                        </items>
+                    </favicon>
                 </items>
             </tabs>
         </items>

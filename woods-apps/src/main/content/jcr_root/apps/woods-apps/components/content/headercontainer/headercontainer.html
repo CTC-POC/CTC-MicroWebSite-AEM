@@ -14,9 +14,15 @@
 			<div class="row">
 				<div class="col-md-12">
 					<div class="col-md-offset-1 col-xs-7 col-sm-7 col-md-5">
-						<div
-							data-sly-resource="${'ttilebar' @ resourceType='/apps/woods-apps/components/content/titleBar'}"
-							data-sly-unwrap></div>
+						<div class="center_motto">
+							<div
+								data-sly-resource="${'Image' @ resourceType='/apps/woods-apps/components/content/image'}"
+								data-sly-unwrap></div>
+						</div>
+						<div class="mobile_motto">
+							<img src="/content/dam/woods-content/motto-mobile.png">
+						</div>
+
 					</div>
 					<div class="col-xs-3 col-sm-3 col-md-5">
 						<div
@@ -43,7 +49,7 @@
 			</div>
 
 			<div id="navbar"
-				class="col-xs-12 col-sm-7 col-md-6 navbarToggleBg navbar-collapse">
+				class="col-xs-12 col-sm-7 col-md-6 collapse navbarToggleBg navbar-collapse">
 				<div
 					data-sly-resource="${'topnav' @ resourceType='/apps/woods-apps/components/content/top-nav'}"
 					data-sly-unwrap></div>
@@ -51,7 +57,7 @@
 			</div>
 
 			<div
-				class="col-xs-12 col-sm-12  col-md-4  pull-right predictive-search">
+				class="col-xs-12 col-sm-12  col-md-4  pull-right predictive-search search_lg">
 				<div
 					data-sly-resource="${'headerSearch' @ resourceType='/apps/woods-apps/components/content/headerSearch'}"
 					data-sly-unwrap></div>
@@ -59,6 +65,17 @@
 
 		</div>
 	</nav>
+	<div class="search_container">
+		<div class="row">
+			<div
+				class="col-xs-12 col-sm-12  col-md-4  pull-right predictive-search search_sm">
+				<div
+					data-sly-resource="${'headerSearch' @ resourceType='/apps/woods-apps/components/content/headerSearch'}"
+					data-sly-unwrap></div>
+			</div>
+		</div>
+	</div>
+
 </header>
 <div data-sly-test="${wcmmode.edit}" data-emptytext="Header Container"
 	class="cq-placeholder"></div>
