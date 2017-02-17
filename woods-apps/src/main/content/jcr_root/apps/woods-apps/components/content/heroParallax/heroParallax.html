@@ -38,7 +38,8 @@
 						<div class="slider__text slider__description_font-size"
 							style="color: #fff;">${carouselChild.text}</div>
 						<a class="button slider__button slider__button_colors"
-                href="${carouselChild.linkPath}" rel="nofollow">${carouselChild.title}</a>
+							href="${carouselChild.linkPath @context='unsafe'} "
+							rel="nofollow">${carouselChild.title}</a>
 					</div>
 					<!-- /header-text -->
 				</div>

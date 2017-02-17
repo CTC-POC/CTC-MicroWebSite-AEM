@@ -2,7 +2,8 @@
     font-size: 36px !important;
     margin: 20px 0px;
     font-weight: bold !important;
-	text-transform:uppercase;	
+	text-transform:uppercase;
+    margin-top:70px;
 }
 .contact-us .container .slider a {
     color: #005841;
@@ -56,10 +57,10 @@ text-decoration:none;
 	{
 		margin-bottom:30px;
 	}
-	.container .slider h1 {
+	.contact-us .container .slider h1 {
     font-size: 20px !important;
     margin: 20px 0px;
-    font-weight: bold !important;	
+    font-weight: bold !important;
 }
 .container .slider p {
     font-size: 1rem;

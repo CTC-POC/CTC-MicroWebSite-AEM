@@ -1,5 +1,17 @@
+@font-face {
+    font-family: HelveticaLTStd-BlkCond;
+    src: url(/etc/designs/woods/clientlibs/fonts/HelveticaLTStd-BlkCond.eot);
+    src: url(/etc/designs/woods/clientlibs/fonts/HelveticaLTStd-BlkCond.otf);
+}
+
+/*@font-face {
+    font-family: RockwellStd-Bold;
+    src: url(/etc/designs/woods/clientlibs/fonts/HelveticaLTStd-BlkCond.eot);
+    src: url(/etc/designs/woods/clientlibs/fonts/HelveticaLTStd-BlkCond.otf);
+}
+RockwellStd-Bold,'Times New Roman',serif;*/
 html{
-	
+
 	font-family: sans-serif;
 }
 .padding_0{
@@ -12,16 +24,16 @@ margin:0;
 	height : 126px;
 }
 .footer {
-    background-image: url("/etc/designs/woods/footer/image/footer-background.png");
+    background-image: url("/content/dam/woods-content/footer-graphic-min.png");
     background-size: cover;
-    border-top: 3px solid #64a70b;
+    /*border-top: 3px solid #64a70b;*/
     position: relative;
-    
+
 }
 .footer__wrapper {
     margin: 0 auto;
     width: 90%;
-    padding-top: 31px;
+    padding-top: 15px;
 }
 a:active, a:hover {
     outline: 0;
@@ -37,7 +49,7 @@ line-height : 10px;
 footer .nav.menu a,.footer span.menu_social__header {
     color: #fff;
     font-family: 'HelveticaLTStd-BlkCond',Helvetica,Arial,sans-serif;
-    font-size: 12px;
+    font-size: 14px;
     text-decoration: none;
 	font-weight:bold;
 }
@@ -108,7 +120,7 @@ footer .menu.menu_social{
 
 @media only screen and (min-width: 320px) and (max-width : 1027px) {
 .footer_container .footer {
-    height: 19.6rem;
+    height: 126px;
 }
 .menu_social__header {
    /* font-size: 1.125rem;
@@ -129,16 +141,19 @@ footer .menu.menu_social{
 .footer__wrapper {
     margin: 0 auto;
     width : 100%;
-    padding-top: 31px;
+    padding-top: 0px;
     text-align : center;
 }
 .footer-main-menu{
-
+	padding-top: 10px;
     text-align : center; 
 }
-.footer {
-	border-top: 1px solid #64a70b;
+
+.footer-main-menu .menu li {
+    margin: 0px;
+    padding: 2px;
 }
+
 }
 @media only screen and (min-width : 321px) and (max-width : 768px) {
 .menu.menu_social ul, .menu.menu_social li {

@@ -26,7 +26,30 @@
 			console.log(search_value);
           window.location = search_path+"elasticsearch/?text="+search_value;
       });
-
+		$(window).resize(function(){
+		if ($(this).width() < 1028) {
+			$(".menu_dynamic.dropdown-toggle").removeClass("disabled");
+			
+		}
+		else {
+			$(".menu_dynamic.dropdown-toggle").addClass("disabled");
+		}
+	})
+		if ($(this).width() < 1028) {
+			$(".menu_dynamic.dropdown-toggle").removeClass("disabled");
+		}
+		else {
+			$(".menu_dynamic.dropdown-toggle").addClass("disabled");
+		}
+		
+        $('.dropdown-submenu a').on("click", function(e) {
+		if($(window).width() < 1028) {
+            $(this).next('ul').toggle();
+            $(this).find('.glyphicon').toggleClass("down");
+            e.stopPropagation();
+            e.preventDefault();
+			}
+        })
 
   });
 })(jQuery);
