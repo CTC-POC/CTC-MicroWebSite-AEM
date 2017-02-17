@@ -49,10 +49,14 @@ public class TopNavigation {
 			while (rootPageIterator.hasNext()) {
 				ParentPage parentPage = new ParentPage();
 				Page childPage = rootPageIterator.next();
+				if(!childPage.getProperties().get("hideInNav", false))
+				{
 				parentPage.setParentPageTitle(childPage.getTitle());
 				parentPage.setParentPagePath(childPage.getPath());
+				
 
 				pageList.add(parentPage);
+				}
 			}
 
 		}

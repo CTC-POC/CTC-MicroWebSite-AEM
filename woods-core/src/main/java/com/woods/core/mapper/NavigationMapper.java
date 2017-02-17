@@ -51,12 +51,12 @@ public class NavigationMapper {
 				JSONArray categoriesarray = new JSONArray(array
 						.getJSONObject(1).get("categories").toString());
 				Categories categories = new Categories();
-				categories.setId(categoriesarray.getJSONObject(4).get("id")
+				categories.setId(categoriesarray.getJSONObject(3).get("id")
 						.toString());
-				categories.setUrl(categoriesarray.getJSONObject(4).get("url")
+				categories.setUrl(categoriesarray.getJSONObject(3).get("url")
 						.toString());
 				JSONArray subcategoriesarray = new JSONArray(categoriesarray
-						.getJSONObject(4).get("subcategories").toString());
+						.getJSONObject(3).get("subcategories").toString());
 				int i = 0;
 				while (i < subcategoriesarray.length()) {
 
