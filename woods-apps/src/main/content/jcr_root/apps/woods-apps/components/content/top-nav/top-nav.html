@@ -15,7 +15,7 @@
 				  <nav class=" menu menu__products menu-holder" >
 					<ul class="menu__products__items" data-sly-list.childPage="${topnav.childPage}">
 						<li data-sly-test=${!childPage.sublevels} class="menu__products__item ">
-							<a href="https://10.232.196.163:9002/ctcstorefront/en/${childPage.url}" >
+								<a href="${inheritedPageProperties.hybrisRedirectPage}${childPage.url}" >
 								${childPage.name} 	 </a>
 								
 						</li>
@@ -24,7 +24,7 @@
 							<a href="https://10.232.196.163:9002/ctcstorefront/en/${childPage.url}">
 								${childPage.name}<span class="glyphicon glyphicon-chevron-right"></span></a>
 								<ul class="dropdown-menu" data-sly-list.child=${childPage.sublevels}>
-									<li><a href="https://10.232.196.163:9002/ctcstorefront/en/${child.url}">${child.name}</a></li>			                  
+									<li><a href="${inheritedPageProperties.hybrisRedirectPage}${child.url}">${child.name}</a></li>			                  
 									
 								</ul>
 						</li>

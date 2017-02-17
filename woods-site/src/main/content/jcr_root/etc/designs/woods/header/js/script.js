@@ -12,11 +12,21 @@
             }
 
     });
-      $(".search__button, .advanced_Search" ).click(function() {
+
+      $(".search__button" ).click(function() {
 	       var search_value = $('.search__input').val();
+			var search_path = $('#hybrisRedirectPath').val();
 			console.log(search_value);
-          window.location ="https://10.226.179.82:9002/ctcstorefront/en/search/?text=woods";
+         	console.log(search_path);
+          	window.location = search_path+"search/?text="+search_value;
       });
+      $(".advanced_Search" ).click(function() {
+	       var search_value = $('.search__input').val();
+          var search_path = $('#hybrisRedirectPath').val();
+			console.log(search_value);
+          window.location = search_path+"elasticsearch/?text="+search_value;
+      });
+
 
   });
 })(jQuery);

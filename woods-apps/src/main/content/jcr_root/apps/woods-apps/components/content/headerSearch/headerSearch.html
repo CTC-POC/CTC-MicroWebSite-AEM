@@ -11,8 +11,9 @@
 
 <div id="predictive-search-form" class="search">
 	<input type="text" name="searchquery" class="search__input"> <input
-		type="submit" value="Search"
+		type="submit" value="${properties.freetext}"
 		class="search__button search__button_inactive" disabled=""> <input
-		type="submit" class="advanced_Search" value="Advanced Search"
+		type="submit" class="advanced_Search" value="${properties.advanceSearchLabel}"
 		disabled="">
+		<input type="hidden" value="${inheritedPageProperties.hybrisRedirectPage}" name="hybrisRedirectPath" id="hybrisRedirectPath">
 </div>

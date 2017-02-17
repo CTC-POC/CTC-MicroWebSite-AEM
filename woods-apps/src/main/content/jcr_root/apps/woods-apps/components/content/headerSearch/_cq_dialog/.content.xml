@@ -28,6 +28,11 @@
                                 sling:resourceType="/libs/granite/ui/components/foundation/form/textfield"
                                 fieldLabel="Search label"
                                 name="./freetext"/>
+                            <advanceSearchLabel
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="/libs/granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Advance Search label"
+                                name="./advanceSearchLabel"/>
                         </items>
                     </columns>
                 </items>

@@ -47,6 +47,35 @@
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="granite/ui/components/foundation/include"
                         path="foundation/components/page/cq:dialog/content/items/tabs/items/livecopy"/>
+                    <hybris
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Hybris"
+                        sling:resourceType="granite/ui/components/foundation/section">
+                        <layout
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"
+                            margin="{Boolean}false"/>
+                        <items jcr:primaryType="nt:unstructured">
+                            <column
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <hybrisUrl
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Hybris URL"
+                                        sling:resourceType="granite/ui/components/foundation/form/fieldset">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <hybrisRedirectPath
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                                fieldLabel="Hybris Redirect Page Path"
+                                                name="./hybrisRedirectPage"/>
+                                        </items>
+                                    </hybrisUrl>
+                                </items>
+                            </column>
+                        </items>
+                    </hybris>
                 </items>
             </tabs>
         </items>
