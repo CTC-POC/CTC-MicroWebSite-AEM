@@ -131,7 +131,7 @@ footer .menu.menu_social{
 footer .menu.menu_social{
 	padding-left:6px;
 	padding-right : 0;
-	padding-top : 10px;
+	padding-top : 32px;
 }
 .menu_social .nav .menu {
 	width : 85px;
@@ -151,13 +151,15 @@ footer .menu.menu_social{
 
 .footer-main-menu .menu li {
     margin: 0px;
-    padding: 2px;
+    padding: 7px 7px 7px 9px;
+
 }
 
 }
 @media only screen and (min-width : 321px) and (max-width : 768px) {
 .menu.menu_social ul, .menu.menu_social li {
      padding-left: 0;
+     padding-right: 8px;
 }
 .footer .menu_social__header {
     margin-right: 0px;
@@ -165,6 +167,7 @@ footer .menu.menu_social{
 .footer .nav>li>a {
     padding: 1px;
 }
+
 }
 .menu_social__header {
     font: 14px HelveticaLTStd-BlkCond,Helvetica,Arial,sans-serif;
@@ -180,6 +183,7 @@ footer .menu.menu_social{
 @media only screen and (max-width : 320px) {
 	menu.menu_social ul, .menu.menu_social li {
      padding-left: 0;
+     padding-right: 8px;
 }
 .footer .menu_social__header {
     margin-right: 0px;
@@ -188,7 +192,7 @@ footer .menu.menu_social{
 footer .nav.menu a, .footer span.menu_social__header{font-size : 10px;}
 .footer .nav>li>a {
     padding: 0px;
-	font-size:10px;
+	font-size:14px;
 }
 footer .menu.menu_social {
     padding-left: 16px;
