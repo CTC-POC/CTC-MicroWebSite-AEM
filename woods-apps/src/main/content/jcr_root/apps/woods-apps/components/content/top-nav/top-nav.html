@@ -21,7 +21,7 @@
 						</li>
 						
 						<li data-sly-test=${childPage.sublevels} class="menu__products__item dropdown-submenu">
-							<a href="https://10.232.196.163:9002/ctcstorefront/en/${childPage.url}">
+							<a href="${inheritedPageProperties.hybrisRedirectPage}${childPage.url}">
 								${childPage.name}<span class="glyphicon glyphicon-chevron-right"></span></a>
 								<ul class="dropdown-menu" data-sly-list.child=${childPage.sublevels}>
 									<li><a href="${inheritedPageProperties.hybrisRedirectPage}${child.url}">${child.name}</a></li>			                  
