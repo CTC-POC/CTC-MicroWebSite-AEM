@@ -236,9 +236,18 @@ header .dropdown-submenu:hover > a:after {
 
         }
     .dropdown-submenu  .dropdown-menu li  a:hover{
-        border-left: none;
-    	padding-left: 37px;
+           border-left: 7px solid #cecece;
+   			 padding-left: 24px;
    }
+	.menu__products__item.dropdown-submenu:hover a { 
+    background-color: #cecece !important;
+    border-left: 7px solid #005841;
+     padding-left: 37px;
+}
+.menu__products__item.dropdown-submenu .dropdown-menu li a {
+    padding-left: 24px !important;
+    border-left: 7px solid #cecece;
+}
 /*ends here*/
 .dropdown{height:39px;}
 li:first-child .menu_main__item{padding-left: 0px !important; border-left:none;}
@@ -279,7 +288,7 @@ header .menu__products__header {
     padding-left: 24px;
     padding-right: 10px;
     text-decoration: none;
-    font: bold 16px/35px HelveticaLTStd-BoldCond,Helvetica,Arial,sans-serif;
+    font: bold 15px/35px HelveticaLTStd-BoldCond,Helvetica,Arial,sans-serif;
     color: #737373;
 	padding-top:0px;
 	padding-bottom:0px;
@@ -559,7 +568,7 @@ header .search__button,.search__button_inactive{width:26%;}
     border-bottom: solid 1px #fff;
     padding-bottom: 6px;
     padding-left: 40px;
-    font: bold 12px HelveticaLTStd-BoldCond, Helvetica, Arial, sans-serif;
+    font: bold 14px HelveticaLTStd-BoldCond, Helvetica, Arial, sans-serif;
         padding-top: 6px;
 	}
     .navbar-nav .open .dropdown-submenu .dropdown-menu {
@@ -573,6 +582,7 @@ header .search__button,.search__button_inactive{width:26%;}
     .dropdown-submenu .glyphicon-chevron-right {
         float: right;
        margin-right: 5%;
+    	    color: #666;
     }
     .dropdown-submenu .glyphicon-chevron-right.down {
         -moz-transform: rotate(90deg);
@@ -720,7 +730,10 @@ header .mobile_motto img {
 @media only screen 
   and (min-width: 768px) 
   and (max-width: 1028px) {
+header .search__input {
+    width: 73%;
 
+}
     header .mobile_motto img {
     position: relative;
     left: 42%;
