@@ -13,6 +13,10 @@
 
     });
 
+      var elasticSearch=$('#elasticSearch').val();
+	console.log(elasticSearch);
+		if(!elasticSearch)
+        {
       $(".search__button" ).click(function() {
 	       var search_value = $('.search__input').val();
 			var search_path = $('#hybrisRedirectPath').val();
@@ -20,12 +24,15 @@
          	console.log(search_path);
           	window.location = search_path+"search/?text="+search_value;
       });
-      $(".advanced_Search" ).click(function() {
+        }
+      else{
+      $(".search__button" ).click(function() {
 	       var search_value = $('.search__input').val();
           var search_path = $('#hybrisRedirectPath').val();
 			console.log(search_value);
           window.location = search_path+"elasticsearch/?text="+search_value;
       });
+      }
 		$(window).resize(function(){
 		if ($(this).width() < 1028) {
 			$(".menu_dynamic.dropdown-toggle").removeClass("disabled");
