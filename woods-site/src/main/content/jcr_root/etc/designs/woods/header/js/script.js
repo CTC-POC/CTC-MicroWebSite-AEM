@@ -44,20 +44,6 @@
           window.location = search_path+"elasticsearch/?text="+search_value+queryParam;
       });
       }
-		$(window).resize(function(){
-		if ($(this).width() < 1028) {
-			$(".menu_dynamic.dropdown-toggle").removeClass("disabled");
-		}
-		else {
-			$(".menu_dynamic.dropdown-toggle").addClass("disabled");
-		}
-	})
-		if ($(this).width() < 1028) {
-			$(".menu_dynamic.dropdown-toggle").removeClass("disabled");
-		}
-		else {
-			$(".menu_dynamic.dropdown-toggle").addClass("disabled");
-		}
 		
         $('.dropdown-submenu>a').on("click", function(e) {
 		if($(window).width() < 1028) {
