@@ -376,10 +376,10 @@ header .navbar-fixed-top{
     z-index: 999;
 }
 header .search__input{
-height:39px;
+height:34px;
 }
 .search__button{
-height:39px;
+height:34px;
  }
 header .navbar-toggle{
     margin: 0;
@@ -548,10 +548,10 @@ header .navbar-inverse .navbar-toggle{border-color:#fff;}
 header .navbar-inverse .navbar-toggle:focus, .navbar-inverse .navbar-toggle:hover{background:#64a70b;}
 header .navbar-inverse .navbar-toggle.collapsed:focus, .navbar-inverse .navbar-toggle.collapsed:hover{background:none;}
 header .search__input{
-    width: 72%;
+    width: 66%;
     background-color: #ccc;
 }
-header .search__button,.search__button_inactive{width:26%;}
+header .search__button,.search__button_inactive{width:33%;}
 .navbar-nav li {
         width: 100%;
     }
@@ -736,12 +736,12 @@ header .mobile_motto img {
   and (min-width: 768px) 
   and (max-width: 1028px) {
 header .search__input {
-    width: 73%;
+    width: 66%;
 
 }
     header .mobile_motto img {
     position: relative;
-    left: 42%;
+    left: 56%;
 
 }
     .glyphicon-shopping-cart {
@@ -780,4 +780,7 @@ header .navbar-collapse.collapse.in{
   header .predictive-search {
     margin-left: -9px;
 	}
+}
+.row-offcanvas.row-offcanvas-left{
+	overflow:hidden;
 }
