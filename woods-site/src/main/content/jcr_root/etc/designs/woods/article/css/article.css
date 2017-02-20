@@ -26,6 +26,9 @@
 .row .col-sm-6:nth-child(1), .row .col-sm-6:nth-child(2) {
     margin-top: 70px;
 }
+.row .col-sm-6.col-md-4.col-xs-12:nth-child(3) {
+    margin-left:197px;
+}
 }
 
 .imagecalltoaction .container.paddingZero.marginZero {

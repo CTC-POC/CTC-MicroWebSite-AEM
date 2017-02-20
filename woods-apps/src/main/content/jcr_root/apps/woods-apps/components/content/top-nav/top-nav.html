@@ -15,16 +15,16 @@
 				  <nav class=" menu menu__products menu-holder" >
 					<ul class="menu__products__items" data-sly-list.childPage="${topnav.childPage}">
 						<li data-sly-test=${!childPage.sublevels} class="menu__products__item ">
-								<a href="${inheritedPageProperties.hybrisRedirectPage}${childPage.url}" >
+								<a href="${inheritedPageProperties.hybrisRedirectPage}${childPage.url}${inheritedPageProperties.parameter}" >
 								${childPage.name} 	 </a>
 								
 						</li>
 						
 						<li data-sly-test=${childPage.sublevels} class="menu__products__item dropdown-submenu">
-							<a href="${inheritedPageProperties.hybrisRedirectPage}${childPage.url}">
+							<a href="${inheritedPageProperties.hybrisRedirectPage}${childPage.url}${inheritedPageProperties.parameter}">
 								${childPage.name}<span class="glyphicon glyphicon-chevron-right"></span></a>
 								<ul class="dropdown-menu" data-sly-list.child=${childPage.sublevels}>
-									<li><a href="${inheritedPageProperties.hybrisRedirectPage}${child.url}">${child.name}</a></li>			                  
+									<li><a href="${inheritedPageProperties.hybrisRedirectPage}${child.url}${inheritedPageProperties.parameter}">${child.name}</a></li>			                  
 									
 								</ul>
 						</li>
