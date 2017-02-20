@@ -1,6 +1,10 @@
 package com.woods.core.dto;
 
-
+/**
+ * 
+ * Subcategories class with getters and setters for id, name, url and subcategories.
+ *
+ */
 
 public class Subcategories {
 	

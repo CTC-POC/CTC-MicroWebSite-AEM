@@ -1,7 +1,11 @@
 package com.woods.core.dto;
 
 import java.util.List;
-
+/**
+ * 
+ * Catalog class with getters and setters for id, catalogVersions, name, type and url.
+ *
+ */
 
 public class Catalog {
 	
@@ -68,9 +72,5 @@ public class Catalog {
 	    {
 	        this.url = url;
 	    }
-
-	    
-	
-	
 
 }

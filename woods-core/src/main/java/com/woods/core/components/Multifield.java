@@ -10,6 +10,11 @@ import org.apache.sling.models.annotations.Model;
 
 import com.woods.core.models.MultifieldModel;
 
+/**
+ * 
+ * Multifield 
+ *
+ */
 @Model(adaptables = Resource.class)
 public class Multifield {
 	
@@ -31,7 +36,7 @@ public class Multifield {
 	}
 
 	/**
-	 * This method is used to get all the child nodes of the multifield
+	 * populateChildList() method is used to get all the child nodes of the multifield
 	 */
 	private void populateChildList(final ArrayList<MultifieldModel> childList) {
 	

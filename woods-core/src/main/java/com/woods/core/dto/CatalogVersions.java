@@ -2,7 +2,11 @@ package com.woods.core.dto;
 
 import java.util.List;
 
-
+/**
+ * 
+ * CatalogVersions class with getters and setters for id, url and categories.
+ *
+ */
 public class CatalogVersions {
 	
 	

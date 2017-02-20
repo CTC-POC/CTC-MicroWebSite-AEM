@@ -2,6 +2,11 @@ package com.woods.core.dto;
 
 import java.util.List;
 
+/**
+ * 
+ * categories class with getters and setters for id, name, url and subcategories.
+ *
+ */
 
 public class Categories {
 	

@@ -38,11 +38,11 @@ public class ColumnControl
     }
     
     /**
-     * This method is used to get all the child nodes of the multifield
+     * populateColumnList() method is used to get all the child nodes of the multifield
      */
     private void populateColumnList() 
     {
-    	// Get columns
+    	
     	ValueMap properties = resource.adaptTo(ValueMap.class);
     	final String columns = properties.get("columns", DEFAULT_COLUMNS);
     	Properties prop = new Properties();

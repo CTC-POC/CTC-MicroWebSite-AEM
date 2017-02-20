@@ -16,6 +16,12 @@ import org.slf4j.LoggerFactory;
 import com.woods.core.dao.NavigationDao;
 import com.woods.core.servicehelper.WoodsHttpClient;
 
+/**
+ * The NavigationDaoImpl  class implements NavigationDao Interface to
+ * get sub levels of navigation from hybris.
+ *
+ */
+
 @Component(metatype = true, label = "Woods  NavigationDaoImpl", description = "Navigation that get sub levels from hybris", immediate = true)
 @Service(NavigationDao.class)
 public class NavigationDaoImpl implements NavigationDao {
@@ -32,6 +38,10 @@ public class NavigationDaoImpl implements NavigationDao {
 	@Property(name = HYBRIS_URL, label = "hybris navigation service URL ", description = "URL of hybris to get navigation sublevel", value = DEFAULT_NAVIGATION_HYBRIS_URL)
 	protected String hybrisNavigationUrl;
 
+	/**
+	 * activate() uses to get the Osgi properties.
+	 * @param context
+	 */
 	@Activate
 	public void activate(final ComponentContext context) {
 		final Dictionary<?, ?> properties = context.getProperties();
@@ -40,6 +50,10 @@ public class NavigationDaoImpl implements NavigationDao {
 
 	}
 
+	/**
+	 * getProductsCatalog() gets the product categories from hybris.
+	 * @return catalog
+	 */
 	@Override
 	public JSONObject getProductsCatalog() {
 

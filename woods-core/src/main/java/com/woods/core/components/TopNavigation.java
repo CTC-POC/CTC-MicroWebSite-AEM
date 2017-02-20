@@ -18,6 +18,11 @@ import com.woods.core.model.navigation.NavigationVO;
 import com.woods.core.models.ParentPage;
 import com.woods.core.service.NavigationService;
 
+/**
+ * 
+ * Top Navigation Component.
+ *
+ */
 @Model(adaptables = Resource.class)
 public class TopNavigation {
 
@@ -33,6 +38,9 @@ public class TopNavigation {
 	@SlingObject
 	Resource resource;
 
+	/**
+	 * populateMenuList() method is used to get all the child nodes.
+	 */
 	@PostConstruct
 	private void populateMenuList() {
 		ValueMap properties = resource.adaptTo(ValueMap.class);
