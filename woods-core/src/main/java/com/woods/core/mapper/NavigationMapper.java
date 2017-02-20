@@ -6,7 +6,7 @@ import java.util.List;
 import org.apache.sling.commons.json.JSONArray;
 import org.apache.sling.commons.json.JSONException;
 import org.apache.sling.commons.json.JSONObject;
-import org.modelmapper.ModelMapper;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -29,11 +29,10 @@ public class NavigationMapper {
 	 */
 	@SuppressWarnings("null")
 	public static List<NavigationVO> getNavigationModel(
-			List<NavigationVO> navigationVO, JSONObject catalogjson,
-			ModelMapper modelMapper) {
+			List<NavigationVO> navigationVO, JSONObject catalogjson) {
 		log.info("Inside NavigationMapper----------getNavigationModel");
 		Catalog catalog = new Catalog();
-		List<CatalogVersions> catalogVersionsList = new ArrayList<CatalogVersions>();
+		List<CatalogVersions> catalogVersionsList = new ArrayList<>();
 		if (null != catalogjson) {
 			try {
 				catalog.setId(catalogjson.get("id").toString());
@@ -106,7 +105,7 @@ public class NavigationMapper {
 
 			} catch (JSONException e) {
 
-				log.info("Exception in mapper" + e.getMessage());
+				log.error("Exception in mapper", e);
 			}
 
 		}

@@ -44,13 +44,14 @@ public class NavigationDaoImpl implements NavigationDao {
 	public JSONObject getProductsCatalog() {
 
 		try {
-			log.info("Inside NavigationDaoImpl"+hybrisNavigationUrl);
-			catalog = woodsHttpsClient.getProductCatalog(
-					hybrisNavigationUrl, "");
-			log.info("End of  NavigationDaoImpl"+catalog);
-			
+			log.info("Inside NavigationDaoImpl:::getProductsCatalog---->>>"
+					+ hybrisNavigationUrl);
+			catalog = woodsHttpsClient.getProductCatalog(hybrisNavigationUrl);
+			log.info("End of  NavigationDaoImpl--->>>" + catalog);
+
 		} catch (Exception e) {
-			log.error(e.getMessage());
+			log.error("Exception in <--NavigationDao:::getProductsCatalog -->",
+					e);
 		}
 		return catalog;
 	}

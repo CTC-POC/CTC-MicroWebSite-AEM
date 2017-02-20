@@ -14,7 +14,6 @@ import org.apache.sling.commons.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.woods.core.servicehelper.SSLUtilities;
 import com.woods.core.servicehelper.WoodsHttpClient;
 
@@ -26,21 +25,21 @@ public class WoodsHttpClientImpl implements WoodsHttpClient {
 			.getLogger(WoodsHttpClientImpl.class);
 
 	@Override
-	public JSONObject getProductCatalog(String endpointUrl, String resource) {
+	public JSONObject getProductCatalog(String endpointUrl) {
 
 		log.info("Inside WoodsHttpClientImpl---- getProductCatalog");
-		String responseJson = doGetResponse(endpointUrl, resource);
+		String responseJson = doGetResponse(endpointUrl);
 		JSONObject jsonObj = null;
 		try {
 			jsonObj = new JSONObject(responseJson);
 		} catch (JSONException e) {
 
-			log.error("Exception in getProductCatalog" + e.getMessage());
+			log.error("Exception in getProductCatalog",e);
 		}
 		return jsonObj;
 	}
 
-	private String doGetResponse(String endpointUrl, String resource) {
+	private String doGetResponse(String endpointUrl) {
 		log.info("Inside WoodsHttpClientImpl---- doGetResponse");
 		HttpURLConnection con;
 		URL url;
@@ -58,7 +57,7 @@ public class WoodsHttpClientImpl implements WoodsHttpClient {
 			BufferedReader in = new BufferedReader(new InputStreamReader(
 					con.getInputStream()));
 			String inputLine;
-			StringBuffer res = new StringBuffer();
+			StringBuilder res = new StringBuilder();
 
 			while ((inputLine = in.readLine()) != null) {
 				res.append(inputLine);
@@ -68,26 +67,11 @@ public class WoodsHttpClientImpl implements WoodsHttpClient {
 			response = res.toString();
 		} catch (Exception e) {
 
-			log.error("Exception in doGetResponse" + e.getMessage());
+			log.error("Exception in doGetResponse",e);
 		}
 		log.info("WoodsHttpClientImpl response"+response);
 		return response;
 
 	}
-
-	protected Object getResponseObject(final String responseAsJson,
-			final Class<?> clazz) {
-		if (clazz != null && clazz.isAssignableFrom(String.class)) {
-			return responseAsJson;
-		}
-		ObjectMapper om = new ObjectMapper();
-		try {
-			return om.readValue(responseAsJson, clazz);
-		} catch (Exception e) {
-			log.error("Exception In getResponseObject" + e.getMessage());
-		}
-		return om;
-
-	}
-
+	
 }

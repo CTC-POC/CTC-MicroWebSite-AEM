@@ -25,7 +25,6 @@ public class TopNavigation {
 
 	private List<ParentPage> pageList = new ArrayList<>();
 	
-	private List<NavigationVO> childPage = new ArrayList<>();
 
 	@Inject
 	NavigationService navigationService;
@@ -60,12 +59,12 @@ public class TopNavigation {
 			}
 
 		}
-		childPage = navigationService.getNavigationProducts();
+	
 
 	}
 
 	public List<NavigationVO> getChildPage() {
-		return childPage;
+		return navigationService.getNavigationProducts();
 	}
 
 	public List<ParentPage> getPageList() {
