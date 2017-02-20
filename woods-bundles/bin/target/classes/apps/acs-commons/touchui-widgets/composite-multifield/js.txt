@@ -1,5 +1,0 @@
-#base=source
-
-touchui-widgets-init.js
-touchui-composite-multifield.js
-touchui-composite-multifield-nodestore.js

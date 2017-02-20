@@ -1,2 +1,0 @@
-ProductPageTests.js
-ShoppingCartTests.js

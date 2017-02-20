@@ -1,9 +1,0 @@
-init.js
-
-utils.sistine.js
-utils.viewport.js
-
-geometrixx-instore.js
-geometrixx-channels.js
-geometrixx-devices.js
-geometrixx-authoring.js
