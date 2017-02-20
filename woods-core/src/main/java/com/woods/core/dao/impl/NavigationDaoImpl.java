@@ -22,7 +22,7 @@ public class NavigationDaoImpl implements NavigationDao {
 
 	private static final Logger log = LoggerFactory
 			.getLogger(NavigationDaoImpl.class);
-	private static final String DEFAULT_NAVIGATION_HYBRIS_URL = "https://10.226.179.82:9002/rest/v2/ctc/catalogs/ctcProductCatalog/?options=CATEGORIES";
+	private static final String DEFAULT_NAVIGATION_HYBRIS_URL = "https://10.232.196.163:9002/rest/v2/ctc/catalogs/ctcProductCatalog/?options=CATEGORIES";
 	private static final String HYBRIS_URL = "hybrisUrl";
 	JSONObject catalog = null;
 
