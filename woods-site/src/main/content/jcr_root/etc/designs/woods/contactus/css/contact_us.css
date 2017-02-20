@@ -3,7 +3,7 @@
     margin: 20px 0px;
     font-weight: bold !important;
 	text-transform:uppercase;
-    margin-top:70px;
+    margin-top:170px;
 }
 .contact-us .container .slider a {
     color: #005841;
@@ -51,6 +51,12 @@ text-decoration:none;
 .container .article h2, .container .article p, .container .article .anchor {
     text-align: center;
 }
+@media(max-width:1024px)
+{
+.contact-us .container .slider h1 {
+    margin-top:90px;
+}
+}
 @media(max-width:768px)
 {
 	.article1,.article2,.article3
@@ -59,7 +65,6 @@ text-decoration:none;
 	}
 	.contact-us .container .slider h1 {
     font-size: 20px !important;
-    margin: 20px 0px;
     font-weight: bold !important;
 }
 .container .slider p {

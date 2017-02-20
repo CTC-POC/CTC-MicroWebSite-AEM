@@ -148,12 +148,14 @@
 					height: 15px;
 					background-color: #64a70b;
 					border: transparent;
+            		margin : 1px; /* carousel-in same line */
 				}
 			.carousel-indicators li{
 					width : 15px;
 					height : 15px;
 					background-color: #cecece;
         			border: transparent;
+        			margin : 1px; /* carousel-in same line */
 			} 
     		.carousel_container .carousel-inner .item, .carousel_container .carousel-inner .item img{
 				height : 669px;
@@ -166,18 +168,20 @@
 
 				.carousel_container .carousel-inner .item{
 					width: 100%;
+                    height : 225px;
+                    background-size : cover;
 
 				}
                 .carousel_container{ 
-                    padding-top: 69px;
-				    height: 400px;
+                    padding-top: 100px;
+				    height: 225px;
                 }
 				.carousel_container .carousel-inner .item a img{
-					height : 400px;
+					height : 225px;
 				} 
 
 				.carousel_container .carousel-indicators{
-					bottom: 64px;
+					bottom: 1px;
 
 					}
 
@@ -205,10 +209,7 @@
 					height : inherit;
 
        		 	}
-				.carousel-inner .item{
-					height: 400px;
 
-				} 
 
 				.carousel_container .carousel-caption .slider__header_font-size {
     				font-size: 1.9rem;
@@ -223,19 +224,19 @@
 				}
             }                
 
-	@media only screen and (min-width: 768px) and (max-width: 1023px){
+	@media only screen and (min-width: 768px) and (max-width: 1024px){
 
 		.carousel_container .carousel-inner .item{
 			width: 100%;
-                    height: 856px;
+                    height: 292.5px;
 
 		} 
         .carousel_container{ 
                     padding-top: 69px;
-				    height: 856px;
+				    height: 292.5px;
                 }
 		.carousel_container .carousel-inner .item a img{
-					height : 856px;
+					height : 292.5px;
 				} 
    		.carousel_container .carousel-caption .slider__button {
             font-size: 0.5rem;
@@ -267,7 +268,7 @@
 						width: 768px;
 				}
 		.carousel_container .carousel-indicators{
-					bottom: 64px;
+					bottom: 1px;
 
 					}
 
