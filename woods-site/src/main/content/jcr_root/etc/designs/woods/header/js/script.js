@@ -18,11 +18,19 @@
 		if(!elasticSearch)
         {
       $(".search__button" ).click(function() {
+          if ($(window).width() > 1028) {
 	       var search_value = $('.search__input').val();
 			var search_path = $('#hybrisRedirectPath').val();
-			console.log(search_value);
-         	console.log(search_path);
+			//console.log("search value"+ search_value);
+         	//console.log("searchy path"+ search_path);
           	window.location = search_path+"search/?text="+search_value;
+          }else{
+			var search_value = $('.search_sm .search__input').val();
+			var search_path = $('#hybrisRedirectPath').val();
+			//console.log("search value1"+ search_value);
+         	//console.log("searchy path"+ search_path);
+            window.location = search_path+"search/?text="+search_value;
+          }
       });
         }
       else{
@@ -36,7 +44,6 @@
 		$(window).resize(function(){
 		if ($(this).width() < 1028) {
 			$(".menu_dynamic.dropdown-toggle").removeClass("disabled");
-			
 		}
 		else {
 			$(".menu_dynamic.dropdown-toggle").addClass("disabled");
@@ -49,7 +56,7 @@
 			$(".menu_dynamic.dropdown-toggle").addClass("disabled");
 		}
 		
-        $('.dropdown-submenu a').on("click", function(e) {
+        $('.dropdown-submenu>a').on("click", function(e) {
 		if($(window).width() < 1028) {
             $(this).next('ul').toggle();
             $(this).find('.glyphicon').toggleClass("down");
