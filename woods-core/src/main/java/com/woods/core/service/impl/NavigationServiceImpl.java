@@ -7,7 +7,6 @@ import org.apache.felix.scr.annotations.Component;
 import org.apache.felix.scr.annotations.Reference;
 import org.apache.felix.scr.annotations.Service;
 import org.apache.sling.commons.json.JSONObject;
-import org.modelmapper.ModelMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -26,8 +25,6 @@ public class NavigationServiceImpl implements NavigationService {
      @Reference
 	private NavigationDao navigationDao;
 
-	ModelMapper modelMapper = null;
-
 	@Override
 	public List<NavigationVO> getNavigationProducts() {
 		
@@ -36,13 +33,11 @@ public class NavigationServiceImpl implements NavigationService {
 		try {
 			JSONObject catalog = navigationDao.getProductsCatalog();
 			log.info("Json Object from navigationDao.getProductsCatalog()"
-					+ catalog);
-			modelMapper = new ModelMapper();
-			navigationVO = NavigationMapper.getNavigationModel(navigationVO,
-					catalog, modelMapper);
+					+ catalog);			
+			navigationVO = NavigationMapper.getNavigationModel(navigationVO,catalog);
 			log.info("NavigationVO list from mapper class" + navigationVO);
 		} catch (Exception e) {
-			log.error(e.getMessage());
+			log.error("Exception occured in <---NavigationService::getNavigationProducts",e);
 		}
 		return navigationVO;
 	}

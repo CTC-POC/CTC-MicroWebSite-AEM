@@ -9,6 +9,9 @@ import javax.net.ssl.SSLContext;
 import javax.net.ssl.TrustManager;
 import javax.net.ssl.X509TrustManager;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 /**
  * This class provide various static methods that relax X509 certificate and 
  * hostname verification while using the SSL over the HTTP protocol.
@@ -16,19 +19,25 @@ import javax.net.ssl.X509TrustManager;
  * @author    Francis Labrie
  */
 public final class SSLUtilities {
-  
+	
+	protected static final Logger log = LoggerFactory
+			.getLogger(SSLUtilities.class);
+	
+	
   /**
    * Hostname verifier for the Sun's deprecated API.
    *
    * @deprecated see {@link #_hostnameVerifier}.
    */
-  private static com.sun.net.ssl.HostnameVerifier __hostnameVerifier;
+  @Deprecated
+  private static com.sun.net.ssl.HostnameVerifier hostnameVerifier;
   /**
    * Thrust managers for the Sun's deprecated API.
    *
    * @deprecated see {@link #_trustManagers}.
    */
-  private static com.sun.net.ssl.TrustManager[] __trustManagers;
+  @Deprecated
+  private static com.sun.net.ssl.TrustManager[] trustManagers;
   /**
    * Hostname verifier.
    */
@@ -39,6 +48,13 @@ public final class SSLUtilities {
   private static TrustManager[] _trustManagers;
 
 
+   /**
+	   * private constructor to hide the implicit public one
+  */
+	private SSLUtilities(){
+		
+	}
+
   /**
    * Set the default Hostname Verifier to an instance of a fake class that 
    * trust all hostnames. This method uses the old deprecated API from the 
@@ -46,14 +62,15 @@ public final class SSLUtilities {
    *
    * @deprecated see {@link #_trustAllHostnames()}.
    */
+  @Deprecated
   private static void __trustAllHostnames() {
       // Create a trust manager that does not validate certificate chains
-      if(__hostnameVerifier == null) {
-          __hostnameVerifier = new _FakeHostnameVerifier();
+      if(hostnameVerifier == null) {
+          hostnameVerifier = new _FakeHostnameVerifier();
       } // if
       // Install the all-trusting host name verifier
       com.sun.net.ssl.HttpsURLConnection.
-          setDefaultHostnameVerifier(__hostnameVerifier);
+          setDefaultHostnameVerifier(hostnameVerifier);
   } // __trustAllHttpsCertificates
   
   /**
@@ -63,19 +80,21 @@ public final class SSLUtilities {
    *
    * @deprecated see {@link #_trustAllHttpsCertificates()}.
    */
+  @Deprecated
   private static void __trustAllHttpsCertificates() {
       com.sun.net.ssl.SSLContext context;
       
       // Create a trust manager that does not validate certificate chains
-      if(__trustManagers == null) {
-          __trustManagers = new com.sun.net.ssl.TrustManager[] 
+      if(trustManagers == null) {
+          trustManagers = new com.sun.net.ssl.TrustManager[] 
               {new _FakeX509TrustManager()};
       } // if
       // Install the all-trusting trust manager
       try {
           context = com.sun.net.ssl.SSLContext.getInstance("SSL");
-          context.init(null, __trustManagers, new SecureRandom());
+          context.init(null, trustManagers, new SecureRandom());
       } catch(GeneralSecurityException gse) {
+    	  log.error("Exeception <--SSLUtilities:: __trustAllHttpsCertificates",gse);
           throw new IllegalStateException(gse.getMessage());
       } // catch
       com.sun.net.ssl.HttpsURLConnection.
@@ -93,8 +112,8 @@ public final class SSLUtilities {
    * otherwise.
    */
   private static boolean isDeprecatedSSLProtocol() {
-      return("com.sun.net.ssl.internal.www.protocol".equals(System.
-          getProperty("java.protocol.handler.pkgs")));
+      return "com.sun.net.ssl.internal.www.protocol".equals(System.
+          getProperty("java.protocol.handler.pkgs"));
   } // isDeprecatedSSLProtocol
 
   /**
@@ -126,6 +145,7 @@ public final class SSLUtilities {
       context = SSLContext.getInstance("SSL");
       context.init(null, _trustManagers, new SecureRandom());
       } catch(GeneralSecurityException gse) {
+    	  log.error("Exeception while <--SSLUtilities:: _trustAllHttpsCertificates--->",gse);
           throw new IllegalStateException(gse.getMessage());
       } // catch
       HttpsURLConnection.setDefaultSSLSocketFactory(context.
@@ -167,6 +187,7 @@ public final class SSLUtilities {
    *
    * @deprecated see {@link SSLUtilities.FakeHostnameVerifier}.
    */
+  @Deprecated
   public static class _FakeHostnameVerifier 
       implements com.sun.net.ssl.HostnameVerifier {
       
@@ -180,8 +201,9 @@ public final class SSLUtilities {
        * @return                the true boolean value 
        * indicating the host name is trusted.
        */
+	  @Override
       public boolean verify(String hostname, String session) {
-          return(true);
+          return true;
       } // verify
   } // _FakeHostnameVerifier
 
@@ -196,6 +218,7 @@ public final class SSLUtilities {
    *
    * @deprecated see {@link SSLUtilities.FakeX509TrustManager}.
    */
+  @Deprecated
   public static class _FakeX509TrustManager 
       implements com.sun.net.ssl.X509TrustManager {
   
@@ -214,8 +237,9 @@ public final class SSLUtilities {
        * @return                the true boolean value 
        * indicating the chain is trusted.
        */
+      @Override
       public boolean isClientTrusted(X509Certificate[] chain) {
-          return(true);
+          return true;
       } // checkClientTrusted
       
       /**
@@ -226,8 +250,9 @@ public final class SSLUtilities {
        * @return                the true boolean value 
        * indicating the chain is trusted.
        */
+      @Override
       public boolean isServerTrusted(X509Certificate[] chain) {
-          return(true);
+          return true;
       } // checkServerTrusted
       
       /**
@@ -236,8 +261,9 @@ public final class SSLUtilities {
        *
        * @return                a empty array of issuer certificates.
        */
+      @Override
       public X509Certificate[] getAcceptedIssuers() {
-          return(_AcceptedIssuers);
+          return _AcceptedIssuers;
       } // getAcceptedIssuers
   } // _FakeX509TrustManager
 
@@ -260,9 +286,10 @@ public final class SSLUtilities {
        * @return                the true boolean value 
        * indicating the host name is trusted.
        */
+	  @Override
       public boolean verify(String hostname, 
           javax.net.ssl.SSLSession session) {
-          return(true);
+          return true;
       } // verify
   } // FakeHostnameVerifier
 
@@ -290,9 +317,10 @@ public final class SSLUtilities {
        * @param authType        the authentication type based on the client 
        * certificate.
        */
+      @Override
       public void checkClientTrusted(X509Certificate[] chain, 
           String authType) {
-      } // checkClientTrusted
+    	} // checkClientTrusted
       
       /**
        * Always trust for server SSL chain peer certificate 
@@ -301,18 +329,20 @@ public final class SSLUtilities {
        * @param chain           the peer certificate chain.
        * @param authType        the key exchange algorithm used.
        */
+      @Override
       public void checkServerTrusted(X509Certificate[] chain, 
-          String authType) {
+          String authType) {    	
       } // checkServerTrusted
       
-      /**
+      /** 
        * Return an empty array of certificate authority certificates which 
        * are trusted for authenticating peers.
        *
        * @return                a empty array of issuer certificates.
        */
+      @Override
       public X509Certificate[] getAcceptedIssuers() {
-          return(_AcceptedIssuers);
+          return _AcceptedIssuers;
       } // getAcceptedIssuers
   } // FakeX509TrustManager
 } // SSLUtilities
