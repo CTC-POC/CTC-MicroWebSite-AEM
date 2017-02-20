@@ -55,7 +55,7 @@ header .menu_second {
     clear: right;
     
 }
-.menu_second a{color: rgba(255,255,255,0.6);}
+.menu_second a{color: rgba(255,255,255,0.6);font-size: 16px;}
 .menu_second a:visited, .menu_second a:active, .menu_second a:hover {
     color: #fff;
 	text-decoration:none;
@@ -144,8 +144,8 @@ li.dropdown a:hover, .dropdown:hover .dropbtn{
 background:none;
 }
 .cart_item{
-    border: 1px solid #ED1B2D;
-    background-color: #ED1B2D;
+    border: 1px solid #00792b;
+    background-color: #00792b;
     color: #fff;
     border-radius: 100%;
     position: relative;
@@ -159,6 +159,7 @@ background:none;
 }
 header .advanced_Search{display:none;}
 @media  (min-width:1028px){
+header ul.mainNavlogoSpace li:last-child{display:none;}
 .search_container{display:none;}
 .woods-logo img{ height: 108px;}
 header .predictive-search{padding-left:0px;}
@@ -185,7 +186,7 @@ header .advanced_Search{display:inline-block;font-size: 9px;color: #fff;text-tra
         filter: FlipH;
         -ms-filter: "FlipH";
     }
-header .menu_second{margin-right:-2px;}
+header .menu_second{margin-right:-2px;margin-top: 9px;}
 	header .glyphicon-chevron-right{
 		color: #999;
 		float: right;
@@ -350,7 +351,10 @@ header .dropdown-content a:hover {padding-left: 24px;background-color: #cecece !
 }
 }
 @media  (max-width:1027px){
-.navbar-header::before {
+header .navbar-fixed-top{
+ position:absolute;
+}
+#navbar::before {
     content: '';
     border-top: 11px solid #64a70b;
     border-left: 9px solid transparent;
@@ -358,13 +362,13 @@ header .dropdown-content a:hover {padding-left: 24px;background-color: #cecece !
     width: 0;
     display: block;
     position: absolute;
-    top: -19px;
-    left: 45px;
+    top: -12px;
+    left: 30px;
 }
 .navbarToggleBg.navbar-collapse{
 	margin-top: 0px;
     position: relative;
-    top: 20px;
+    top: 26px;
 }
 .predictive-search{
 	position: relative;
@@ -395,6 +399,7 @@ header .navbar-toggle .icon-bar{
 header .nav.mainNavlogoSpace.navbar-nav{ background-color:#64a70b;}
 .search_container{display:block;}
 .search_lg{display:none;}
+
 header .navbar-inverse{background-color:none;border:none;}
 .glyphicon.glyphicon-menu-hamburger{display:none;}
 .glyphicon-shopping-cart {
@@ -416,8 +421,8 @@ header .navbar.navbar-inverse.navbar-fixed-top{
     height: 69px;
 }
 .cart_item {
-        border: 1px solid #ED1B2D;
-    background-color: #ED1B2D;
+        border: 1px solid #00792b;
+    background-color: #00792b;
     color: #fff;
     bottom: 18px;
     text-align: center;
@@ -673,8 +678,8 @@ header .customBg{width:100%; padding-left:0px;}
 }
 @media(min-width:808px) and (max-width:1027px){
 .cart_item {
-    border: 1px solid #ED1B2D;
-    background-color: #ED1B2D;
+    border: 1px solid #00792b;
+    background-color: #00792b;
     color: #fff;
     padding: 9px 14px 9px 14px;
     border-radius: 100%;
@@ -749,7 +754,7 @@ header .search__input {
 .navbarToggleBg.navbar-collapse {
     margin-top: 0px;
     position: relative;
-    top: 14px;
+    top: 22px;
 }
 header .navbar-nav>li>a.menu_main__item {
     padding-top: 8px;
@@ -768,7 +773,11 @@ header .navbar-nav .open .dropdown-menu>li>a {
     padding-top: 7px;
 }
 header .navbar-collapse.collapse.in{
-margin-top:-2px;
+    margin-top: 6px;
 }
 }
-
+@-moz-document url-prefix() { 
+  header .predictive-search {
+    margin-left: -9px;
+	}
+}

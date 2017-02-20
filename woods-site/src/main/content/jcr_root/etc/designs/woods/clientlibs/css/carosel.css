@@ -173,7 +173,7 @@
 
 				}
                 .carousel_container{ 
-                    padding-top: 100px;
+                    /*padding-top: 69px;*/
 				    height: 225px;
                 }
 				.carousel_container .carousel-inner .item a img{
@@ -241,8 +241,8 @@
    		.carousel_container .carousel-caption .slider__button {
             font-size: 0.5rem;
             margin-top: 1.5rem;
-            padding: 20px 20px;
-            height: 80px;
+            padding: 9px 20px;
+            height: 55px;
 
 		}
 		.carousel_container>.carousel-caption {
@@ -260,7 +260,7 @@
 		}
         .carousel_container .carousel-caption .slider__button {
     				padding: -0.9rem 1rem;
-    				font-size: 2.25rem;
+    				font-size: 1.7rem;
     				margin-top: 1.5rem;
 		}
         .carousel_container .carousel-caption{
