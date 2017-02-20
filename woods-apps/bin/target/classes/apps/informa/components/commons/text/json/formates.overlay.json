@@ -1,8 +1,0 @@
-[
-	{"description" : "Paragraph", "tag" : "p"},
-	{"description" : "Heading 1 - Main Heading", "tag" : "h1"},
-	{"description" : "Heading 2", "tag" : "h2"},
-	{"description" : "Heading 3 - Bold, Italic", "tag" : "h3"},
-	{"description" : "Heading 4 - Section Title", "tag" : "h4"},
-	{"description" : "Heading 5", "tag" : "h5"}
-]
