@@ -1,7 +1,14 @@
-@font-face {
+/*@font-face {
     font-family: HelveticaLTStd-BlkCond;
     src: url(/etc/designs/woods/clientlibs/fonts/HelveticaLTStd-BlkCond.eot);
     src: url(/etc/designs/woods/clientlibs/fonts/HelveticaLTStd-BlkCond.otf);
+}*/
+@font-face {
+  font-family: 'HelveticaLTStd-BlkCond';
+  src: url('/etc/designs/woods/clientlibs/fonts/HelveticaLTStd-BlkCond.eot');
+  src: url('/etc/designs/woods/clientlibs/fonts/HelveticaLTStd-BlkCond.html') format("woff"), url('/etc/designs/woods/clientlibs/fonts/HelveticaLTStd-BlkCond-2.html') format("woff2"), url('/etc/designs/woods/clientlibs/fonts/HelveticaLTStd-BlkCond-3.html') format("truetype"), url('/etc/designs/woods/clientlibs/fonts/HelveticaLTStd-BlkCond.otf') format("opentype"), url('/etc/designs/woods/clientlibs/fonts/HelveticaLTStd-BlkCond.svg') format("svg");
+  font-weight: 400;
+  font-style: normal;
 }
 
 /*@font-face {

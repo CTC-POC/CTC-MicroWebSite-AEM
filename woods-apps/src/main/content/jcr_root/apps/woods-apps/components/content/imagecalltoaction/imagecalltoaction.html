@@ -8,18 +8,29 @@
 */-->
 
 <div data-sly-test="${wcmmode.edit}"
-	data-emptytext="Image call to action" class="cq-placeholder" 	data-sly-unwrap></div>
+	data-emptytext="Image call to action" class="cq-placeholder" data-sly-unwrap></div>
 
-<section id="SECTION_1">
-	<div id="DIV_2">
-		<article id="ARTICLE_3">
-			<a href="${properties.imagePath}" rel="nofollow" id="A_4"> <img
-				data-sly-test="${properties.imageRef}" src="${properties.imageRef}"
-				alt="${properties.alttext}" id="IMG_5" /></a> <a
-				href="${properties.imagePath}" rel="nofollow" id="A_6"></a>
-			<h2 id="H2_7">${properties.title}</h2>
-			<p id="P_8">${properties.subtitle}</p>
-			<a href="${properties.linkPath}" rel="nofollow" id="A_9">${properties.linkTitle}</a>
-		</article>
+<div class="container-fluid article">
+	<div class="imagecontainer">
+		<div class="row">
+			<div class="article" >
+				<div class="article1">
+					<div class="article">
+						<div>
+                            <a href="${properties.imagePath}"><img src="${properties.imageRef}" alt="imag1"/></a>
+						</div>
+						<div>
+							<h2 href="#" class="articles-list__item__header">${properties.title}</h2>
+						</div>
+						<div>
+							<p class="articles-list__item__text">${properties.subtitle}</p>
+						</div>					
+						<div class="anchor">
+                            <a class="articles-list__item__details web-analytics-custom-link" href="${properties.linkPath}" rel="nofollow" data-custom-link="{&quot;linkName&quot;:&quot;Home:FeatureBox:Woods™ Canada Greatest Explorer&quot;}">${properties.linkTitle}</a>
+						</div>
+						</div>
+				</div>
+			</div>
+		</div>
 	</div>
-</section>
+</div>
