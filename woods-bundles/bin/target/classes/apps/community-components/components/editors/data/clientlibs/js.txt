@@ -1,2 +1,0 @@
-#base=.
-dataeditor.js
