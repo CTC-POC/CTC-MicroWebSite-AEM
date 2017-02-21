@@ -1,5 +1,5 @@
 (function( $ ) {
- $(function() {
+$(function() {
 	function readCookie(name) {
 	    var nameEQ = name + '=',
 	      ca = document.cookie.split(';'),
