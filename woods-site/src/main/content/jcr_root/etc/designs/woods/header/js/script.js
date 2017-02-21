@@ -19,30 +19,23 @@
         {
       $(".search__button" ).click(function() {
           if ($(window).width() > 1028) {
-	       var search_value = $('.search__input').val();
+			var search_value = $('.search__input').val();
 			var search_path = $('#hybrisRedirectPath').val();
             var queryParam=$('#queryparameter').val();
-			//console.log("search value"+ search_value);
-              alert('search value' + search_value);
-         	//console.log("searchy path"+ search_path);
           	window.location = search_path+"search/?text="+search_value+queryParam;
           }else{
 			var search_value = $('.search_sm .search__input').val();
 			var search_path = $('#hybrisRedirectPath').val();
-                var queryParam=$('#queryparameter').val();
-                alert('search value_mobile' + search_value);
-			//console.log("search value1"+ search_value);
-         	//console.log("searchy path"+ search_path);
+            var queryParam=$('#queryparameter').val();
             window.location = search_path+"search/?text="+search_value+queryParam;
           }
       });
         }
       else{
       $(".search__button" ).click(function() {
-	       var search_value = $('.search__input').val();
-          var search_path = $('#hybrisRedirectPath').val();
-          var queryParam=$('#queryparameter').val();
-			console.log(search_value);
+			var search_value = $('.search__input').val();
+			var search_path = $('#hybrisRedirectPath').val();
+			var queryParam=$('#queryparameter').val();
           window.location = search_path+"elasticsearch/?text="+search_value+queryParam;
       });
       }
