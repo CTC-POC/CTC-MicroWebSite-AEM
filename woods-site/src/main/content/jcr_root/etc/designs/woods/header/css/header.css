@@ -81,7 +81,7 @@ header .menu_main__item {
 }
 
 header .navbar-nav>li>a.menu_main__item{
-    margin-top: 21px;
+    margin-top: 18px;
     padding-top: 0px;
 padding-bottom:0px; 
 font:bold 17px/13px HelveticaLTStd-BlkCond,Helvetica,Arial,sans-serif;
@@ -264,7 +264,7 @@ li:first-child .menu_main__item{padding-left: 0px !important; border-left:none;}
 header .dropdown-menu{
 position: absolute;
     min-width: 370px;
-    top: 61px;
+    top: 52px;
     left: -150px;
     float: left;
     border-bottom: 9px solid #005841;
