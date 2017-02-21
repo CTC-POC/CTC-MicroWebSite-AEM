@@ -10,7 +10,9 @@ import org.apache.sling.models.annotations.Model;
 import org.apache.sling.models.annotations.injectorspecific.SlingObject;
 
 import com.woods.core.models.MultifieldModel;
-
+/**
+ * Multifield.
+ */
 @Model(adaptables = Resource.class)
 public class Multifield {
 	
@@ -41,7 +43,11 @@ public class Multifield {
 }
 		}
 	}
-	
+	 /**
+     * Gets the childList.
+     * 
+     * @return The childList.
+     */
 	public List<MultifieldModel> getChildList() {
 		return childList;
 	}

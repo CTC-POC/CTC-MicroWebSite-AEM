@@ -14,7 +14,9 @@ import com.woods.core.dao.NavigationDao;
 import com.woods.core.mapper.NavigationMapper;
 import com.woods.core.model.navigation.NavigationVO;
 import com.woods.core.service.NavigationService;
-
+/**
+ * NavigationServiceImpl .
+ */
 @Component(metatype = true, label = "Woods  NavigationServiceImpl", immediate = true)
 @Service(NavigationService.class)
 public class NavigationServiceImpl implements NavigationService {
@@ -28,14 +30,14 @@ public class NavigationServiceImpl implements NavigationService {
 	@Override
 	public List<NavigationVO> getNavigationProducts() {
 		
-		log.info("Inside NavigationServiceImpl------ getNavigationProducts");
+		log.debug("Inside NavigationServiceImpl------ getNavigationProducts");
 		List<NavigationVO> navigationVO = new ArrayList<>();
 		try {
 			JSONObject catalog = navigationDao.getProductsCatalog();
-			log.info("Json Object from navigationDao.getProductsCatalog()"
+			log.debug("Json Object from navigationDao.getProductsCatalog()"
 					+ catalog);			
 			navigationVO = NavigationMapper.getNavigationModel(navigationVO,catalog);
-			log.info("NavigationVO list from mapper class" + navigationVO);
+			log.debug("NavigationVO list from mapper class" + navigationVO);
 		} catch (Exception e) {
 			log.error("Exception occured in <---NavigationService::getNavigationProducts",e);
 		}

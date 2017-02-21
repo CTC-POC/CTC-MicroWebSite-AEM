@@ -16,7 +16,9 @@ import org.slf4j.LoggerFactory;
 
 import com.woods.core.servicehelper.SSLUtilities;
 import com.woods.core.servicehelper.WoodsHttpClient;
-
+/**
+ * WoodsHttpClientImpl .
+ */
 @Component(metatype = true, label = "Woods Rest Client", description = "Service that enables communication with hybris", immediate = true)
 @Service(WoodsHttpClient.class)
 public class WoodsHttpClientImpl implements WoodsHttpClient {
@@ -27,7 +29,7 @@ public class WoodsHttpClientImpl implements WoodsHttpClient {
 	@Override
 	public JSONObject getProductCatalog(String endpointUrl) {
 
-		log.info("Inside WoodsHttpClientImpl---- getProductCatalog");
+		log.debug("Inside WoodsHttpClientImpl---- getProductCatalog");
 		String responseJson = doGetResponse(endpointUrl);
 		JSONObject jsonObj = null;
 		try {
@@ -40,7 +42,7 @@ public class WoodsHttpClientImpl implements WoodsHttpClient {
 	}
 
 	private String doGetResponse(String endpointUrl) {
-		log.info("Inside WoodsHttpClientImpl---- doGetResponse");
+		log.debug("Inside WoodsHttpClientImpl---- doGetResponse");
 		HttpURLConnection con;
 		URL url;
 		String response = null;
@@ -69,7 +71,7 @@ public class WoodsHttpClientImpl implements WoodsHttpClient {
 
 			log.error("Exception in doGetResponse",e);
 		}
-		log.info("WoodsHttpClientImpl response"+response);
+		log.debug("WoodsHttpClientImpl response"+response);
 		return response;
 
 	}

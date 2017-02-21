@@ -17,7 +17,9 @@ import com.day.cq.wcm.api.PageManager;
 import com.woods.core.model.navigation.NavigationVO;
 import com.woods.core.models.ParentPage;
 import com.woods.core.service.NavigationService;
-
+/**
+ * TopNavigation.
+ */
 @Model(adaptables = Resource.class)
 public class TopNavigation {
 
@@ -31,7 +33,10 @@ public class TopNavigation {
 
 	@SlingObject
 	Resource resource;
-
+	
+	/**
+	 * This method is used to get all the child nodes of the multifield
+	 */
 	@PostConstruct
 	private void populateMenuList() {
 		ValueMap properties = resource.adaptTo(ValueMap.class);
@@ -62,11 +67,19 @@ public class TopNavigation {
 	
 
 	}
-
+	 /**
+     * Gets the navigationVOList.
+     * 
+     * @return The navigationVOList.
+     */
 	public List<NavigationVO> getChildPage() {
 		return navigationService.getNavigationProducts();
 	}
-
+	 /**
+     * Gets the pageList.
+     * 
+     * @return The pageList.
+     */
 	public List<ParentPage> getPageList() {
 		return pageList;
 	}
