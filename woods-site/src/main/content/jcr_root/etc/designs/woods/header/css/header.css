@@ -1,4 +1,10 @@
+/*@font-face {
+    font-family: 'HelveticaLTStd-BoldCond';
+    src: url('/etc/designs/woods/clientlibs/fonts/HelveticaLTStd-BlkCond.eot');
+    src: url('/etc/designs/woods/clientlibs/fonts/HelveticaLTStd-BlkCond.otf');
 
+}
+*/
 @font-face {
   font-family: 'HelveticaLTStd-BlkCond';
   src: url('/etc/designs/woods/clientlibs/fonts/HelveticaLTStd-BlkCond.eot');
@@ -7,18 +13,10 @@
   font-style: normal;
 }
 
-
 @font-face {
   font-family: 'HelveticaLTStd-BoldCond';
   src: url('/etc/designs/woods/clientlibs/fonts/HelveticaLTStd-BoldCond.eot');
   src: url('/etc/designs/woods/clientlibs/fonts/HelveticaLTStd-BoldCondd41d.eot?#iefix') format("embedded-opentype"), url('/etc/designs/woods/clientlibs/fonts/HelveticaLTStd-BoldCond.html') format("woff"), url('/etc/designs/woods/clientlibs/fonts/HelveticaLTStd-BoldCond-2.html') format("woff2"), url('/etc/designs/woods/clientlibs/fonts/HelveticaLTStd-BoldCond-3.html') format("truetype"), url('/etc/designs/woods/clientlibs/fonts/HelveticaLTStd-BoldCond.svg') format("svg");
-  font-weight: 700;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Helvetica Neue';
-  src: url('/etc/designs/woods/clientlibs/fonts/HelveticaNeueLTStd-BdCn.eot');
-  src: url('/etc/designs/woods/clientlibs/fonts/HelveticaNeueLTStd-BdCn.html') format("woff"), url('/etc/designs/woods/clientlibs/fonts/HelveticaNeueLTStd-BdCn-2.html') format("woff2"), url('/etc/designs/woods/clientlibs/fonts/HelveticaNeueLTStd-BdCn-3.html') format("truetype"), url('/etc/designs/woods/clientlibs/fonts/HelveticaNeueLTStd-BdCn.otf') format("opentype"), url('/etc/designs/woods/clientlibs/fonts/HelveticaNeueLTStd-BdCn.svg') format("svg");
   font-weight: 700;
   font-style: normal;
 }
@@ -146,8 +144,8 @@ li.dropdown a:hover, .dropdown:hover .dropbtn{
 background:none;
 }
 .cart_item{
-    border: 1px solid #00792b;
-    background-color: #00792b;
+    border: 1px solid #64A70B;
+    background-color: #64A70B;
     color: #fff;
     border-radius: 100%;
     position: relative;
@@ -156,15 +154,16 @@ background:none;
     z-index: 999;
     text-align: center;
     font-size: 10px;
-    padding: 3px 6px;
+    padding: 1px 6px;
     font-weight: 900;
+    font: 12px/20px HelveticaLTStd-BlkCond, Helvetica, Arial, sans-serif;
 }
 header .advanced_Search{display:none;}
 @media  (min-width:1028px){
 .menu__products__item.dropdown-submenu>a{
     pointer-events: none;
     cursor: default;
-}
+} 
 header ul.mainNavlogoSpace li:last-child{display:none;}
 .search_container{display:none;}
 .woods-logo img{ height: 108px;}
@@ -374,7 +373,7 @@ header .navbar-fixed-top{
 .navbarToggleBg.navbar-collapse{
 	margin-top: 0px;
     position: relative;
-    top: 26px;
+    top: 19px;
 }
 .predictive-search{
 	position: relative;
@@ -409,7 +408,7 @@ header .nav.mainNavlogoSpace.navbar-nav{ background-color:#64a70b;}
 header .navbar-inverse{background-color:none;border:none;}
 .glyphicon.glyphicon-menu-hamburger{display:none;}
 .glyphicon-shopping-cart {
-    font-size: 35px;
+    font-size: 30px;
     color: #fff;
     -moz-transform: scaleX(-1);
     -o-transform: scaleX(-1);
@@ -417,7 +416,7 @@ header .navbar-inverse{background-color:none;border:none;}
     transform: scaleX(-1);
     filter: FlipH;
     -ms-filter: "FlipH";
-    top: 7px !important;
+    top: 5px !important;
     left: 7px;
 }
 header .navbar.navbar-inverse.navbar-fixed-top{
@@ -427,8 +426,8 @@ header .navbar.navbar-inverse.navbar-fixed-top{
     height: 69px;
 }
 .cart_item {
-        border: 1px solid #00792b;
-    background-color: #00792b;
+        border: 1px solid #64A70B;
+    background-color: #64A70B;
     color: #fff;
     bottom: 18px;
     text-align: center;
@@ -440,6 +439,7 @@ header .navbar.navbar-inverse.navbar-fixed-top{
     z-index: 999;
     bottom: -19px;
     font-size: 10px;
+    font: 12px/20px HelveticaLTStd-BlkCond, Helvetica, Arial, sans-serif;
 }
 .menu_second{display:none;}
 header .navbar-inverse .navbar-toggle.collapsed{    background: none;}
@@ -684,8 +684,8 @@ header .customBg{width:100%; padding-left:0px;}
 }
 @media(min-width:808px) and (max-width:1027px){
 .cart_item {
-    border: 1px solid #00792b;
-    background-color: #00792b;
+    border: 1px solid #64A70B;
+    background-color: #64A70B;
     color: #fff;
     padding: 9px 14px 9px 14px;
     border-radius: 100%;
@@ -693,6 +693,7 @@ header .customBg{width:100%; padding-left:0px;}
     left: -16px;
     z-index: 999;
     bottom: -19px;
+        font: 12px/20px HelveticaLTStd-BlkCond, Helvetica, Arial, sans-serif;
 }
 .glyphicon-shopping-cart {
     position: relative;
@@ -734,7 +735,9 @@ header .mobile_motto img {
         left: -6px;
 
 }
+
 }
+
 
 @media only screen 
   and (min-width: 768px) 
@@ -777,7 +780,7 @@ header .navbar-nav .open .dropdown-menu>li>a {
     padding-top: 7px;
 }
 header .navbar-collapse.collapse.in{
-    margin-top: 6px;
+   margin-top: -3px;
 }
 }
 @-moz-document url-prefix() { 

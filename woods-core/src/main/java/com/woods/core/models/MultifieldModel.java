@@ -1,7 +1,6 @@
 package com.woods.core.models;
 
 import javax.inject.Inject;
-import javax.inject.Named;
 
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.models.annotations.Model;
