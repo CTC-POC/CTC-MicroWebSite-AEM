@@ -69,10 +69,19 @@ public class ColumnControl
        }
     }
     
-    
+    /**
+     * Gets the columns CSS class.
+     * 
+     * @return The columns CSS class.
+     */
     public String[] getColumnsCssClass() {
 		return columnsCssClass;
 	}
+    /**
+     * Indicates if the column control is a child of another column control.
+     * 
+     * @return If the column control is a child of another column control.
+     */
 	public boolean isChildColumnControl() {
 		return childColumnControl;
 	}

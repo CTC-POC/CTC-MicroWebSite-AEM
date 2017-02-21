@@ -15,7 +15,9 @@ import com.woods.core.dto.CatalogVersions;
 import com.woods.core.dto.Categories;
 import com.woods.core.model.navigation.NavigationSublevel;
 import com.woods.core.model.navigation.NavigationVO;
-
+/**
+ * NavigationMapper .
+ */
 public class NavigationMapper {
 	protected static final Logger log = LoggerFactory
 			.getLogger(NavigationMapper.class);
@@ -30,7 +32,7 @@ public class NavigationMapper {
 	@SuppressWarnings("null")
 	public static List<NavigationVO> getNavigationModel(
 			List<NavigationVO> navigationVO, JSONObject catalogjson) {
-		log.info("Inside NavigationMapper----------getNavigationModel");
+		log.debug("Inside NavigationMapper----------getNavigationModel");
 		Catalog catalog = new Catalog();
 		List<CatalogVersions> catalogVersionsList = new ArrayList<>();
 		if (null != catalogjson) {
@@ -109,7 +111,7 @@ public class NavigationMapper {
 			}
 
 		}
-		log.info("End of mapper" + navigationVO);
+		log.debug("End of mapper" + navigationVO);
 		return navigationVO;
 
 	}

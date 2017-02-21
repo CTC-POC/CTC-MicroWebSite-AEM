@@ -16,6 +16,9 @@ import org.slf4j.LoggerFactory;
 import com.woods.core.dao.NavigationDao;
 import com.woods.core.servicehelper.WoodsHttpClient;
 
+/**
+ * NavigationDaoImpl implementation.
+ */
 @Component(metatype = true, label = "Woods  NavigationDaoImpl", description = "Navigation that get sub levels from hybris", immediate = true)
 @Service(NavigationDao.class)
 public class NavigationDaoImpl implements NavigationDao {
@@ -44,10 +47,10 @@ public class NavigationDaoImpl implements NavigationDao {
 	public JSONObject getProductsCatalog() {
 
 		try {
-			log.info("Inside NavigationDaoImpl:::getProductsCatalog---->>>"
+			log.debug("Inside NavigationDaoImpl:::getProductsCatalog---->>>"
 					+ hybrisNavigationUrl);
 			catalog = woodsHttpsClient.getProductCatalog(hybrisNavigationUrl);
-			log.info("End of  NavigationDaoImpl--->>>" + catalog);
+			log.debug("End of  NavigationDaoImpl--->>>" + catalog);
 
 		} catch (Exception e) {
 			log.error("Exception in <--NavigationDao:::getProductsCatalog -->",
