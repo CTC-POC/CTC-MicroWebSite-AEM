@@ -22,12 +22,12 @@
 			var search_value = $('.search__input').val();
 			var search_path = $('#hybrisRedirectPath').val();
             var queryParam=$('#queryparameter').val();
-          	window.location = search_path+"search/?text="+search_value+queryParam;
+          	window.location = search_path+"search/"+queryParam+"&text="+search_value;
           }else{
 			var search_value = $('.search_sm .search__input').val();
 			var search_path = $('#hybrisRedirectPath').val();
             var queryParam=$('#queryparameter').val();
-            window.location = search_path+"search/?text="+search_value+queryParam;
+            window.location = search_path+"search/"+queryParam+"&text="+search_value;
           }
       });
         }
@@ -36,7 +36,7 @@
 			var search_value = $('.search__input').val();
 			var search_path = $('#hybrisRedirectPath').val();
 			var queryParam=$('#queryparameter').val();
-          window.location = search_path+"elasticsearch/?text="+search_value+queryParam;
+          window.location = search_path+"elasticsearch/"+queryParam+"&text="+search_value;
       });
       }
 		

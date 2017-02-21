@@ -130,13 +130,6 @@
                     <verbose>true</verbose>
                     <failOnError>true</failOnError>
                     <group>woods</group>
-                    <embeddeds>
-                        <embedded>
-                            <groupId>woods.co</groupId>
-                            <artifactId>woods.core</artifactId>
-                            <target>/apps/woods-apps/install</target>
-                        </embedded>
-                    </embeddeds>
                 </configuration>
             </plugin>
         </plugins>
@@ -201,12 +194,6 @@
     <!-- D E P E N D E N C I E S                                                -->
     <!-- ====================================================================== -->
     <dependencies>
-        <dependency>
-            <groupId>woods.co</groupId>
-            <artifactId>woods.core</artifactId>
-            <version>1.0-SNAPSHOT</version>
-        </dependency>
-
         <dependency>
             <groupId>com.adobe.aem</groupId>
             <artifactId>aem-api</artifactId>

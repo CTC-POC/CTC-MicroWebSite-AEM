@@ -24,8 +24,8 @@
     
     <modules>
      	<module>woods-apps</module>
-     	<module>woods-bundles</module>
         <module>woods-core</module>
+		<module>woods-bundles</module>
         <module>woods-site</module>
         <module>woods-content</module>
         <module>woods-tests</module>     
