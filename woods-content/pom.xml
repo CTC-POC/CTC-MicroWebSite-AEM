@@ -74,13 +74,6 @@
             </resource>
         </resources>
         <plugins>
-                    <plugin>
-                <groupId>com.cognifide.maven.plugins</groupId>
-                <artifactId>maven-crx-plugin</artifactId>
-                <configuration>
-                    <skip>false</skip>
-                </configuration>
-            </plugin>
             <!--
                 we want to keep some of the META-INF files and not configure
                 everything in the plugin (mainly the filters).
@@ -184,33 +177,6 @@
                         </executions>
                         <configuration>
                             <targetURL>http://${aem.host}:${aem.port}/crx/packmgr/service.jsp</targetURL>
-                            <failOnError>true</failOnError>
-                            <failOnMissingEmbed>true</failOnMissingEmbed>
-                        </configuration>
-                     </plugin>
-                 </plugins>
-            </build>
-        </profile>
-        <profile>
-            <id>autoInstallPackagePublish</id>
-            <activation>
-                <activeByDefault>false</activeByDefault>
-            </activation>
-            <build>
-                <plugins>
-                    <plugin>
-                        <groupId>com.day.jcr.vault</groupId>
-                        <artifactId>content-package-maven-plugin</artifactId>
-                        <executions>
-                            <execution>
-                                <id>install-package</id>
-                                <goals>
-                                    <goal>install</goal>
-                                </goals>
-                            </execution>
-                        </executions>
-                        <configuration>
-                            <targetURL>http://${aem.publish.host}:${aem.publish.port}/crx/packmgr/service.jsp</targetURL>
                             <failOnError>true</failOnError>
                             <failOnMissingEmbed>true</failOnMissingEmbed>
                         </configuration>
