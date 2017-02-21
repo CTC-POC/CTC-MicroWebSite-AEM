@@ -67,6 +67,9 @@ footer .instagramIcon {
     height: 21px;
     display: inline-block;
 }
+.inspirational {
+    padding-left: 120px;
+}
 @media screen and (min-width: 1028px){
 	.menu_footer, .footer-main-menu .nav.menu {
 		width: 500px;
@@ -162,7 +165,9 @@ footer .menu.menu_social{
 .footer .nav>li>a {
     padding: 1px;
 }
-
+.inspirational {
+    padding-left: 120px;
+}
 }
 .menu_social__header {
     font: 14px HelveticaLTStd-BlkCond,Helvetica,Arial,sans-serif;
@@ -192,5 +197,6 @@ footer .nav.menu a, .footer span.menu_social__header{font-size : 10px;}
 footer .menu.menu_social {
     padding-left: 16px;
 }
-
+.inspirational {
+    padding-left: 23px;
 }
