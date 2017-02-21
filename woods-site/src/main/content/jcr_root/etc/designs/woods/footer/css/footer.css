@@ -1,8 +1,4 @@
-/*@font-face {
-    font-family: HelveticaLTStd-BlkCond;
-    src: url(/etc/designs/woods/clientlibs/fonts/HelveticaLTStd-BlkCond.eot);
-    src: url(/etc/designs/woods/clientlibs/fonts/HelveticaLTStd-BlkCond.otf);
-}*/
+
 @font-face {
   font-family: 'HelveticaLTStd-BlkCond';
   src: url('/etc/designs/woods/clientlibs/fonts/HelveticaLTStd-BlkCond.eot');
@@ -11,12 +7,6 @@
   font-style: normal;
 }
 
-/*@font-face {
-    font-family: RockwellStd-Bold;
-    src: url(/etc/designs/woods/clientlibs/fonts/HelveticaLTStd-BlkCond.eot);
-    src: url(/etc/designs/woods/clientlibs/fonts/HelveticaLTStd-BlkCond.otf);
-}
-RockwellStd-Bold,'Times New Roman',serif;*/
 html{
 
 	font-family: sans-serif;
@@ -33,7 +23,6 @@ margin:0;
 .footer {
     background-image: url("/content/dam/woods-content/footer-graphic-min.png");
     background-size: cover;
-    /*border-top: 3px solid #64a70b;*/
     position: relative;
 
 }
@@ -128,11 +117,10 @@ footer .menu.menu_social{
 @media only screen and (min-width: 320px) and (max-width : 1027px) {
 .footer_container .footer {
     height: 126px;
+
 }
+
 .menu_social__header {
-   /* font-size: 1.125rem;
-    line-height: 2rem;
-	padding-left: 0;*/
             display : none;
 }
 footer .menu.menu_social{

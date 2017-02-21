@@ -21,14 +21,6 @@
 	padding : 0;
 }
 
-  /* Hide the carousel text when the screen is less than 600 pixels wide */
- /* @media screen and (max-width: 600px) {
-
-	.carousel-control{
-	display : none;
-	}
-  }
-*/
     @media (min-width: 1200px){
     .carousel_container .container {
     width: 100%;
@@ -94,49 +86,7 @@
 		}
 
           @media screen and (max-width: 1028px) {
-               /* .carousel_container .carousel-caption .slider__header_font-size {
-                 font-size: 1.9rem;
-                }
-				.carousel_container .carousel-caption{
-					    left: 8%;
 
-				}
-				.carousel_container .slider__description_font-size {
-					font-size: 1.2rem;
-				}
-				.carousel-inner .item {
-					height: auto;
-				}
-				.carousel_container .slider__header {
-					font-size: 2.5rem;
-					text-shadow: 2px 3px 3px rgba(0,0,0,0.33);
-				}
-				.carousel_container .slider__button {
-					padding: 0 1.3rem;
-					font-size: 1.25rem;
-					margin-top: 1.5rem;
-				}
-
-				.carousel-inner>.item{
-					width : 100%;
-				}
-				/*.carousel_container .carousel-indicators > li  {
-					width: .7rem;
-					height: .7rem;
-					padding: 10px;
-					margin: 10px;
-					background-color:#cecece;
-					
-				}
-				.carousel_container .carousel-indicators>li.active{
-					width: .9rem;
-					height: .9rem;
-					padding: 10px;
-					margin: 10px;
-					background-color:#64a70b;
-					border:transparent;
-
-				} */
 				.carousel_container .container{
 						width : 100%;
             			padding : 0;
@@ -290,30 +240,3 @@
 				} 
 	}
 
-/*	@media (max-width: 1024px){
-        .carousel_container .carousel-caption .slider__header_font-size {
-             font-size: 3.9rem;
-        }
-         .carousel_container .slider__text.slider__description_font-size {
-            font-size: 2.6rem;
-         	}
-         .carousel_container  .carousel-caption .slider__button {
-            font-size: 4.25rem;
-            margin-top: 1.5rem;
-            padding: 20px 20px;
-            height: 80px; }
-         .carousel_container .carousel-caption .slider__button {
-                    font-size: 2rem;
-                    margin-top: 1.5rem;
-                    padding: 13px 14px;
-                    height: 64px;
-            }
-
-}
-
-
-    .carousel_container>.carousel-caption {
-        left: 5%;
-        top: 57%;
-    }
-*/

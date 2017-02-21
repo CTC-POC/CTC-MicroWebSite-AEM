@@ -1,10 +1,4 @@
-/*@font-face {
-    font-family: 'HelveticaLTStd-BoldCond';
-    src: url('/etc/designs/woods/clientlibs/fonts/HelveticaLTStd-BlkCond.eot');
-    src: url('/etc/designs/woods/clientlibs/fonts/HelveticaLTStd-BlkCond.otf');
 
-}
-*/
 @font-face {
   font-family: 'HelveticaLTStd-BlkCond';
   src: url('/etc/designs/woods/clientlibs/fonts/HelveticaLTStd-BlkCond.eot');
@@ -13,10 +7,18 @@
   font-style: normal;
 }
 
+
 @font-face {
   font-family: 'HelveticaLTStd-BoldCond';
   src: url('/etc/designs/woods/clientlibs/fonts/HelveticaLTStd-BoldCond.eot');
   src: url('/etc/designs/woods/clientlibs/fonts/HelveticaLTStd-BoldCondd41d.eot?#iefix') format("embedded-opentype"), url('/etc/designs/woods/clientlibs/fonts/HelveticaLTStd-BoldCond.html') format("woff"), url('/etc/designs/woods/clientlibs/fonts/HelveticaLTStd-BoldCond-2.html') format("woff2"), url('/etc/designs/woods/clientlibs/fonts/HelveticaLTStd-BoldCond-3.html') format("truetype"), url('/etc/designs/woods/clientlibs/fonts/HelveticaLTStd-BoldCond.svg') format("svg");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url('/etc/designs/woods/clientlibs/fonts/HelveticaNeueLTStd-BdCn.eot');
+  src: url('/etc/designs/woods/clientlibs/fonts/HelveticaNeueLTStd-BdCn.html') format("woff"), url('/etc/designs/woods/clientlibs/fonts/HelveticaNeueLTStd-BdCn-2.html') format("woff2"), url('/etc/designs/woods/clientlibs/fonts/HelveticaNeueLTStd-BdCn-3.html') format("truetype"), url('/etc/designs/woods/clientlibs/fonts/HelveticaNeueLTStd-BdCn.otf') format("opentype"), url('/etc/designs/woods/clientlibs/fonts/HelveticaNeueLTStd-BdCn.svg') format("svg");
   font-weight: 700;
   font-style: normal;
 }
@@ -159,6 +161,10 @@ background:none;
 }
 header .advanced_Search{display:none;}
 @media  (min-width:1028px){
+.menu__products__item.dropdown-submenu>a{
+    pointer-events: none;
+    cursor: default;
+}
 header ul.mainNavlogoSpace li:last-child{display:none;}
 .search_container{display:none;}
 .woods-logo img{ height: 108px;}
@@ -728,9 +734,7 @@ header .mobile_motto img {
         left: -6px;
 
 }
-
 }
-
 
 @media only screen 
   and (min-width: 768px) 
