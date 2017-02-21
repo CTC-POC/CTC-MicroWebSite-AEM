@@ -1,10 +1,4 @@
-/*@font-face {
-    font-family: 'HelveticaLTStd-BoldCond';
-    src: url('/etc/designs/woods/clientlibs/fonts/HelveticaLTStd-BlkCond.eot');
-    src: url('/etc/designs/woods/clientlibs/fonts/HelveticaLTStd-BlkCond.otf');
 
-}
-*/
 @font-face {
   font-family: 'HelveticaLTStd-BlkCond';
   src: url('/etc/designs/woods/clientlibs/fonts/HelveticaLTStd-BlkCond.eot');
@@ -17,6 +11,13 @@
   font-family: 'HelveticaLTStd-BoldCond';
   src: url('/etc/designs/woods/clientlibs/fonts/HelveticaLTStd-BoldCond.eot');
   src: url('/etc/designs/woods/clientlibs/fonts/HelveticaLTStd-BoldCondd41d.eot?#iefix') format("embedded-opentype"), url('/etc/designs/woods/clientlibs/fonts/HelveticaLTStd-BoldCond.html') format("woff"), url('/etc/designs/woods/clientlibs/fonts/HelveticaLTStd-BoldCond-2.html') format("woff2"), url('/etc/designs/woods/clientlibs/fonts/HelveticaLTStd-BoldCond-3.html') format("truetype"), url('/etc/designs/woods/clientlibs/fonts/HelveticaLTStd-BoldCond.svg') format("svg");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url('/etc/designs/woods/clientlibs/fonts/HelveticaNeueLTStd-BdCn.eot');
+  src: url('/etc/designs/woods/clientlibs/fonts/HelveticaNeueLTStd-BdCn.html') format("woff"), url('/etc/designs/woods/clientlibs/fonts/HelveticaNeueLTStd-BdCn-2.html') format("woff2"), url('/etc/designs/woods/clientlibs/fonts/HelveticaNeueLTStd-BdCn-3.html') format("truetype"), url('/etc/designs/woods/clientlibs/fonts/HelveticaNeueLTStd-BdCn.otf') format("opentype"), url('/etc/designs/woods/clientlibs/fonts/HelveticaNeueLTStd-BdCn.svg') format("svg");
   font-weight: 700;
   font-style: normal;
 }
@@ -80,7 +81,7 @@ header .menu_main__item {
 }
 
 header .navbar-nav>li>a.menu_main__item{
-    margin-top: 18px;
+    margin-top: 21px;
     padding-top: 0px;
 padding-bottom:0px; 
 font:bold 17px/13px HelveticaLTStd-BlkCond,Helvetica,Arial,sans-serif;
@@ -263,7 +264,7 @@ li:first-child .menu_main__item{padding-left: 0px !important; border-left:none;}
 header .dropdown-menu{
 position: absolute;
     min-width: 370px;
-    top: 52px;
+    top: 61px;
     left: -150px;
     float: left;
     border-bottom: 9px solid #005841;
@@ -439,8 +440,7 @@ header .navbar.navbar-inverse.navbar-fixed-top{
     z-index: 999;
     bottom: -19px;
     font-size: 10px;
-    font: 12px/20px HelveticaLTStd-BlkCond, Helvetica, Arial, sans-serif;
-}
+    font: 12px/20px HelveticaLTStd-BlkCond, Helvetica, Arial, sans-serif;}
 .menu_second{display:none;}
 header .navbar-inverse .navbar-toggle.collapsed{    background: none;}
 header .navbar-inverse .navbar-toggle{    background-color: #64a70b;}
@@ -693,8 +693,7 @@ header .customBg{width:100%; padding-left:0px;}
     left: -16px;
     z-index: 999;
     bottom: -19px;
-        font: 12px/20px HelveticaLTStd-BlkCond, Helvetica, Arial, sans-serif;
-}
+        font: 12px/20px HelveticaLTStd-BlkCond, Helvetica, Arial, sans-serif;}
 .glyphicon-shopping-cart {
     position: relative;
     display: inline-block;
@@ -735,9 +734,7 @@ header .mobile_motto img {
         left: -6px;
 
 }
-
 }
-
 
 @media only screen 
   and (min-width: 768px) 
