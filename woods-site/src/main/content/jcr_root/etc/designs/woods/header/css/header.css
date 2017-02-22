@@ -165,7 +165,10 @@ header .advanced_Search{display:none;}
     pointer-events: none;
     cursor: default;
 } 
-header ul.mainNavlogoSpace li:last-child{display:none;}
+
+header ul.mainNavlogoSpace li:last-child a.menu__item.menu_main__item {
+    display: none;
+}
 .search_container{display:none;}
 .woods-logo img{ height: 108px;}
 header .predictive-search{padding-left:0px;}

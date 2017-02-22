@@ -81,9 +81,7 @@
         color : #fff;
 	}
 
-	.carousel-control.left,.carousel-control.right{
-		background : none;
-		}
+
 
           @media screen and (max-width: 1028px) {
 
@@ -172,6 +170,10 @@
     				font-size: 1.25rem;
     				margin-top: 1.5rem;
 				}
+				.carousel_container .carousel-control.left,.carousel_container .carousel-control.right{
+					display : none;
+				}
+
             }                
 
 	@media only screen and (min-width: 768px) and (max-width: 1024px){
@@ -187,6 +189,7 @@
                 }
 		.carousel_container .carousel-inner .item a img{
 					height : 292.5px;
+    				object-fit : cover;
 				} 
    		.carousel_container .carousel-caption .slider__button {
             font-size: 0.5rem;
@@ -238,5 +241,8 @@
                     padding: 0;
                     margin: 3px;
 				} 
+				.carousel_container .carousel-control.left,.carousel_container .carousel-control.right{
+					display : none;
+				}
 	}
 
