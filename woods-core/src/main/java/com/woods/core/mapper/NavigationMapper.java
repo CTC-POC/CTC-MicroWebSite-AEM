@@ -51,13 +51,17 @@ public class NavigationMapper {
 						.toString());
 				JSONArray categoriesarray = new JSONArray(array
 						.getJSONObject(1).get("categories").toString());
+				int k=0;
+				while (k < categoriesarray.length()) {
+
+					if (categoriesarray.getJSONObject(k).get("name").toString().equalsIgnoreCase("WOODS PRODUCTS")) {
 				Categories categories = new Categories();
-				categories.setId(categoriesarray.getJSONObject(1).get("id")
+				categories.setId(categoriesarray.getJSONObject(k).get("id")
 						.toString());
-				categories.setUrl(categoriesarray.getJSONObject(1).get("url")
+				categories.setUrl(categoriesarray.getJSONObject(k).get("url")
 						.toString());
 				JSONArray subcategoriesarray = new JSONArray(categoriesarray
-						.getJSONObject(1).get("subcategories").toString());
+						.getJSONObject(k).get("subcategories").toString());
 				int i = 0;
 				while (i < subcategoriesarray.length()) {
 
@@ -104,8 +108,14 @@ public class NavigationMapper {
 				catalogVersionsList.add(catalogVersions);
 
 				catalog.setCatalogVersions(catalogVersionsList);
-
-			} catch (JSONException e) {
+           k++;
+			} 
+					else
+					{
+						k++;
+					}
+				}
+			}catch (JSONException e) {
 
 				log.error("Exception in mapper", e);
 			}
